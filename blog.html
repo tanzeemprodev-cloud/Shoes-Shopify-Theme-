@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/track-order.css">
+    <link rel="stylesheet" href="css/blog.css">
 </head>
 
 <body>
-   <!-- header -->
+    <!-- header -->
     <header class="header-shoes">
         <div class="container-sh">
             <div class="row-sh">
@@ -274,63 +274,346 @@
         </div>
 
     </aside>
-    <!-- track order section -->
-    <section class="track-order-hero-sh">
+    <!-- BLOG PAGE -->
+    <section class="blog-page-sh">
 
-        <div class="track-order-hero-container-sh">
+        <div class="blog-page-container-sh">
 
-            <div class="track-order-hero-label-sh">
-                <span></span>
-                ORDER TRACKING
+            <!-- HERO -->
+            <div class="blog-page-hero-sh">
+
+                <span class="blog-page-eyebrow-sh">
+                    STEPLUX JOURNAL
+                </span>
+
+                <h1>
+                    Stories That
+                    <span>Move You.</span>
+                </h1>
+
+                <p>
+                    Discover footwear guides, styling inspiration, shoe care tips
+                    and the latest trends to help you step up your style.
+                </p>
+
             </div>
 
-            <h1>
-                WHERE'S YOUR
-                <span>ORDER?</span>
-            </h1>
 
-            <p>
-                Enter your order number below to see the latest
-                status and delivery updates for your purchase.
-            </p>
+            <!-- =========================
+             BLOG TABS
+        ========================= -->
+            <div class="blog-tabs-sh">
 
-            <form class="track-order-form-sh">
-
-                <div class="track-order-input-wrap-sh">
-                    <label for="track-order-number-sh">
-                        ORDER NUMBER
-                    </label>
-
-                    <input type="text" id="track-order-number-sh" name="order" placeholder="e.g. #12345" required>
-                </div>
-
-                <div class="track-order-input-wrap-sh">
-                    <label for="track-order-email-sh">
-                        EMAIL ADDRESS
-                    </label>
-
-                    <input type="email" id="track-order-email-sh" name="email" placeholder="you@example.com" required>
-                </div>
-
-                <button type="submit" class="track-order-btn-sh">
-                    <span>TRACK ORDER</span>
-                    <span class="track-order-arrow-sh">↗</span>
+                <button class="blog-tab-sh active" data-filter="all">
+                    All
                 </button>
 
-            </form>
+                <button class="blog-tab-sh" data-filter="style">
+                    Style
+                </button>
 
-            <div class="track-order-help-sh">
-                <span>CAN'T FIND YOUR ORDER?</span>
+                <button class="blog-tab-sh" data-filter="footwear">
+                    Footwear
+                </button>
 
-                <a href="/pages/contact">
-                    CONTACT SUPPORT
-                    <span>→</span>
-                </a>
+                <button class="blog-tab-sh" data-filter="care">
+                    Shoe Care
+                </button>
+
+                <button class="blog-tab-sh" data-filter="trends">
+                    Trends
+                </button>
+
+            </div>
+
+
+
+
+
+            <!-- =========================
+             LATEST ARTICLES
+        ========================= -->
+            <div class="blog-latest-title-sh">
+
+                <div>
+                    <span>EXPLORE MORE</span>
+
+                    <h2>
+                        Latest <em>Articles</em>
+                    </h2>
+                </div>
+
+                <p>
+                    Fresh ideas, useful guides and footwear inspiration
+                    from StepLux.
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+             ARTICLES GRID
+        ========================= -->
+            <div class="blog-grid-page-sh">
+
+
+                <!-- ARTICLE 01 -->
+                <article class="blog-card-page-sh" data-category="care">
+
+                    <a href="blog-detail.html">
+
+                        <div class="blog-card-image-page-sh">
+
+                            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=900&q=85"
+                                alt="Shoe care">
+
+                            <span>SHOE CARE</span>
+
+                        </div>
+
+                    </a>
+
+                    <div class="blog-card-content-page-sh">
+
+                        <div class="blog-card-meta-sh">
+                            August 12, 2026
+                            <span>•</span>
+                            4 Min Read
+                        </div>
+
+                        <h3>
+                            5 Simple Ways to Keep Your Shoes Looking New
+                        </h3>
+
+                        <p>
+                            Simple habits that can help your favorite footwear
+                            stay fresh and clean for longer.
+                        </p>
+
+                        <a href="article.html" class="blog-read-link-sh">
+                            Read Article <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ARTICLE 02 -->
+                <article class="blog-card-page-sh" data-category="style">
+
+                    <a href="blog-detail.html">
+
+                        <div class="blog-card-image-page-sh">
+
+                            <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=85"
+                                alt="Sneaker style">
+
+                            <span>STYLE</span>
+
+                        </div>
+
+                    </a>
+
+                    <div class="blog-card-content-page-sh">
+
+                        <div class="blog-card-meta-sh">
+                            August 08, 2026
+                            <span>•</span>
+                            6 Min Read
+                        </div>
+
+                        <h3>
+                            The Sneaker Styles You Need in Your Collection
+                        </h3>
+
+                        <p>
+                            Discover the sneaker styles worth adding
+                            to your everyday rotation.
+                        </p>
+
+                        <a href="article.html" class="blog-read-link-sh">
+                            Read Article <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ARTICLE 03 -->
+                <article class="blog-card-page-sh" data-category="footwear">
+
+                    <a href="blog-detail.html">
+
+                        <div class="blog-card-image-page-sh">
+
+                            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=900&q=85"
+                                alt="Shoe sizing">
+
+                            <span>FOOTWEAR</span>
+
+                        </div>
+
+                    </a>
+
+                    <div class="blog-card-content-page-sh">
+
+                        <div class="blog-card-meta-sh">
+                            August 04, 2026
+                            <span>•</span>
+                            5 Min Read
+                        </div>
+
+                        <h3>
+                            Finding Your Perfect Shoe Size Made Simple
+                        </h3>
+
+                        <p>
+                            A simple guide to getting the right fit before
+                            your next footwear purchase.
+                        </p>
+
+                        <a href="article.html" class="blog-read-link-sh">
+                            Read Article <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ARTICLE 04 -->
+                <article class="blog-card-page-sh" data-category="trends">
+
+                    <a href="article.html">
+
+                        <div class="blog-card-image-page-sh">
+
+                            <img src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=900&q=85"
+                                alt="Shoe trends">
+
+                            <span>TRENDS</span>
+
+                        </div>
+
+                    </a>
+
+                    <div class="blog-card-content-page-sh">
+
+                        <div class="blog-card-meta-sh">
+                            July 29, 2026
+                            <span>•</span>
+                            4 Min Read
+                        </div>
+
+                        <h3>
+                            The Footwear Trends Taking Over This Season
+                        </h3>
+
+                        <p>
+                            Explore the latest styles and silhouettes
+                            shaping footwear this season.
+                        </p>
+
+                        <a href="article.html" class="blog-read-link-sh">
+                            Read Article <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ARTICLE 05 -->
+                <article class="blog-card-page-sh" data-category="style">
+
+                    <a href="blog-detail.html">
+
+                        <div class="blog-card-image-page-sh">
+
+                            <img src="https://images.unsplash.com/photo-1494496195158-c3becb4f2475?auto=format&fit=crop&w=900&q=85"
+                                alt="White sneakers">
+
+                            <span>STYLE</span>
+
+                        </div>
+
+                    </a>
+
+                    <div class="blog-card-content-page-sh">
+
+                        <div class="blog-card-meta-sh">
+                            July 24, 2026
+                            <span>•</span>
+                            5 Min Read
+                        </div>
+
+                        <h3>
+                            Why Every Wardrobe Needs a Classic Pair of Sneakers
+                        </h3>
+
+                        <p>
+                            The timeless sneaker that works with almost
+                            every casual look.
+                        </p>
+
+                        <a href="article.html" class="blog-read-link-sh">
+                            Read Article <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ARTICLE 06 -->
+                <article class="blog-card-page-sh" data-category="footwear">
+
+                    <a href="blog-detail.html">
+
+                        <div class="blog-card-image-page-sh">
+
+                            <img src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=900&q=85"
+                                alt="Comfortable shoes">
+
+                            <span>FOOTWEAR</span>
+
+                        </div>
+
+                    </a>
+
+                    <div class="blog-card-content-page-sh">
+
+                        <div class="blog-card-meta-sh">
+                            July 18, 2026
+                            <span>•</span>
+                            6 Min Read
+                        </div>
+
+                        <h3>
+                            What Actually Makes a Shoe Comfortable?
+                        </h3>
+
+                        <p>
+                            Understanding what makes an everyday shoe
+                            comfortable and easy to wear.
+                        </p>
+
+                        <a href="article.html" class="blog-read-link-sh">
+                            Read Article <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
             </div>
 
         </div>
 
     </section>
+    <!-- footer -->
     <footer class="footer-sh">
 
         <div class="footer-container-sh">
@@ -539,6 +822,60 @@
 
     </footer>
 
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const tabs = document.querySelectorAll(".blog-tab-sh");
+            const cards = document.querySelectorAll(".blog-card-page-sh");
+
+            tabs.forEach(function (tab) {
+
+                tab.addEventListener("click", function () {
+
+                    const filter = this.getAttribute("data-filter");
+
+
+                    /* Active Tab */
+                    tabs.forEach(function (item) {
+                        item.classList.remove("active");
+                    });
+
+                    this.classList.add("active");
+
+
+                    /* Filter Cards */
+                    cards.forEach(function (card) {
+
+                        const category = card.getAttribute("data-category");
+
+                        if (
+                            filter === "all" ||
+                            category === filter
+                        ) {
+
+                            card.style.display = "";
+
+                            setTimeout(function () {
+                                card.classList.add("show");
+                            }, 10);
+
+                        } else {
+
+                            card.classList.remove("show");
+                            card.style.display = "none";
+
+                        }
+
+                    });
+
+                });
+
+            });
+
+        });
+
+    </script>
 </body>
 
 </html>

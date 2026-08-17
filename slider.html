@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <section class="hot-deals-sh">
+        <h1 class="hot-deals-title-sh">Hot Deals</h1>
+
+        <div class="container-sh-hot">
+
+            <!-- Card 1 -->
+            <div class="card-sh">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <img src="https://cdn.pixabay.com/photo/2016/08/25/21/38/home-1620736_1280.jpg"
+                                alt="Classic Villa" />
+                            <div class="card-content-sh">
+                                <h2>Classic Villa</h2>
+                                <p>Villamartín, Spain</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="https://images.pexels.com/photos/8859821/pexels-photo-8859821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Classic Villa" />
+                            <div class="card-content-sh">
+                                <h2>Classic Villa</h2>
+                                <p>Miami, USA</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="https://images.pexels.com/photos/4916509/pexels-photo-4916509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Classic Villa" />
+                            <div class="card-content-sh">
+                                <h2>Classic Villa</h2>
+                                <p>Bangkok, Thailand</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Card 2 -->
+            <div class="card-sh">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <img src="https://cdn.pixabay.com/photo/2017/04/10/22/28/residence-2219972_1280.jpg"
+                                alt="Modern Villa" />
+                            <div class="card-content-sh">
+                                <h2>Modern Villa</h2>
+                                <p>Paris, France</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="https://cdn.pixabay.com/photo/2020/04/28/04/02/villa-5102539_1280.jpg"
+                                alt="Modern Villa" />
+                            <div class="card-content-sh">
+                                <h2>Modern Villa</h2>
+                                <p>Washington DC, USA</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="https://cdn.pixabay.com/photo/2015/11/06/11/45/interior-1026446_1280.jpg"
+                                alt="Modern Villa" />
+                            <div class="card-content-sh">
+                                <h2>Modern Villa</h2>
+                                <p>London, United Kingdom</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Card 3 -->
+            <div class="card-sh">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <img src="https://images.pexels.com/photos/7902912/pexels-photo-7902912.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Villa Sea View" />
+                            <div class="card-content-sh">
+                                <h2>Villa Sea View</h2>
+                                <p>Antalya, Turkey</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="https://images.pexels.com/photos/5899725/pexels-photo-5899725.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Villa Sea View" />
+                            <div class="card-content-sh">
+                                <h2>Villa Sea View</h2>
+                                <p>Ibiza, PM, España</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="https://images.pexels.com/photos/1078983/pexels-photo-1078983.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Mediterranean Style Villa" />
+                            <div class="card-content-sh">
+                                <h2>Mediterranean Style Villa</h2>
+                                <p>Dambulla, CP, Sri Lanka</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+    <script>
+        document.querySelectorAll(".hot-deals-sh .mySwiper").forEach(function (slider) {
+            new Swiper(slider, {
+                effect: "cube",
+                loop: true,
+                grabCursor: true,
+
+                speed: 1800,
+
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false
+                },
+
+                cubeEffect: {
+                    shadow: false,
+                    slideShadows: false
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

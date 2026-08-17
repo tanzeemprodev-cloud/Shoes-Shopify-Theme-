@@ -1,0 +1,2337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header-shoes">
+        <div class="container-sh">
+            <div class="row-sh">
+
+                <!-- Logo -->
+                <div class="logo-sh">
+                    <h3>StepLux</h3>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="menu-list-sh">
+                    <ul>
+                        <li><a href="/home.html">Home</a></li>
+                        <li><a href="/collection.html">Collection</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Desktop / Mobile Right Icons -->
+                <div class="icons-sh">
+
+
+                    <!-- Search -->
+                    <div class="search-sh">
+                        <button type="button" id="search-open-sh" aria-label="Open Search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                <path
+                                    d="M544 513L397.2 364.2C417.2 336.3 429.1 302 429.1 265C429.1 171.9 354.4 96.1 262.6 96.1C170.7 96 96 171.8 96 264.9C96 358 170.7 433.8 262.5 433.8C302.3 433.8 338.8 419.6 367.5 395.9L513.5 544L544 513zM262.5 394.8C191.9 394.8 134.4 336.5 134.4 264.9C134.4 193.3 191.9 135 262.5 135C333.1 135 390.6 193.3 390.6 264.9C390.6 336.5 333.2 394.8 262.5 394.8z" />
+                            </svg>
+                        </button>
+                    </div>
+
+
+                    <!-- Cart -->
+                    <div class="cart-sh">
+                        <button type="button" id="cart-open-sh" aria-label="Open Cart">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                <path
+                                    d="M331.8 504.4C331.1 487.5 339.7 471.7 354.2 463C368.7 454.4 386.7 454.5 401.2 463.2C415.6 471.9 424.1 487.8 423.3 504.7C424 521.6 415.4 537.4 400.9 546.1C386.4 554.7 368.4 554.6 353.9 545.9C339.5 537.2 331 521.3 331.8 504.4zM169.4 458.9C152.6 458.2 136.7 466.7 128.1 481.2C119.5 495.7 119.6 513.7 128.3 528.1C137 542.6 152.9 551 169.7 550.2C186.5 550.9 202.4 542.4 211 527.9C219.6 513.4 219.5 495.4 210.8 481C202.1 466.5 186.2 458.1 169.4 458.9zM461.1 188.9C158.9 188.9 81.9 176.1 0 89.7C34.4 141.4 53.3 238.6 373.1 233.9C706.4 228.9 503.1 320 443.9 422.8C630.6 256.1 763.3 188.9 461.1 188.9z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Desktop Button -->
+                    <div class="button-sh">
+                        <a href="#">Shop Now</a>
+                    </div>
+
+                    <!-- Mobile Hamburger -->
+                    <button class="hamburger-sh" id="hamburger-sh" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Search Overlay -->
+    <div class="search-overlay-sh" id="search-overlay-sh">
+
+        <div class="search-overlay-inner-sh">
+
+            <div class="search-overlay-top-sh">
+
+                <span>SEARCH</span>
+
+                <button type="button" id="search-close-sh" aria-label="Close Search">
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+
+            <form class="search-form-sh" action="/search.html" method="get">
+
+                <input type="search" name="q" id="search-input-sh" placeholder="What are you looking for?"
+                    autocomplete="off">
+
+                <button type="submit" aria-label="Submit Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                        <path
+                            d="M544 513L397.2 364.2C417.2 336.3 429.1 302 429.1 265C429.1 171.9 354.4 96.1 262.6 96.1C170.7 96 96 171.8 96 264.9C96 358 170.7 433.8 262.5 433.8C302.3 433.8 338.8 419.6 367.5 395.9L513.5 544L544 513zM262.5 394.8C191.9 394.8 134.4 336.5 134.4 264.9C134.4 193.3 191.9 135 262.5 135C333.1 135 390.6 193.3 390.6 264.9C390.6 336.5 333.2 394.8 262.5 394.8z" />
+                    </svg>
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+    <!-- Cart Overlay -->
+    <div class="cart-drawer-overlay-sh" id="cart-drawer-overlay-sh"></div>
+    <!-- Cart Drawer -->
+    <aside class="cart-drawer-sh" id="cart-drawer-sh" aria-hidden="true">
+
+        <div class="cart-drawer-header-sh">
+
+            <div>
+                <span class="cart-drawer-label-sh">
+                    YOUR CART
+                </span>
+
+                <h2>
+                    CART
+                </h2>
+            </div>
+
+            <button type="button" class="cart-drawer-close-sh" id="cart-close-sh" aria-label="Close cart">
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+
+        <!-- Cart Items -->
+        <div class="cart-drawer-items-sh" id="cart-drawer-items-sh">
+
+            <!-- Example Cart Item -->
+
+            <div class="cart-item-sh">
+
+                <div class="cart-item-image-sh">
+
+                    <img src="https://placehold.co/180x220" alt="Product">
+
+                </div>
+
+                <div class="cart-item-info-sh">
+
+                    <div class="cart-item-top-sh">
+
+                        <h3>
+                            Premium Essential
+                        </h3>
+
+                        <button type="button" class="cart-item-remove-sh">
+                            ×
+                        </button>
+
+                    </div>
+
+                    <span class="cart-item-option-sh">
+                        Size: M
+                    </span>
+
+                    <div class="cart-item-bottom-sh">
+
+                        <div class="cart-item-quantity-sh">
+
+                            <button type="button">
+                                −
+                            </button>
+
+                            <span>1</span>
+
+                            <button type="button">
+                                +
+                            </button>
+
+                        </div>
+
+                        <strong>
+                            $49.00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Empty Cart -->
+        <div class="cart-empty-sh" id="cart-empty-sh">
+
+            <div class="cart-empty-icon-sh">
+                ◇
+            </div>
+
+            <h3>
+                YOUR CART IS EMPTY
+            </h3>
+
+            <p>
+                Looks like you haven't added anything yet.
+            </p>
+
+            <a href="/collection.html">
+                SHOP COLLECTION
+                <span>↗</span>
+            </a>
+
+        </div>
+
+
+        <!-- Cart Footer -->
+        <div class="cart-drawer-footer-sh">
+
+            <div class="cart-subtotal-sh">
+
+                <span>
+                    SUBTOTAL
+                </span>
+
+                <strong>
+                    $49.00
+                </strong>
+
+            </div>
+
+            <p>
+                Shipping and taxes calculated at checkout.
+            </p>
+
+            <a href="/checkout.html" class="cart-checkout-sh">
+                CHECKOUT
+                <span>↗</span>
+            </a>
+
+            <a href="/cart.html" class="cart-view-sh">
+                VIEW CART
+            </a>
+
+        </div>
+
+    </aside>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay-sh" id="mobile-menu-overlay-sh"></div>
+    <!-- Mobile Side Drawer -->
+    <aside class="mobile-drawer-sh" id="mobile-drawer-sh">
+
+        <div class="mobile-drawer-header-sh">
+            <div class="mobile-drawer-logo-sh">
+                <h3>StepLux</h3>
+            </div>
+
+            <button class="mobile-close-sh" id="mobile-close-sh" aria-label="Close menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="mobile-menu-list-sh">
+            <ul>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/collection.html">Collection</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="mobile-shop-button-sh">
+            <a href="#">Shop Now</a>
+        </div>
+
+    </aside>
+    <!-- Hero Section -->
+    <section class="hero-sh" style="background: url(/images/Hero-Bg-Image.webp);">
+        <div class="overlay-sh"></div>
+        <div class="container-sh">
+            <div class="hero-row-sh">
+                <div class="sub-heading-sh">
+                    <h3>Handcrafted With Integrity</h3>
+                </div>
+                <div class="heading-sh">
+                    <h1>Highest Quality.</h1>
+                    <h1>Honest Prices.</h1>
+                </div>
+                <div class="buttons-shop-sh">
+                    <div class="shop-men-sh">
+                        <a href="#">Shop Men</a>
+                    </div>
+                    <div class="shop-women-sh">
+                        <a href="#">Shop Women</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- MARQUEE SECTION -->
+    <section class="marquee-section-sh">
+
+        <div class="marquee-sh">
+
+            <div class="marquee-track-sh">
+
+                <div class="marquee-item-sh">
+                    STEP INTO STYLE
+                    <span>✦</span>
+                </div>
+
+                <div class="marquee-item-sh">
+                    PREMIUM QUALITY
+                    <span>✦</span>
+                </div>
+
+                <div class="marquee-item-sh">
+                    EVERYDAY COMFORT
+                    <span>✦</span>
+                </div>
+
+                <div class="marquee-item-sh">
+                    HONEST PRICES
+                    <span>✦</span>
+                </div>
+
+                <div class="marquee-item-sh">
+                    MADE FOR EVERY STEP
+                    <span>✦</span>
+                </div>
+
+
+                <!-- Duplicate for seamless loop -->
+
+                <div class="marquee-item-sh">
+                    STEP INTO STYLE
+                    <span>✦</span>
+                </div>
+
+                <div class="marquee-item-sh">
+                    PREMIUM QUALITY
+                    <span>✦</span>
+                </div>
+
+                <div class="marquee-item-sh">
+                    EVERYDAY COMFORT
+                    <span>✦</span>
+                </div>
+
+                <div class="marquee-item-sh">
+                    HONEST PRICES
+                    <span>✦</span>
+                </div>
+
+                <div class="marquee-item-sh">
+                    MADE FOR EVERY STEP
+                    <span>✦</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Hot Deal -->
+    <!-- <section class="hot-deals-sh">
+        <h1 class="hot-deals-title-sh">Hot Deals</h1>
+        <div class="container-sh-hot">
+
+          
+            <div class="card-sh">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <img src="images/Black-1.webp" alt="Classic Villa" />
+                            <div class="card-content-sh card-sh-one">
+                                <h2>RESORT FLIP FLOPS</h2>
+                                <p>smooth faux-leather</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="images/Black-2.webp" alt="Classic Villa" />
+                            <div class="card-content-sh card-sh-one">
+                                <h2>RESORT FLIP FLOPS</h2>
+                                <p>smooth faux-leather</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="images/Black-3.webp" alt="Classic Villa" />
+                            <div class="card-content-sh card-sh-one">
+                                <h2>RESORT FLIP FLOPS</h2>
+                                <p>smooth faux-leather</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="images/Black-4.webp" alt="Classic Villa" />
+                            <div class="card-content-sh card-sh-one">
+                                <h2>RESORT FLIP FLOPS</h2>
+                                <p>smooth faux-leather</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="images/Black-5.webp" alt="Classic Villa" />
+                            <div class="card-content-sh card-sh-one">
+                                <h2>RESORT FLIP FLOPS</h2>
+                                <p>smooth faux-leather</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="card-sh">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <img src="images/Grey-1.webp" alt="Modern Villa" />
+                            <div class="card-content-sh card-sh-two">
+                                <h2>LIGHT EVERYDAY SLIPPERS</h2>
+                                <p>light weight slippers</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="images/Grey-2.webp" alt="Modern Villa" />
+                            <div class="card-content-sh card-sh-two">
+                                <h2>LIGHT EVERYDAY SLIPPERS</h2>
+                                <p>light weight slippers</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="images/Grey-3.webp" alt="Modern Villa" />
+                            <div class="card-content-sh card-sh-two">
+                                <h2>LIGHT EVERYDAY SLIPPERS</h2>
+                                <p>light weight slippers</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="images/Grey-4.webp" alt="Classic Villa" />
+                            <div class="card-content-sh card-sh-two">
+                                <h2>LIGHT EVERYDAY SLIPPERS</h2>
+                                <p>light weight slippers</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="images/Grey-5.webp" alt="Classic Villa" />
+                            <div class="card-content-sh card-sh-two">
+                                <h2>LIGHT EVERYDAY SLIPPERS</h2>
+                                <p>light weight slippers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-sh">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <img src="images/Beige-1.webp" alt="Villa Sea View" />
+                            <div class="card-content-sh card-sh-one">
+                                <h2>CLOUD FLIP FLOPS</h2>
+                                <p>Casual summmer flip</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="images/Beige-2.webp" alt="Villa Sea View" />
+                            <div class="card-content-sh card-sh-one">
+                                <h2>CLOUD FLIP FLOPS</h2>
+                                <p>Casual summmer flip</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="images/Beige-3.webp" alt="Mediterranean Style Villa" />
+                            <div class="card-content-sh card-sh-one">
+                                <h2>CLOUD FLIP FLOPS</h2>
+                                <p>Casual summmer flip</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="images/Beige-4.webp" alt="Villa Sea View" />
+                            <div class="card-content-sh card-sh-one">
+                                <h2>CLOUD FLIP FLOPS</h2>
+                                <p>Casual summmer flip</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="images/Beige-5.webp" alt="Mediterranean Style Villa" />
+                            <div class="card-content-sh card-sh-one">
+                                <h2>CLOUD FLIP FLOPS</h2>
+                                <p>Casual summmer flip</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section> -->
+    <!-- 3D PRODUCT SLIDER -->
+    <section class="product-3d-section-sh">
+
+        <div class="product-3d-container-sh">
+
+            <!-- Section Heading -->
+
+            <div class="product-3d-heading-sh">
+
+                <span class="product-3d-eyebrow-sh">
+                    Featured Collection
+                </span>
+
+                <h2>
+                    Step Into
+                    <span>Style</span>
+                </h2>
+
+                <p>
+                    Discover our latest collection of premium
+                    footwear designed for comfort and style.
+                </p>
+
+            </div>
+
+
+            <!-- Swiper -->
+
+            <div class="swiper product-3d-swiper-sh">
+
+                <div class="swiper-wrapper">
+
+
+                    <!-- Product 1 -->
+
+                    <div class="swiper-slide">
+
+                        <div class="product-3d-card-sh">
+
+                            <div class="product-3d-image-sh">
+
+                                <span class="product-3d-badge-sh">
+                                    NEW
+                                </span>
+
+                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+                                    alt="Nike Air Max">
+
+                            </div>
+
+                            <div class="product-3d-info-sh">
+
+                                <div>
+                                    <h3>
+                                        Nike Air Max
+                                    </h3>
+
+                                    <p>
+                                        Everyday Sneakers
+                                    </p>
+                                </div>
+
+                                <strong>
+                                    $149.99
+                                </strong>
+
+                            </div>
+
+                            <a href="#" class="product-3d-btn-sh">
+                                View Product
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Product 2 -->
+
+                    <div class="swiper-slide">
+
+                        <div class="product-3d-card-sh">
+
+                            <div class="product-3d-image-sh">
+
+                                <span class="product-3d-badge-sh">
+                                    SALE
+                                </span>
+
+                                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=900&q=80"
+                                    alt="Classic Sneakers">
+
+                            </div>
+
+                            <div class="product-3d-info-sh">
+
+                                <div>
+                                    <h3>
+                                        Urban Runner
+                                    </h3>
+
+                                    <p>
+                                        Street Collection
+                                    </p>
+                                </div>
+
+                                <strong>
+                                    $129.99
+                                </strong>
+
+                            </div>
+
+                            <a href="#" class="product-3d-btn-sh">
+                                View Product
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Product 3 -->
+
+                    <div class="swiper-slide">
+
+                        <div class="product-3d-card-sh">
+
+                            <div class="product-3d-image-sh">
+
+                                <span class="product-3d-badge-sh">
+                                    NEW
+                                </span>
+
+                                <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=80"
+                                    alt="Running Shoes">
+
+                            </div>
+
+                            <div class="product-3d-info-sh">
+
+                                <div>
+                                    <h3>
+                                        Velocity Pro
+                                    </h3>
+
+                                    <p>
+                                        Performance Series
+                                    </p>
+                                </div>
+
+                                <strong>
+                                    $179.99
+                                </strong>
+
+                            </div>
+
+                            <a href="#" class="product-3d-btn-sh">
+                                View Product
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Product 4 -->
+
+                    <div class="swiper-slide">
+
+                        <div class="product-3d-card-sh">
+
+                            <div class="product-3d-image-sh">
+
+                                <span class="product-3d-badge-sh">
+                                    HOT
+                                </span>
+
+                                <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=900&q=80"
+                                    alt="Premium Shoes">
+
+                            </div>
+
+                            <div class="product-3d-info-sh">
+
+                                <div>
+                                    <h3>
+                                        Street X
+                                    </h3>
+
+                                    <p>
+                                        Premium Collection
+                                    </p>
+                                </div>
+
+                                <strong>
+                                    $159.99
+                                </strong>
+
+                            </div>
+
+                            <a href="#" class="product-3d-btn-sh">
+                                View Product
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Product 5 -->
+
+                    <div class="swiper-slide">
+
+                        <div class="product-3d-card-sh">
+
+                            <div class="product-3d-image-sh">
+
+                                <span class="product-3d-badge-sh">
+                                    NEW
+                                </span>
+
+                                <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=900&q=80"
+                                    alt="Sport Shoes">
+
+                            </div>
+
+                            <div class="product-3d-info-sh">
+
+                                <div>
+                                    <h3>
+                                        Motion X
+                                    </h3>
+
+                                    <p>
+                                        Sport Collection
+                                    </p>
+                                </div>
+
+                                <strong>
+                                    $139.99
+                                </strong>
+
+                            </div>
+
+                            <a href="#" class="product-3d-btn-sh">
+                                View Product
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <div class="product-3d-navigation-sh">
+
+                <button class="product-3d-prev-sh" aria-label="Previous product">
+                    ←
+                </button>
+
+                <div class="product-3d-pagination-sh"></div>
+
+                <button class="product-3d-next-sh" aria-label="Next product">
+                    →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Product Card Section -->
+    <section class="product-section-sh">
+        <div class="product-container-sh">
+
+            <!-- Product Card 1 -->
+            <div class="product-card-sh">
+                <div class="product-card__image-sh">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1740&q=80"
+                        alt="Red Nike Shoes">
+                </div>
+
+                <div class="product-card__info-sh">
+                    <h2 class="product-card__title-sh">Nike Air Max</h2>
+
+                    <p class="product-card__description-sh">
+                        Experience ultimate comfort and style with these iconic Nike Air Max sneakers.
+                    </p>
+
+                    <div class="product-card__price-row-sh">
+                        <span class="product-card__price-sh">$149.99</span>
+
+                        <button class="product-card__btn-sh">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Product Card 2 -->
+            <div class="product-card-sh">
+                <div class="product-card__image-sh">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1740&q=80"
+                        alt="Nike Air Max Black">
+                </div>
+
+                <div class="product-card__info-sh">
+                    <h2 class="product-card__title-sh">Nike Air Max Pro</h2>
+
+                    <p class="product-card__description-sh">
+                        Premium comfort and modern design made for everyday performance.
+                    </p>
+
+                    <div class="product-card__price-row-sh">
+                        <span class="product-card__price-sh">$169.99</span>
+
+                        <button class="product-card__btn-sh">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Product Card 3 -->
+            <div class="product-card-sh">
+                <div class="product-card__image-sh">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1740&q=80"
+                        alt="Nike Air Max Sport">
+                </div>
+
+                <div class="product-card__info-sh">
+                    <h2 class="product-card__title-sh">Nike Air Max Sport</h2>
+
+                    <p class="product-card__description-sh">
+                        Lightweight sneakers with a stylish look and all-day comfort.
+                    </p>
+
+                    <div class="product-card__price-row-sh">
+                        <span class="product-card__price-sh">$189.99</span>
+
+                        <button class="product-card__btn-sh">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- About section -->
+    <section class="shoe-section-sh">
+        <div class="shoe-container-sh">
+
+            <!-- ROW 1 -->
+            <div class="shoe-row-sh">
+
+                <div class="shoe-col-img-sh">
+                    <div class="shoe-card-sh">
+                        <img src="images/25-off (1).png" alt="25% Off Shoe">
+                    </div>
+                </div>
+
+                <div class="shoe-col-text-sh">
+                    <h2 class="shoe-title-sh">
+                        Get Discount<br>
+                        every Day
+                    </h2>
+
+                    <p class="shoe-subtitle-sh">
+                        The insole are comfortable so you can wear them everyday
+                    </p>
+
+                    <a href="#" class="shoe-btn-sh">
+                        Brows Products
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- ROW 2 -->
+            <div class="shoe-row-sh shoe-row-second-sh">
+
+                <div class="shoe-col-text-sh">
+
+                    <h2 class="shoe-feature-title-sh">
+                        WE Provide High<br>
+                        Quality Shoes
+                    </h2>
+
+                    <p class="shoe-subtitle-sh">
+                        The insole are comfortable so you can wear them everyday
+                    </p>
+
+                    <div class="shoe-feature-list-sh">
+
+                        <div class="shoe-feature-item-sh">
+                            <div class="shoe-icon-box-sh">◇</div>
+                            <span>It is a customer-oriented brand.</span>
+                        </div>
+
+                        <div class="shoe-feature-item-sh">
+                            <div class="shoe-icon-box-sh">◇</div>
+                            <span>It is a customer-oriented brand.</span>
+                        </div>
+
+                    </div>
+
+                    <a href="#" class="shoe-btn-sh">
+                        Brows Products
+                    </a>
+
+                </div>
+
+
+                <div class="shoe-col-img-sh">
+                    <div class="shoe-card-sh">
+                        <img src="images/comfort.png" alt="Comfort Shoe">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- REVIEWS SECTION -->
+    <section class="reviews-section-sh">
+        <div class="reviews-container-sh">
+
+            <div class="reviews-heading-sh">
+                <h2 class="reviews-title-sh">
+                    What Our Customers Say
+                </h2>
+            </div>
+
+
+            <div class="reviews-track-wrap-sh">
+
+                <div class="reviews-track-sh" id="reviewsTrackSh">
+
+                    <!-- Slide 1 -->
+                    <div class="reviews-slide-sh">
+
+                        <!-- Review 1 -->
+                        <div class="review-card-sh">
+
+                            <div class="review-stars-sh">
+                                ★★★★★
+                            </div>
+
+                            <p class="review-text-sh">
+                                "These are easily the most comfortable sneakers I've owned.
+                                They look great and feel even better."
+                            </p>
+
+                            <div class="review-user-sh">
+
+                                <div class="review-avatar-sh">
+                                    AM
+                                </div>
+
+                                <div class="review-user-info-sh">
+                                    <strong>Alex Morgan</strong>
+                                    <span>Verified Buyer</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Review 2 -->
+                        <div class="review-card-sh">
+
+                            <div class="review-stars-sh">
+                                ★★★★★
+                            </div>
+
+                            <p class="review-text-sh">
+                                "Ordered a size up based on the guide and it fit perfectly.
+                                Shipping was fast too."
+                            </p>
+
+                            <div class="review-user-sh">
+
+                                <div class="review-avatar-sh">
+                                    PN
+                                </div>
+
+                                <div class="review-user-info-sh">
+                                    <strong>Priya Nair</strong>
+                                    <span>Verified Buyer</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Review 3 -->
+                        <div class="review-card-sh">
+
+                            <div class="review-stars-sh">
+                                ★★★★★
+                            </div>
+
+                            <p class="review-text-sh">
+                                "Been running in the Velocity Pro for two months —
+                                zero complaints, great support."
+                            </p>
+
+                            <div class="review-user-sh">
+
+                                <div class="review-avatar-sh">
+                                    DC
+                                </div>
+
+                                <div class="review-user-info-sh">
+                                    <strong>Daniel Cho</strong>
+                                    <span>Verified Buyer</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Slide 2 -->
+                    <div class="reviews-slide-sh">
+
+                        <!-- Review 4 -->
+                        <div class="review-card-sh">
+
+                            <div class="review-stars-sh">
+                                ★★★★★
+                            </div>
+
+                            <p class="review-text-sh">
+                                "The Urban Street X gets compliments every time I wear it.
+                                Worth every dollar."
+                            </p>
+
+                            <div class="review-user-sh">
+
+                                <div class="review-avatar-sh">
+                                    MC
+                                </div>
+
+                                <div class="review-user-info-sh">
+                                    <strong>Maya Chen</strong>
+                                    <span>Verified Buyer</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Review 5 -->
+                        <div class="review-card-sh">
+
+                            <div class="review-stars-sh">
+                                ★★★★★
+                            </div>
+
+                            <p class="review-text-sh">
+                                "Returns were painless when a pair didn't fit.
+                                Customer service was excellent."
+                            </p>
+
+                            <div class="review-user-sh">
+
+                                <div class="review-avatar-sh">
+                                    JL
+                                </div>
+
+                                <div class="review-user-info-sh">
+                                    <strong>Jordan Lee</strong>
+                                    <span>Verified Buyer</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Review 6 -->
+                        <div class="review-card-sh">
+
+                            <div class="review-stars-sh">
+                                ★★★★★
+                            </div>
+
+                            <p class="review-text-sh">
+                                "Cloud Walk lives up to its name.
+                                All-day comfort for standing shifts at work."
+                            </p>
+
+                            <div class="review-user-sh">
+
+                                <div class="review-avatar-sh">
+                                    SA
+                                </div>
+
+                                <div class="review-user-info-sh">
+                                    <strong>Sara Ahmed</strong>
+                                    <span>Verified Buyer</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Review Controls -->
+
+            <div class="reviews-controls-sh">
+
+                <button type="button" class="reviews-arrow-sh" id="reviewsPrevSh" aria-label="Previous reviews">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 4L7 12L15 20"></path>
+                    </svg>
+                </button>
+
+
+                <div class="reviews-dots-sh" id="reviewsDotsSh">
+
+                    <button type="button" class="active" aria-label="Go to review slide 1"></button>
+
+                    <button type="button" aria-label="Go to review slide 2"></button>
+
+                </div>
+
+
+                <button type="button" class="reviews-arrow-sh" id="reviewsNextSh" aria-label="Next reviews">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 4L17 12L9 20"></path>
+                    </svg>
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- FAQ SECTION -->
+    <section class="faq-section-sh">
+
+        <div class="faq-container-sh">
+
+            <div class="faq-heading-sh">
+
+                <h2 class="faq-title-sh">
+                    Frequently Asked Questions
+                </h2>
+
+                <p class="faq-intro-sh">
+                    Find answers to the most common questions about our shoes,
+                    shipping, returns and orders.
+                </p>
+
+            </div>
+
+            <div class="faq-list-sh" id="faqListSh">
+
+                <!-- FAQ 1 -->
+                <div class="faq-item-sh">
+
+                    <button type="button" class="faq-question-sh">
+                        <span>
+                            How long does shipping take?
+                        </span>
+
+                        <span class="faq-plus-sh"></span>
+                    </button>
+
+                    <div class="faq-answer-sh">
+
+                        <p>
+                            Standard shipping takes 3–5 business days within the
+                            continental US. Expedited options are available at checkout.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 2 -->
+                <div class="faq-item-sh">
+
+                    <button type="button" class="faq-question-sh">
+                        <span>
+                            Do you offer free shipping?
+                        </span>
+
+                        <span class="faq-plus-sh"></span>
+                    </button>
+
+                    <div class="faq-answer-sh">
+
+                        <p>
+                            Yes — all orders over $100 ship free. Orders under $100
+                            have a flat $6.95 shipping rate.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 3 -->
+                <div class="faq-item-sh">
+
+                    <button type="button" class="faq-question-sh">
+                        <span>
+                            What is your return policy?
+                        </span>
+
+                        <span class="faq-plus-sh"></span>
+                    </button>
+
+                    <div class="faq-answer-sh">
+
+                        <p>
+                            We offer easy 30-day returns on unworn shoes in original
+                            packaging. Refunds are processed within 5 business days
+                            of receipt.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 4 -->
+                <div class="faq-item-sh">
+
+                    <button type="button" class="faq-question-sh">
+                        <span>
+                            How do I choose the right shoe size?
+                        </span>
+
+                        <span class="faq-plus-sh"></span>
+                    </button>
+
+                    <div class="faq-answer-sh">
+
+                        <p>
+                            Check our Size Guide for a full conversion chart and fit
+                            notes for each style. Most customers find our shoes true
+                            to size.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 5 -->
+                <div class="faq-item-sh">
+
+                    <button type="button" class="faq-question-sh">
+                        <span>
+                            Can I exchange my shoes?
+                        </span>
+
+                        <span class="faq-plus-sh"></span>
+                    </button>
+
+                    <div class="faq-answer-sh">
+
+                        <p>
+                            Yes, exchanges are free within 30 days of delivery.
+                            Start an exchange from your order page or contact support.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 6 -->
+                <div class="faq-item-sh">
+
+                    <button type="button" class="faq-question-sh">
+                        <span>
+                            How can I track my order?
+                        </span>
+
+                        <span class="faq-plus-sh"></span>
+                    </button>
+
+                    <div class="faq-answer-sh">
+
+                        <p>
+                            You'll receive a tracking link by email as soon as your
+                            order ships. You can also track it from your account's
+                            Order History.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 7 -->
+                <div class="faq-item-sh">
+
+                    <button type="button" class="faq-question-sh">
+                        <span>
+                            Are your shoes true to size?
+                        </span>
+
+                        <span class="faq-plus-sh"></span>
+                    </button>
+
+                    <div class="faq-answer-sh">
+
+                        <p>
+                            Most styles run true to size. Wide-foot customers may
+                            prefer sizing up half a size — details are available
+                            on each product page.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 8 -->
+                <div class="faq-item-sh">
+
+                    <button type="button" class="faq-question-sh">
+                        <span>
+                            How can I contact customer support?
+                        </span>
+
+                        <span class="faq-plus-sh"></span>
+                    </button>
+
+                    <div class="faq-answer-sh">
+
+                        <p>
+                            Reach our team through the Contact Us page, live chat,
+                            or email. Our support team typically responds within
+                            24 hours.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- GET IN TOUCH SECTION -->
+    <section class="contact-section-sh">
+
+        <div class="contact-container-sh">
+
+            <div class="contact-grid-sh">
+
+                <!-- =================================
+           LEFT CONTENT
+      ================================== -->
+
+                <div class="contact-content-sh">
+
+                    <h2 class="contact-title-sh">
+                        Get In
+                        <span>Touch.</span>
+                    </h2>
+
+                    <p class="contact-description-sh">
+                        Have a question about our shoes, your order,
+                        or anything else? Our team is here to help.
+                        Send us a message and we'll get back to you
+                        as soon as possible.
+                    </p>
+
+
+                    <!-- Contact Information -->
+
+                    <div class="contact-info-sh">
+
+                        <!-- Email -->
+
+                        <div class="contact-info-item-sh">
+
+                            <div class="contact-icon-sh">
+
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.7">
+                                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+
+                                    <path d="M3 7L12 13L21 7"></path>
+                                </svg>
+
+                            </div>
+
+                            <div>
+                                <span>Email Us</span>
+
+                                <a href="mailto:hello@steplux.com">
+                                    hello@steplux.com
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Phone -->
+
+                        <div class="contact-info-item-sh">
+
+                            <div class="contact-icon-sh">
+
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.7">
+                                    <path d="M22 16.92V20a2 2 0 0 1-2.18
+                  2 19.79 19.79 0 0 1-8.63-3.07
+                  19.5 19.5 0 0 1-6-6A19.79
+                  19.79 0 0 1 2.12 4.18
+                  2 2 0 0 1 4.11 2h3.09
+                  a2 2 0 0 1 2 1.72
+                  12.84 12.84 0 0 0 .7 2.81
+                  2 2 0 0 1-.45 2.11L8.14
+                  9.91a16 16 0 0 0 6 6l1.27-1.27
+                  a2 2 0 0 1 2.11-.45
+                  12.84 12.84 0 0 0 2.81.7
+                  A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+
+                            </div>
+
+                            <div>
+                                <span>Call Us</span>
+
+                                <a href="tel:+1234567890">
+                                    +1 (234) 567-890
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Location -->
+
+                        <div class="contact-info-item-sh">
+
+                            <div class="contact-icon-sh">
+
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.7">
+                                    <path d="M20 10c0 5-8 12-8 12S4 15 4 10
+                  a8 8 0 1 1 16 0z"></path>
+
+                                    <circle cx="12" cy="10" r="2.5"></circle>
+                                </svg>
+
+                            </div>
+
+                            <div>
+                                <span>Visit Us</span>
+
+                                <p>
+                                    123 Fashion Street, New York
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Social -->
+
+                    <div class="contact-social-sh">
+
+                        <span>Follow Us</span>
+
+                        <div class="contact-social-links-sh">
+
+                            <a href="#" aria-label="Instagram">
+                                IG
+                            </a>
+
+                            <a href="#" aria-label="Facebook">
+                                FB
+                            </a>
+
+                            <a href="#" aria-label="Twitter">
+                                X
+                            </a>
+
+                            <a href="#" aria-label="TikTok">
+                                TK
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+           RIGHT FORM
+      ================================== -->
+
+                <div class="contact-form-wrapper-sh">
+
+                    <div class="contact-form-header-sh">
+
+                        <h3>
+                            Send Us A Message
+                        </h3>
+
+                        <p>
+                            Fill out the form below and we'll
+                            get back to you shortly.
+                        </p>
+
+                    </div>
+
+
+                    <form class="contact-form-sh">
+
+                        <!-- Name + Email -->
+
+                        <div class="contact-form-row-sh">
+
+                            <div class="contact-field-sh">
+
+                                <label for="contact-name-sh">
+                                    Your Name
+                                </label>
+
+                                <input type="text" id="contact-name-sh" name="name" placeholder="Enter your name"
+                                    required>
+
+                            </div>
+
+
+                            <div class="contact-field-sh">
+
+                                <label for="contact-email-sh">
+                                    Email Address
+                                </label>
+
+                                <input type="email" id="contact-email-sh" name="email" placeholder="Enter your email"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Phone + Subject -->
+
+                        <div class="contact-form-row-sh">
+
+                            <div class="contact-field-sh">
+
+                                <label for="contact-phone-sh">
+                                    Phone Number
+                                </label>
+
+                                <input type="tel" id="contact-phone-sh" name="phone" placeholder="+1 234 567 890">
+
+                            </div>
+
+
+                            <div class="contact-field-sh">
+
+                                <label for="contact-subject-sh">
+                                    Subject
+                                </label>
+
+                                <select id="contact-subject-sh" name="subject">
+
+                                    <option value="">
+                                        Select subject
+                                    </option>
+
+                                    <option value="order">
+                                        Order Inquiry
+                                    </option>
+
+                                    <option value="shipping">
+                                        Shipping
+                                    </option>
+
+                                    <option value="returns">
+                                        Returns & Exchange
+                                    </option>
+
+                                    <option value="product">
+                                        Product Question
+                                    </option>
+
+                                    <option value="other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Message -->
+
+                        <div class="contact-field-sh">
+
+                            <label for="contact-message-sh">
+                                Your Message
+                            </label>
+
+                            <textarea id="contact-message-sh" name="message" rows="6"
+                                placeholder="Write your message here..." required></textarea>
+
+                        </div>
+
+
+                        <!-- Submit -->
+
+                        <button type="submit" class="contact-submit-sh">
+
+                            Send Message
+
+                            <span>→</span>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- footer -->
+    <footer class="footer-sh">
+
+        <div class="footer-container-sh">
+
+            <!-- Footer Top -->
+            <div class="footer-top-sh">
+
+                <!-- Brand -->
+                <div class="footer-brand-sh">
+
+                    <a href="#" class="footer-logo-sh">
+                        STEPLUX
+                    </a>
+
+                    <p class="footer-description-sh">
+                        Step into comfort, quality and style.
+                        Discover premium shoes designed for
+                        everyday movement.
+                    </p>
+
+                    <!-- Social Icons -->
+                    <div class="footer-social-sh">
+
+                        <a href="#" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.7">
+                                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+
+                                <circle cx="12" cy="12" r="4"></circle>
+
+                                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+                            </svg>
+                        </a>
+
+
+                        <a href="#" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14 8h3V4h-3c-3.3 0-5 1.7-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V9c0-.7.3-1 1-1z" />
+                            </svg>
+                        </a>
+
+
+                        <a href="#" aria-label="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.7">
+                                <path d="M18 3h3l-6.5 7.4L22 21h-6.2l-4.8-6.2L5.5 21H2.5l7-8L2 3h6.4l4.3 5.6L18 3z" />
+                            </svg>
+                        </a>
+
+
+                        <a href="#" aria-label="TikTok">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.7">
+                                <path
+                                    d="M15 4c.5 2.4 2 3.8 4 4.1V11c-1.5 0-2.9-.5-4-1.3v6.4a5 5 0 1 1-4.3-5v2.9a2.2 2.2 0 1 0 1.4 2.1V4H15z" />
+                            </svg>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Shop -->
+                <div class="footer-column-sh">
+
+                    <h3>SHOP</h3>
+
+                    <ul>
+                        <li>
+                            <a href="/collection.html">Men</a>
+                        </li>
+
+                        <li>
+                            <a href="/collection.html">Women</a>
+                        </li>
+
+                        <li>
+                            <a href="/collection.html">New Arrivals</a>
+                        </li>
+
+                        <li>
+                            <a href="/collection.html">Best Sellers</a>
+                        </li>
+
+                        <li>
+                            <a href="/collection.html">Hot Deals</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <!-- Company -->
+                <div class="footer-column-sh">
+
+                    <h3>COMPANY</h3>
+
+                    <ul>
+                        <li>
+                            <a href="/about.html">About Us</a>
+                        </li>
+
+                        <li>
+                            <a href="/our-story.html">Our Story</a>
+                        </li>
+
+                        <li>
+                            <a href="/contact.html">Contact</a>
+                        </li>
+
+                        <li>
+                            <a href="/review.html">Reviews</a>
+                        </li>
+
+                        <li>
+                            <a href="/faq.html">FAQs</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <!-- Support -->
+                <div class="footer-column-sh">
+
+                    <h3>SUPPORT</h3>
+
+                    <ul>
+                        <li>
+                            <a href="/shipping.html">Shipping & Delivery</a>
+                        </li>
+
+                        <li>
+                            <a href="/retrens.html">Returns & Exchanges</a>
+                        </li>
+
+                        <li>
+                            <a href="/track-order.html">Track Order</a>
+                        </li>
+
+                        <li>
+                            <a href="/help.html">Help Center</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <!-- Newsletter -->
+                <div class="footer-newsletter-sh">
+
+                    <h3>STAY IN THE LOOP</h3>
+
+                    <p>
+                        Subscribe to get exclusive offers,
+                        new arrivals and latest updates.
+                    </p>
+
+                    <form class="footer-form-sh">
+
+                        <input type="email" placeholder="Your email address" aria-label="Email address" required>
+
+                        <button type="submit">
+                            →
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom-sh">
+
+                <p>
+                    © 2026 STEPLUX. All rights reserved.
+                </p>
+
+                <div class="footer-bottom-links-sh">
+
+                    <a href="/privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="/trem-conditions.html">
+                        Terms & Conditions
+                    </a>
+
+                    <a href="/refund-policy.html">
+                        Refund Policy
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const product3DSlider = new Swiper(".product-3d-swiper-sh", {
+
+                effect: "coverflow",
+
+                centeredSlides: true,
+
+                initialSlide: 0,
+
+                slidesPerView: "auto",
+
+                loop: true,
+
+                grabCursor: true,
+
+                speed: 1200,
+
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false
+                },
+
+                coverflowEffect: {
+                    rotate: 12,
+                    stretch: 0,
+                    depth: 180,
+                    modifier: 1.2,
+                    slideShadows: false
+                },
+
+                navigation: {
+                    nextEl: ".product-3d-next-sh",
+                    prevEl: ".product-3d-prev-sh"
+                },
+
+                pagination: {
+                    el: ".product-3d-pagination-sh",
+                    clickable: true
+                }
+
+            });
+
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+    <!-- <script>
+        document.querySelectorAll(".hot-deals-sh .mySwiper").forEach(function (slider) {
+            new Swiper(slider, {
+                effect: "cube",
+                loop: true,
+                grabCursor: true,
+
+                speed: 1800,
+
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false
+                },
+
+                cubeEffect: {
+                    shadow: false,
+                    slideShadows: false
+                }
+            });
+        });
+    </script> -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const hamburger = document.getElementById("hamburger-sh");
+            const drawer = document.getElementById("mobile-drawer-sh");
+            const overlay = document.getElementById("mobile-menu-overlay-sh");
+            const closeButton = document.getElementById("mobile-close-sh");
+
+            function openMenu() {
+                drawer.classList.add("active");
+                overlay.classList.add("active");
+
+                document.body.style.overflow = "hidden";
+            }
+
+            function closeMenu() {
+                drawer.classList.remove("active");
+                overlay.classList.remove("active");
+
+                document.body.style.overflow = "";
+            }
+
+            hamburger.addEventListener("click", openMenu);
+
+            closeButton.addEventListener("click", closeMenu);
+
+            overlay.addEventListener("click", closeMenu);
+
+
+            /* Close menu when clicking a menu link */
+
+            const mobileLinks = document.querySelectorAll(
+                ".mobile-menu-list-sh a, .mobile-shop-button-sh a"
+            );
+
+            mobileLinks.forEach(function (link) {
+                link.addEventListener("click", closeMenu);
+            });
+
+
+            /* ESC key */
+
+            document.addEventListener("keydown", function (event) {
+                if (event.key === "Escape") {
+                    closeMenu();
+                }
+            });
+
+        });
+    </script>
+
+    <script>
+        (function () {
+            "use strict";
+
+            /* =========================================
+               REVIEWS SLIDER
+            ========================================= */
+
+            const reviewTrack = document.getElementById("reviewsTrackSh");
+            const reviewDots = document.getElementById("reviewsDotsSh");
+            const reviewSlides = reviewTrack.querySelectorAll(".reviews-slide-sh");
+
+            const previousButton = document.getElementById("reviewsPrevSh");
+            const nextButton = document.getElementById("reviewsNextSh");
+
+            let currentReview = 0;
+
+
+            function updateReviews() {
+
+                reviewTrack.style.transform =
+                    "translateX(-" + (currentReview * 100) + "%)";
+
+                reviewDots
+                    .querySelectorAll("button")
+                    .forEach(function (dot, index) {
+
+                        dot.classList.toggle(
+                            "active",
+                            index === currentReview
+                        );
+
+                    });
+
+            }
+
+
+            nextButton.addEventListener("click", function () {
+
+                currentReview =
+                    (currentReview + 1) % reviewSlides.length;
+
+                updateReviews();
+
+            });
+
+
+            previousButton.addEventListener("click", function () {
+
+                currentReview =
+                    (currentReview - 1 + reviewSlides.length)
+                    % reviewSlides.length;
+
+                updateReviews();
+
+            });
+
+
+            reviewDots
+                .querySelectorAll("button")
+                .forEach(function (dot, index) {
+
+                    dot.addEventListener("click", function () {
+
+                        currentReview = index;
+
+                        updateReviews();
+
+                    });
+
+                });
+
+
+
+            /* =========================================
+               FAQ ACCORDION
+            ========================================= */
+
+            const faqList = document.getElementById("faqListSh");
+
+            const faqItems =
+                faqList.querySelectorAll(".faq-item-sh");
+
+
+            faqItems.forEach(function (item) {
+
+                const question =
+                    item.querySelector(".faq-question-sh");
+
+                const answer =
+                    item.querySelector(".faq-answer-sh");
+
+
+                question.addEventListener("click", function () {
+
+                    const alreadyOpen =
+                        item.classList.contains("open");
+
+
+                    /* Close all FAQ items */
+
+                    faqItems.forEach(function (faqItem) {
+
+                        faqItem.classList.remove("open");
+
+                        faqItem
+                            .querySelector(".faq-answer-sh")
+                            .style.maxHeight = null;
+
+                    });
+
+
+                    /* Open selected FAQ */
+
+                    if (!alreadyOpen) {
+
+                        item.classList.add("open");
+
+                        answer.style.maxHeight =
+                            answer.scrollHeight + "px";
+
+                    }
+
+                });
+
+            });
+
+        })();
+    </script>
+
+    <script>
+        document.querySelector(".contact-form-sh").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const button = this.querySelector(".contact-submit-sh");
+
+            button.innerHTML = "Message Sent ✓";
+
+            button.style.background = "#16883d";
+
+            setTimeout(function () {
+                button.innerHTML = 'Send Message <span>→</span>';
+                button.style.background = "#ff1f26";
+            }, 2500);
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            /* =================================
+               SEARCH
+            ================================= */
+
+            const searchOpen = document.getElementById(
+                "search-open-sh"
+            );
+
+            const searchClose = document.getElementById(
+                "search-close-sh"
+            );
+
+            const searchOverlay = document.getElementById(
+                "search-overlay-sh"
+            );
+
+            const searchInput = document.getElementById(
+                "search-input-sh"
+            );
+
+
+            function openSearch() {
+
+                searchOverlay.classList.add("active");
+
+                document.body.classList.add(
+                    "sh-no-scroll"
+                );
+
+                setTimeout(function () {
+                    searchInput.focus();
+                }, 350);
+
+            }
+
+
+            function closeSearch() {
+
+                searchOverlay.classList.remove("active");
+
+                document.body.classList.remove(
+                    "sh-no-scroll"
+                );
+
+            }
+
+
+            searchOpen.addEventListener(
+                "click",
+                openSearch
+            );
+
+
+            searchClose.addEventListener(
+                "click",
+                closeSearch
+            );
+
+
+            /* Click outside search box */
+
+            searchOverlay.addEventListener(
+                "click",
+                function (event) {
+
+                    if (
+                        event.target === searchOverlay
+                    ) {
+                        closeSearch();
+                    }
+
+                }
+            );
+
+
+            /* =================================
+               CART DRAWER
+            ================================= */
+
+            const cartOpen = document.getElementById(
+                "cart-open-sh"
+            );
+
+            const cartClose = document.getElementById(
+                "cart-close-sh"
+            );
+
+            const cartDrawer = document.getElementById(
+                "cart-drawer-sh"
+            );
+
+            const cartOverlay = document.getElementById(
+                "cart-drawer-overlay-sh"
+            );
+
+
+            function openCart() {
+
+                cartDrawer.classList.add("active");
+
+                cartOverlay.classList.add("active");
+
+                cartDrawer.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+                document.body.classList.add(
+                    "sh-no-scroll"
+                );
+
+            }
+
+
+            function closeCart() {
+
+                cartDrawer.classList.remove("active");
+
+                cartOverlay.classList.remove("active");
+
+                cartDrawer.setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+
+                document.body.classList.remove(
+                    "sh-no-scroll"
+                );
+
+            }
+
+
+            cartOpen.addEventListener(
+                "click",
+                openCart
+            );
+
+
+            cartClose.addEventListener(
+                "click",
+                closeCart
+            );
+
+
+            cartOverlay.addEventListener(
+                "click",
+                closeCart
+            );
+
+
+            /* =================================
+               ESC KEY
+            ================================= */
+
+            document.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (event.key === "Escape") {
+
+                        closeSearch();
+
+                        closeCart();
+
+                    }
+
+                }
+            );
+
+
+            /* =================================
+               BODY SCROLL LOCK
+            ================================= */
+
+        });
+    </script>
+
+</body>
+
+</html>

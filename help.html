@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/help.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header-shoes">
+        <div class="container-sh">
+            <div class="row-sh">
+
+                <!-- Logo -->
+                <div class="logo-sh">
+                    <h3>StepLux</h3>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="menu-list-sh">
+                    <ul>
+                        <li><a href="/home.html">Home</a></li>
+                        <li><a href="/collection.html">Collection</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Desktop / Mobile Right Icons -->
+                <div class="icons-sh">
+
+
+                    <!-- Search -->
+                    <div class="search-sh">
+                        <button type="button" id="search-open-sh" aria-label="Open Search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                <path
+                                    d="M544 513L397.2 364.2C417.2 336.3 429.1 302 429.1 265C429.1 171.9 354.4 96.1 262.6 96.1C170.7 96 96 171.8 96 264.9C96 358 170.7 433.8 262.5 433.8C302.3 433.8 338.8 419.6 367.5 395.9L513.5 544L544 513zM262.5 394.8C191.9 394.8 134.4 336.5 134.4 264.9C134.4 193.3 191.9 135 262.5 135C333.1 135 390.6 193.3 390.6 264.9C390.6 336.5 333.2 394.8 262.5 394.8z" />
+                            </svg>
+                        </button>
+                    </div>
+
+
+                    <!-- Cart -->
+                    <div class="cart-sh">
+                        <button type="button" id="cart-open-sh" aria-label="Open Cart">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                <path
+                                    d="M331.8 504.4C331.1 487.5 339.7 471.7 354.2 463C368.7 454.4 386.7 454.5 401.2 463.2C415.6 471.9 424.1 487.8 423.3 504.7C424 521.6 415.4 537.4 400.9 546.1C386.4 554.7 368.4 554.6 353.9 545.9C339.5 537.2 331 521.3 331.8 504.4zM169.4 458.9C152.6 458.2 136.7 466.7 128.1 481.2C119.5 495.7 119.6 513.7 128.3 528.1C137 542.6 152.9 551 169.7 550.2C186.5 550.9 202.4 542.4 211 527.9C219.6 513.4 219.5 495.4 210.8 481C202.1 466.5 186.2 458.1 169.4 458.9zM461.1 188.9C158.9 188.9 81.9 176.1 0 89.7C34.4 141.4 53.3 238.6 373.1 233.9C706.4 228.9 503.1 320 443.9 422.8C630.6 256.1 763.3 188.9 461.1 188.9z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Desktop Button -->
+                    <div class="button-sh">
+                        <a href="#">Shop Now</a>
+                    </div>
+
+                    <!-- Mobile Hamburger -->
+                    <button class="hamburger-sh" id="hamburger-sh" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Search Overlay -->
+    <div class="search-overlay-sh" id="search-overlay-sh">
+
+        <div class="search-overlay-inner-sh">
+
+            <div class="search-overlay-top-sh">
+
+                <span>SEARCH</span>
+
+                <button type="button" id="search-close-sh" aria-label="Close Search">
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+
+            <form class="search-form-sh" action="/search.html" method="get">
+
+                <input type="search" name="q" id="search-input-sh" placeholder="What are you looking for?"
+                    autocomplete="off">
+
+                <button type="submit" aria-label="Submit Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                        <path
+                            d="M544 513L397.2 364.2C417.2 336.3 429.1 302 429.1 265C429.1 171.9 354.4 96.1 262.6 96.1C170.7 96 96 171.8 96 264.9C96 358 170.7 433.8 262.5 433.8C302.3 433.8 338.8 419.6 367.5 395.9L513.5 544L544 513zM262.5 394.8C191.9 394.8 134.4 336.5 134.4 264.9C134.4 193.3 191.9 135 262.5 135C333.1 135 390.6 193.3 390.6 264.9C390.6 336.5 333.2 394.8 262.5 394.8z" />
+                    </svg>
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+    <!-- Cart Overlay -->
+    <div class="cart-drawer-overlay-sh" id="cart-drawer-overlay-sh"></div>
+    <!-- Cart Drawer -->
+    <aside class="cart-drawer-sh" id="cart-drawer-sh" aria-hidden="true">
+
+        <div class="cart-drawer-header-sh">
+
+            <div>
+                <span class="cart-drawer-label-sh">
+                    YOUR CART
+                </span>
+
+                <h2>
+                    CART
+                </h2>
+            </div>
+
+            <button type="button" class="cart-drawer-close-sh" id="cart-close-sh" aria-label="Close cart">
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+
+        <!-- Cart Items -->
+        <div class="cart-drawer-items-sh" id="cart-drawer-items-sh">
+
+            <!-- Example Cart Item -->
+
+            <div class="cart-item-sh">
+
+                <div class="cart-item-image-sh">
+
+                    <img src="https://placehold.co/180x220" alt="Product">
+
+                </div>
+
+                <div class="cart-item-info-sh">
+
+                    <div class="cart-item-top-sh">
+
+                        <h3>
+                            Premium Essential
+                        </h3>
+
+                        <button type="button" class="cart-item-remove-sh">
+                            ×
+                        </button>
+
+                    </div>
+
+                    <span class="cart-item-option-sh">
+                        Size: M
+                    </span>
+
+                    <div class="cart-item-bottom-sh">
+
+                        <div class="cart-item-quantity-sh">
+
+                            <button type="button">
+                                −
+                            </button>
+
+                            <span>1</span>
+
+                            <button type="button">
+                                +
+                            </button>
+
+                        </div>
+
+                        <strong>
+                            $49.00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Empty Cart -->
+        <div class="cart-empty-sh" id="cart-empty-sh">
+
+            <div class="cart-empty-icon-sh">
+                ◇
+            </div>
+
+            <h3>
+                YOUR CART IS EMPTY
+            </h3>
+
+            <p>
+                Looks like you haven't added anything yet.
+            </p>
+
+            <a href="/collection.html">
+                SHOP COLLECTION
+                <span>↗</span>
+            </a>
+
+        </div>
+
+
+        <!-- Cart Footer -->
+        <div class="cart-drawer-footer-sh">
+
+            <div class="cart-subtotal-sh">
+
+                <span>
+                    SUBTOTAL
+                </span>
+
+                <strong>
+                    $49.00
+                </strong>
+
+            </div>
+
+            <p>
+                Shipping and taxes calculated at checkout.
+            </p>
+
+            <a href="/checkout.html" class="cart-checkout-sh">
+                CHECKOUT
+                <span>↗</span>
+            </a>
+
+            <a href="/cart.html" class="cart-view-sh">
+                VIEW CART
+            </a>
+
+        </div>
+
+    </aside>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay-sh" id="mobile-menu-overlay-sh"></div>
+    <!-- Mobile Side Drawer -->
+    <aside class="mobile-drawer-sh" id="mobile-drawer-sh">
+
+        <div class="mobile-drawer-header-sh">
+            <div class="mobile-drawer-logo-sh">
+                <h3>StepLux</h3>
+            </div>
+
+            <button class="mobile-close-sh" id="mobile-close-sh" aria-label="Close menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="mobile-menu-list-sh">
+            <ul>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/collection.html">Collection</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="mobile-shop-button-sh">
+            <a href="#">Shop Now</a>
+        </div>
+
+    </aside>
+    <!-- hero section -->
+    <section class="help-hero-sh">
+
+        <div class="help-hero-container-sh">
+
+            <div class="help-hero-top-sh">
+                <span>HELP CENTER</span>
+                <span>WE'RE HERE TO HELP</span>
+            </div>
+
+            <div class="help-hero-content-sh">
+
+                <div class="help-hero-heading-sh">
+                    <span>HOW</span>
+                    <span>CAN WE</span>
+                    <span>HELP?</span>
+                </div>
+
+                <div class="help-hero-side-sh">
+
+                    <div class="help-hero-icon-sh">
+                        ?
+                    </div>
+
+                    <p>
+                        Find answers, get product information, track your
+                        order or connect with our support team.
+                    </p>
+
+                    <form class="help-search-sh">
+
+                        <input type="search" placeholder="Search for help..." aria-label="Search help center">
+
+                        <button type="submit" aria-label="Search">
+                            ↗
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="help-hero-bottom-sh">
+
+                <span>ORDERS</span>
+                <span>SHIPPING</span>
+                <span>RETURNS</span>
+                <span>PRODUCTS</span>
+                <span>SUPPORT</span>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Help Categories -->
+    <section class="help-categories-sh">
+
+        <div class="help-categories-container-sh">
+
+            <div class="help-categories-heading-sh">
+
+                <div class="help-categories-label-sh">
+                    <span></span>
+                    BROWSE BY TOPIC
+                </div>
+
+                <h2>
+                    FIND THE
+                    <span>RIGHT HELP.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="help-categories-grid-sh">
+
+                <!-- CARD 01 -->
+                <a href="/pages/order-help" class="help-category-card-sh">
+
+                    <div class="help-category-top-sh">
+                        <span>01</span>
+
+                        <div class="help-category-icon-sh">↗</div>
+                    </div>
+
+                    <div class="help-category-content-sh">
+
+                        <h3>ORDERS</h3>
+
+                        <p>
+                            Questions about placing, changing or
+                            managing your order.
+                        </p>
+
+                    </div>
+
+                    <div class="help-category-bottom-sh">
+                        <span>ORDER HELP</span>
+                        <strong>→</strong>
+                    </div>
+
+                </a>
+
+
+                <!-- CARD 02 -->
+                <a href="/pages/shipping" class="help-category-card-sh">
+
+                    <div class="help-category-top-sh">
+                        <span>02</span>
+
+                        <div class="help-category-icon-sh">↗</div>
+                    </div>
+
+                    <div class="help-category-content-sh">
+
+                        <h3>SHIPPING</h3>
+
+                        <p>
+                            Find information about delivery times,
+                            tracking and shipping options.
+                        </p>
+
+                    </div>
+
+                    <div class="help-category-bottom-sh">
+                        <span>DELIVERY HELP</span>
+                        <strong>→</strong>
+                    </div>
+
+                </a>
+
+
+                <!-- CARD 03 -->
+                <a href="/pages/returns-exchanges" class="help-category-card-sh">
+
+                    <div class="help-category-top-sh">
+                        <span>03</span>
+
+                        <div class="help-category-icon-sh">↗</div>
+                    </div>
+
+                    <div class="help-category-content-sh">
+
+                        <h3>RETURNS</h3>
+
+                        <p>
+                            Learn how to return an item or request
+                            an exchange for another size.
+                        </p>
+
+                    </div>
+
+                    <div class="help-category-bottom-sh">
+                        <span>RETURNS & EXCHANGES</span>
+                        <strong>→</strong>
+                    </div>
+
+                </a>
+
+
+                <!-- CARD 04 -->
+                <a href="/pages/payment" class="help-category-card-sh">
+
+                    <div class="help-category-top-sh">
+                        <span>04</span>
+
+                        <div class="help-category-icon-sh">↗</div>
+                    </div>
+
+                    <div class="help-category-content-sh">
+
+                        <h3>PAYMENTS</h3>
+
+                        <p>
+                            Get help with payments, refunds and
+                            payment-related questions.
+                        </p>
+
+                    </div>
+
+                    <div class="help-category-bottom-sh">
+                        <span>PAYMENT HELP</span>
+                        <strong>→</strong>
+                    </div>
+
+                </a>
+
+
+                <!-- CARD 05 -->
+                <a href="/collections/all" class="help-category-card-sh">
+
+                    <div class="help-category-top-sh">
+                        <span>05</span>
+
+                        <div class="help-category-icon-sh">↗</div>
+                    </div>
+
+                    <div class="help-category-content-sh">
+
+                        <h3>PRODUCTS</h3>
+
+                        <p>
+                            Learn more about sizes, fit, materials
+                            and product information.
+                        </p>
+
+                    </div>
+
+                    <div class="help-category-bottom-sh">
+                        <span>PRODUCT HELP</span>
+                        <strong>→</strong>
+                    </div>
+
+                </a>
+
+
+                <!-- CARD 06 -->
+                <a href="/pages/contact" class="help-category-card-sh">
+
+                    <div class="help-category-top-sh">
+                        <span>06</span>
+
+                        <div class="help-category-icon-sh">↗</div>
+                    </div>
+
+                    <div class="help-category-content-sh">
+
+                        <h3>SUPPORT</h3>
+
+                        <p>
+                            Can't find what you're looking for?
+                            Talk directly with our support team.
+                        </p>
+
+                    </div>
+
+                    <div class="help-category-bottom-sh">
+                        <span>CONTACT US</span>
+                        <strong>→</strong>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Popular Questions -->
+    <section class="help-popular-sh" id="popular-help">
+
+        <div class="help-popular-container-sh">
+
+            <div class="help-popular-heading-sh">
+
+                <div class="help-popular-label-sh">
+                    <span></span>
+                    QUICK ANSWERS
+                </div>
+
+                <h2>
+                    POPULAR
+                    <span>QUESTIONS.</span>
+                </h2>
+
+                <p>
+                    Find quick answers to the questions our customers
+                    ask most often.
+                </p>
+
+            </div>
+
+
+            <div class="help-popular-list-sh">
+
+                <!-- FAQ 01 -->
+                <div class="help-popular-item-sh">
+
+                    <button type="button" class="help-popular-question-sh">
+                        <span class="help-popular-number-sh">01</span>
+
+                        <span class="help-popular-question-text-sh">
+                            Where is my order?
+                        </span>
+
+                        <span class="help-popular-plus-sh"></span>
+                    </button>
+
+                    <div class="help-popular-answer-sh">
+                        <p>
+                            You can track your order using your tracking
+                            number from the shipping confirmation email.
+                            If you need additional help, contact our support
+                            team with your order number.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 02 -->
+                <div class="help-popular-item-sh">
+
+                    <button type="button" class="help-popular-question-sh">
+                        <span class="help-popular-number-sh">02</span>
+
+                        <span class="help-popular-question-text-sh">
+                            How long does shipping take?
+                        </span>
+
+                        <span class="help-popular-plus-sh"></span>
+                    </button>
+
+                    <div class="help-popular-answer-sh">
+                        <p>
+                            Delivery times depend on your location and
+                            selected shipping method. You can find your
+                            estimated delivery information during checkout
+                            and in your order confirmation.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 03 -->
+                <div class="help-popular-item-sh">
+
+                    <button type="button" class="help-popular-question-sh">
+                        <span class="help-popular-number-sh">03</span>
+
+                        <span class="help-popular-question-text-sh">
+                            Can I change or cancel my order?
+                        </span>
+
+                        <span class="help-popular-plus-sh"></span>
+                    </button>
+
+                    <div class="help-popular-answer-sh">
+                        <p>
+                            If your order has not been processed yet, our
+                            support team may be able to help. Contact us
+                            as soon as possible with your order number.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 04 -->
+                <div class="help-popular-item-sh">
+
+                    <button type="button" class="help-popular-question-sh">
+                        <span class="help-popular-number-sh">04</span>
+
+                        <span class="help-popular-question-text-sh">
+                            How do I return an item?
+                        </span>
+
+                        <span class="help-popular-plus-sh"></span>
+                    </button>
+
+                    <div class="help-popular-answer-sh">
+                        <p>
+                            Returns can be requested within our return
+                            window. Your item should be unworn, unused and
+                            returned with its original packaging.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 05 -->
+                <div class="help-popular-item-sh">
+
+                    <button type="button" class="help-popular-question-sh">
+                        <span class="help-popular-number-sh">05</span>
+
+                        <span class="help-popular-question-text-sh">
+                            Can I exchange my size?
+                        </span>
+
+                        <span class="help-popular-plus-sh"></span>
+                    </button>
+
+                    <div class="help-popular-answer-sh">
+                        <p>
+                            Yes. If the requested size is available, you
+                            can request an exchange within the applicable
+                            return period.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 06 -->
+                <div class="help-popular-item-sh">
+
+                    <button type="button" class="help-popular-question-sh">
+                        <span class="help-popular-number-sh">06</span>
+
+                        <span class="help-popular-question-text-sh">
+                            When will I receive my refund?
+                        </span>
+
+                        <span class="help-popular-plus-sh"></span>
+                    </button>
+
+                    <div class="help-popular-answer-sh">
+                        <p>
+                            Once your return is received and approved,
+                            the refund is sent to your original payment
+                            method. Your bank may require additional
+                            processing time.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Order Help -->
+    <section class="help-order-sh" id="order-help">
+
+        <div class="help-order-container-sh">
+
+            <div class="help-order-top-sh">
+                <span>ORDER SUPPORT</span>
+                <span>03 — ORDER HELP</span>
+            </div>
+
+            <div class="help-order-header-sh">
+
+                <div class="help-order-title-sh">
+                    <span>YOUR ORDER.</span>
+                    <span>OUR HELP.</span>
+                </div>
+
+                <div class="help-order-intro-sh">
+
+                    <div class="help-order-icon-sh">#</div>
+
+                    <p>
+                        From placing an order to tracking your package,
+                        find everything you need to manage your purchase.
+                    </p>
+
+                    <a href="/pages/track-order" class="help-order-link-sh">
+                        TRACK YOUR ORDER
+                        <span>↗</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="help-order-grid-sh">
+
+                <!-- 01 -->
+                <div class="help-order-card-sh">
+
+                    <div class="help-order-card-top-sh">
+                        <span>01</span>
+                        <span>ORDER</span>
+                    </div>
+
+                    <div class="help-order-card-icon-sh">
+                        +
+                    </div>
+
+                    <h3>PLACE AN ORDER</h3>
+
+                    <p>
+                        Browse our products, choose your preferred size
+                        and complete checkout securely.
+                    </p>
+
+                </div>
+
+
+                <!-- 02 -->
+                <div class="help-order-card-sh">
+
+                    <div class="help-order-card-top-sh">
+                        <span>02</span>
+                        <span>UPDATE</span>
+                    </div>
+
+                    <div class="help-order-card-icon-sh">
+                        ↻
+                    </div>
+
+                    <h3>CHANGE YOUR ORDER</h3>
+
+                    <p>
+                        Need to update your order? Contact our team as
+                        soon as possible before your order is processed.
+                    </p>
+
+                </div>
+
+
+                <!-- 03 -->
+                <div class="help-order-card-sh">
+
+                    <div class="help-order-card-top-sh">
+                        <span>03</span>
+                        <span>STATUS</span>
+                    </div>
+
+                    <div class="help-order-card-icon-sh">
+                        →
+                    </div>
+
+                    <h3>TRACK YOUR ORDER</h3>
+
+                    <p>
+                        Use your tracking information to see the latest
+                        status and estimated delivery of your package.
+                    </p>
+
+                </div>
+
+
+                <!-- 04 -->
+                <div class="help-order-card-sh">
+
+                    <div class="help-order-card-top-sh">
+                        <span>04</span>
+                        <span>PROBLEM?</span>
+                    </div>
+
+                    <div class="help-order-card-icon-sh">
+                        !
+                    </div>
+
+                    <h3>ORDER ISSUE</h3>
+
+                    <p>
+                        Something isn't right with your order?
+                        Our support team is ready to help you resolve it.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="help-order-bottom-sh">
+
+                <span>ORDER NUMBER REQUIRED FOR SUPPORT</span>
+
+                <a href="/pages/contact">
+                    CONTACT SUPPORT ↗
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Shipping & Delivery Help -->
+    <section class="help-shipping-sh" id="shipping-help">
+
+        <div class="help-shipping-container-sh">
+
+            <div class="help-shipping-label-sh">
+                <span></span>
+                SHIPPING & DELIVERY
+            </div>
+
+            <div class="help-shipping-header-sh">
+
+                <h2>
+                    WHERE'S
+                    <span>MY PACKAGE?</span>
+                </h2>
+
+                <p>
+                    Everything you need to know about shipping,
+                    delivery times and tracking your order.
+                </p>
+
+            </div>
+
+
+            <div class="help-shipping-content-sh">
+
+                <!-- LEFT TIMELINE -->
+                <div class="help-shipping-timeline-sh">
+
+                    <div class="help-shipping-step-sh active">
+
+                        <div class="help-shipping-step-number-sh">
+                            01
+                        </div>
+
+                        <div class="help-shipping-step-line-sh"></div>
+
+                        <div class="help-shipping-step-content-sh">
+                            <span>ORDER CONFIRMED</span>
+
+                            <h3>ORDER PLACED</h3>
+
+                            <p>
+                                Your order has been received and is being
+                                prepared by our team.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="help-shipping-step-sh">
+
+                        <div class="help-shipping-step-number-sh">
+                            02
+                        </div>
+
+                        <div class="help-shipping-step-line-sh"></div>
+
+                        <div class="help-shipping-step-content-sh">
+                            <span>PROCESSING</span>
+
+                            <h3>ORDER SHIPPED</h3>
+
+                            <p>
+                                Once your package leaves our warehouse,
+                                you'll receive tracking information.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="help-shipping-step-sh">
+
+                        <div class="help-shipping-step-number-sh">
+                            03
+                        </div>
+
+                        <div class="help-shipping-step-content-sh">
+                            <span>FINAL STEP</span>
+
+                            <h3>OUT FOR DELIVERY</h3>
+
+                            <p>
+                                Your package is on its way and should
+                                arrive according to the estimated delivery date.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT INFO -->
+                <div class="help-shipping-info-sh">
+
+                    <div class="help-shipping-info-card-sh">
+
+                        <div class="help-shipping-info-top-sh">
+                            <span>01</span>
+
+                            <div class="help-shipping-info-icon-sh">
+                                ↗
+                            </div>
+                        </div>
+
+                        <h3>TRACK YOUR ORDER</h3>
+
+                        <p>
+                            Already placed an order? Use your tracking
+                            information to check the latest status of
+                            your package.
+                        </p>
+
+                        <a href="/pages/track-order">
+                            TRACK ORDER
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+
+                    <div class="help-shipping-info-card-sh">
+
+                        <div class="help-shipping-info-top-sh">
+                            <span>02</span>
+
+                            <div class="help-shipping-info-icon-sh">
+                                ?
+                            </div>
+                        </div>
+
+                        <h3>DELIVERY QUESTIONS?</h3>
+
+                        <p>
+                            Having trouble with your delivery or haven't
+                            received your package? Our support team can help.
+                        </p>
+
+                        <a href="/pages/contact">
+                            CONTACT SUPPORT
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="help-shipping-bottom-sh">
+
+                <span>TRACKING AVAILABLE AFTER SHIPMENT</span>
+
+                <span>DELIVERY TIMES MAY VARY BY LOCATION</span>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Returns & Exchanges Help -->
+    <section class="help-returns-sh" id="returns-help">
+
+        <div class="help-returns-container-sh">
+
+            <div class="help-returns-top-sh">
+                <span>RETURNS & EXCHANGES</span>
+                <span>05 — RETURNS HELP</span>
+            </div>
+
+            <div class="help-returns-content-sh">
+
+                <!-- LEFT -->
+                <div class="help-returns-main-sh">
+
+                    <div class="help-returns-label-sh">
+                        <span></span>
+                        NEED A CHANGE?
+                    </div>
+
+                    <h2>
+                        NOT THE
+                        <span>RIGHT FIT?</span>
+                    </h2>
+
+                    <p>
+                        No problem. Find everything you need to know
+                        about returns, exchanges, refunds and getting
+                        the right size.
+                    </p>
+
+                    <a href="/pages/returns-exchanges" class="help-returns-button-sh">
+                        RETURNS & EXCHANGES
+                        <span>↗</span>
+                    </a>
+
+                </div>
+
+
+                <!-- RIGHT -->
+                <div class="help-returns-cards-sh">
+
+                    <!-- CARD 01 -->
+                    <a href="/pages/returns-exchanges" class="help-returns-card-sh">
+
+                        <div class="help-returns-card-number-sh">
+                            01
+                        </div>
+
+                        <div class="help-returns-card-content-sh">
+
+                            <div class="help-returns-card-icon-sh">
+                                ↩
+                            </div>
+
+                            <h3>START A RETURN</h3>
+
+                            <p>
+                                Find out how to send your order back
+                                and what conditions apply.
+                            </p>
+
+                        </div>
+
+                        <span class="help-returns-arrow-sh">↗</span>
+
+                    </a>
+
+
+                    <!-- CARD 02 -->
+                    <a href="/pages/returns-exchanges" class="help-returns-card-sh">
+
+                        <div class="help-returns-card-number-sh">
+                            02
+                        </div>
+
+                        <div class="help-returns-card-content-sh">
+
+                            <div class="help-returns-card-icon-sh">
+                                ↔
+                            </div>
+
+                            <h3>EXCHANGE A SIZE</h3>
+
+                            <p>
+                                Need another size? Learn how our
+                                exchange process works.
+                            </p>
+
+                        </div>
+
+                        <span class="help-returns-arrow-sh">↗</span>
+
+                    </a>
+
+
+                    <!-- CARD 03 -->
+                    <a href="/pages/contact" class="help-returns-card-sh">
+
+                        <div class="help-returns-card-number-sh">
+                            03
+                        </div>
+
+                        <div class="help-returns-card-content-sh">
+
+                            <div class="help-returns-card-icon-sh">
+                                $
+                            </div>
+
+                            <h3>REFUND HELP</h3>
+
+                            <p>
+                                Questions about your refund?
+                                Our support team can help.
+                            </p>
+
+                        </div>
+
+                        <span class="help-returns-arrow-sh">↗</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="help-returns-bottom-sh">
+
+                <div>
+                    <strong>30</strong>
+                    <span>DAYS TO RETURN</span>
+                </div>
+
+                <div>
+                    <strong>01</strong>
+                    <span>SIMPLE PROCESS</span>
+                </div>
+
+                <div>
+                    <strong>24/7</strong>
+                    <span>HELP AVAILABLE</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Still Need Help -->
+    <section class="help-contact-sh" id="help-contact">
+
+        <div class="help-contact-container-sh">
+
+            <div class="help-contact-top-sh">
+                <span>CAN'T FIND YOUR ANSWER?</span>
+                <span>06 — SUPPORT</span>
+            </div>
+
+            <div class="help-contact-content-sh">
+
+                <div class="help-contact-heading-sh">
+                    <span>STILL NEED</span>
+                    <span>HELP?</span>
+                </div>
+
+                <div class="help-contact-side-sh">
+
+                    <div class="help-contact-icon-sh">
+                        ↗
+                    </div>
+
+                    <p>
+                        Couldn't find what you were looking for?
+                        Our support team is ready to help with your
+                        order, product or any other questions.
+                    </p>
+
+                    <div class="help-contact-actions-sh">
+
+                        <a href="/pages/contact" class="help-contact-primary-sh">
+                            CONTACT SUPPORT
+                            <span>↗</span>
+                        </a>
+
+                        <a href="mailto:support@example.com" class="help-contact-secondary-sh">
+                            EMAIL US
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="help-contact-bottom-sh">
+
+                <div>
+                    <span>01</span>
+                    <p>QUICK RESPONSE</p>
+                </div>
+
+                <div>
+                    <span>02</span>
+                    <p>REAL HUMAN SUPPORT</p>
+                </div>
+
+                <div>
+                    <span>03</span>
+                    <p>HERE WHEN YOU NEED US</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- footer -->
+    <footer class="footer-sh">
+
+        <div class="footer-container-sh">
+
+            <!-- Footer Top -->
+            <div class="footer-top-sh">
+
+                <!-- Brand -->
+                <div class="footer-brand-sh">
+
+                    <a href="#" class="footer-logo-sh">
+                        STEPLUX
+                    </a>
+
+                    <p class="footer-description-sh">
+                        Step into comfort, quality and style.
+                        Discover premium shoes designed for
+                        everyday movement.
+                    </p>
+
+                    <!-- Social Icons -->
+                    <div class="footer-social-sh">
+
+                        <a href="#" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.7">
+                                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+
+                                <circle cx="12" cy="12" r="4"></circle>
+
+                                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+                            </svg>
+                        </a>
+
+
+                        <a href="#" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14 8h3V4h-3c-3.3 0-5 1.7-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V9c0-.7.3-1 1-1z" />
+                            </svg>
+                        </a>
+
+
+                        <a href="#" aria-label="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.7">
+                                <path d="M18 3h3l-6.5 7.4L22 21h-6.2l-4.8-6.2L5.5 21H2.5l7-8L2 3h6.4l4.3 5.6L18 3z" />
+                            </svg>
+                        </a>
+
+
+                        <a href="#" aria-label="TikTok">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.7">
+                                <path
+                                    d="M15 4c.5 2.4 2 3.8 4 4.1V11c-1.5 0-2.9-.5-4-1.3v6.4a5 5 0 1 1-4.3-5v2.9a2.2 2.2 0 1 0 1.4 2.1V4H15z" />
+                            </svg>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Shop -->
+                <div class="footer-column-sh">
+
+                    <h3>SHOP</h3>
+
+                    <ul>
+                        <li>
+                            <a href="/collection.html">Men</a>
+                        </li>
+
+                        <li>
+                            <a href="/collection.html">Women</a>
+                        </li>
+
+                        <li>
+                            <a href="/collection.html">New Arrivals</a>
+                        </li>
+
+                        <li>
+                            <a href="/collection.html">Best Sellers</a>
+                        </li>
+
+                        <li>
+                            <a href="/collection.html">Hot Deals</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <!-- Company -->
+                <div class="footer-column-sh">
+
+                    <h3>COMPANY</h3>
+
+                    <ul>
+                        <li>
+                            <a href="/about.html">About Us</a>
+                        </li>
+
+                        <li>
+                            <a href="/our-story.html">Our Story</a>
+                        </li>
+
+                        <li>
+                            <a href="/contact.html">Contact</a>
+                        </li>
+
+                        <li>
+                            <a href="/review.html">Reviews</a>
+                        </li>
+
+                        <li>
+                            <a href="/faq.html">FAQs</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <!-- Support -->
+                <div class="footer-column-sh">
+
+                    <h3>SUPPORT</h3>
+
+                    <ul>
+                        <li>
+                            <a href="/shipping.html">Shipping & Delivery</a>
+                        </li>
+
+                        <li>
+                            <a href="/retrens.html">Returns & Exchanges</a>
+                        </li>
+
+                        <li>
+                            <a href="/track-order.html">Track Order</a>
+                        </li>
+
+                        <li>
+                            <a href="/help.html">Help Center</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <!-- Newsletter -->
+                <div class="footer-newsletter-sh">
+
+                    <h3>STAY IN THE LOOP</h3>
+
+                    <p>
+                        Subscribe to get exclusive offers,
+                        new arrivals and latest updates.
+                    </p>
+
+                    <form class="footer-form-sh">
+
+                        <input type="email" placeholder="Your email address" aria-label="Email address" required>
+
+                        <button type="submit">
+                            →
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom-sh">
+
+                <p>
+                    © 2026 STEPLUX. All rights reserved.
+                </p>
+
+                <div class="footer-bottom-links-sh">
+
+                    <a href="/privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="/trem-conditions.html">
+                        Terms & Conditions
+                    </a>
+
+                    <a href="/refund-policy.html">
+                        Refund Policy
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const faqItems = document.querySelectorAll(
+                ".help-popular-item-sh"
+            );
+
+            faqItems.forEach(function (item) {
+
+                const button = item.querySelector(
+                    ".help-popular-question-sh"
+                );
+
+                const answer = item.querySelector(
+                    ".help-popular-answer-sh"
+                );
+
+                button.addEventListener("click", function () {
+
+                    const isActive = item.classList.contains("active");
+
+                    // Close all FAQs
+                    faqItems.forEach(function (faq) {
+
+                        faq.classList.remove("active");
+
+                        const faqAnswer = faq.querySelector(
+                            ".help-popular-answer-sh"
+                        );
+
+                        faqAnswer.style.maxHeight = null;
+
+                    });
+
+                    // Open clicked FAQ
+                    if (!isActive) {
+
+                        item.classList.add("active");
+
+                        answer.style.maxHeight =
+                            answer.scrollHeight + "px";
+
+                    }
+
+                });
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>

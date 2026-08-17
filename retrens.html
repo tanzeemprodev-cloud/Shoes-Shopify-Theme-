@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/retrens.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header-shoes">
+        <div class="container-sh">
+            <div class="row-sh">
+
+                <!-- Logo -->
+                <div class="logo-sh">
+                    <h3>StepLux</h3>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="menu-list-sh">
+                    <ul>
+                        <li><a href="/home.html">Home</a></li>
+                        <li><a href="/collection.html">Collection</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Desktop / Mobile Right Icons -->
+                <div class="icons-sh">
+
+
+                    <!-- Search -->
+                    <div class="search-sh">
+                        <button type="button" id="search-open-sh" aria-label="Open Search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                <path
+                                    d="M544 513L397.2 364.2C417.2 336.3 429.1 302 429.1 265C429.1 171.9 354.4 96.1 262.6 96.1C170.7 96 96 171.8 96 264.9C96 358 170.7 433.8 262.5 433.8C302.3 433.8 338.8 419.6 367.5 395.9L513.5 544L544 513zM262.5 394.8C191.9 394.8 134.4 336.5 134.4 264.9C134.4 193.3 191.9 135 262.5 135C333.1 135 390.6 193.3 390.6 264.9C390.6 336.5 333.2 394.8 262.5 394.8z" />
+                            </svg>
+                        </button>
+                    </div>
+
+
+                    <!-- Cart -->
+                    <div class="cart-sh">
+                        <button type="button" id="cart-open-sh" aria-label="Open Cart">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                <path
+                                    d="M331.8 504.4C331.1 487.5 339.7 471.7 354.2 463C368.7 454.4 386.7 454.5 401.2 463.2C415.6 471.9 424.1 487.8 423.3 504.7C424 521.6 415.4 537.4 400.9 546.1C386.4 554.7 368.4 554.6 353.9 545.9C339.5 537.2 331 521.3 331.8 504.4zM169.4 458.9C152.6 458.2 136.7 466.7 128.1 481.2C119.5 495.7 119.6 513.7 128.3 528.1C137 542.6 152.9 551 169.7 550.2C186.5 550.9 202.4 542.4 211 527.9C219.6 513.4 219.5 495.4 210.8 481C202.1 466.5 186.2 458.1 169.4 458.9zM461.1 188.9C158.9 188.9 81.9 176.1 0 89.7C34.4 141.4 53.3 238.6 373.1 233.9C706.4 228.9 503.1 320 443.9 422.8C630.6 256.1 763.3 188.9 461.1 188.9z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Desktop Button -->
+                    <div class="button-sh">
+                        <a href="#">Shop Now</a>
+                    </div>
+
+                    <!-- Mobile Hamburger -->
+                    <button class="hamburger-sh" id="hamburger-sh" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Search Overlay -->
+    <div class="search-overlay-sh" id="search-overlay-sh">
+
+        <div class="search-overlay-inner-sh">
+
+            <div class="search-overlay-top-sh">
+
+                <span>SEARCH</span>
+
+                <button type="button" id="search-close-sh" aria-label="Close Search">
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+
+            <form class="search-form-sh" action="/search.html" method="get">
+
+                <input type="search" name="q" id="search-input-sh" placeholder="What are you looking for?"
+                    autocomplete="off">
+
+                <button type="submit" aria-label="Submit Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                        <path
+                            d="M544 513L397.2 364.2C417.2 336.3 429.1 302 429.1 265C429.1 171.9 354.4 96.1 262.6 96.1C170.7 96 96 171.8 96 264.9C96 358 170.7 433.8 262.5 433.8C302.3 433.8 338.8 419.6 367.5 395.9L513.5 544L544 513zM262.5 394.8C191.9 394.8 134.4 336.5 134.4 264.9C134.4 193.3 191.9 135 262.5 135C333.1 135 390.6 193.3 390.6 264.9C390.6 336.5 333.2 394.8 262.5 394.8z" />
+                    </svg>
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+    <!-- Cart Overlay -->
+    <div class="cart-drawer-overlay-sh" id="cart-drawer-overlay-sh"></div>
+    <!-- Cart Drawer -->
+    <aside class="cart-drawer-sh" id="cart-drawer-sh" aria-hidden="true">
+
+        <div class="cart-drawer-header-sh">
+
+            <div>
+                <span class="cart-drawer-label-sh">
+                    YOUR CART
+                </span>
+
+                <h2>
+                    CART
+                </h2>
+            </div>
+
+            <button type="button" class="cart-drawer-close-sh" id="cart-close-sh" aria-label="Close cart">
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+
+        <!-- Cart Items -->
+        <div class="cart-drawer-items-sh" id="cart-drawer-items-sh">
+
+            <!-- Example Cart Item -->
+
+            <div class="cart-item-sh">
+
+                <div class="cart-item-image-sh">
+
+                    <img src="https://placehold.co/180x220" alt="Product">
+
+                </div>
+
+                <div class="cart-item-info-sh">
+
+                    <div class="cart-item-top-sh">
+
+                        <h3>
+                            Premium Essential
+                        </h3>
+
+                        <button type="button" class="cart-item-remove-sh">
+                            ×
+                        </button>
+
+                    </div>
+
+                    <span class="cart-item-option-sh">
+                        Size: M
+                    </span>
+
+                    <div class="cart-item-bottom-sh">
+
+                        <div class="cart-item-quantity-sh">
+
+                            <button type="button">
+                                −
+                            </button>
+
+                            <span>1</span>
+
+                            <button type="button">
+                                +
+                            </button>
+
+                        </div>
+
+                        <strong>
+                            $49.00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Empty Cart -->
+        <div class="cart-empty-sh" id="cart-empty-sh">
+
+            <div class="cart-empty-icon-sh">
+                ◇
+            </div>
+
+            <h3>
+                YOUR CART IS EMPTY
+            </h3>
+
+            <p>
+                Looks like you haven't added anything yet.
+            </p>
+
+            <a href="/collection.html">
+                SHOP COLLECTION
+                <span>↗</span>
+            </a>
+
+        </div>
+
+
+        <!-- Cart Footer -->
+        <div class="cart-drawer-footer-sh">
+
+            <div class="cart-subtotal-sh">
+
+                <span>
+                    SUBTOTAL
+                </span>
+
+                <strong>
+                    $49.00
+                </strong>
+
+            </div>
+
+            <p>
+                Shipping and taxes calculated at checkout.
+            </p>
+
+            <a href="/checkout.html" class="cart-checkout-sh">
+                CHECKOUT
+                <span>↗</span>
+            </a>
+
+            <a href="/cart.html" class="cart-view-sh">
+                VIEW CART
+            </a>
+
+        </div>
+
+    </aside>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay-sh" id="mobile-menu-overlay-sh"></div>
+    <!-- Mobile Side Drawer -->
+    <aside class="mobile-drawer-sh" id="mobile-drawer-sh">
+
+        <div class="mobile-drawer-header-sh">
+            <div class="mobile-drawer-logo-sh">
+                <h3>StepLux</h3>
+            </div>
+
+            <button class="mobile-close-sh" id="mobile-close-sh" aria-label="Close menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="mobile-menu-list-sh">
+            <ul>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/collection.html">Collection</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="mobile-shop-button-sh">
+            <a href="#">Shop Now</a>
+        </div>
+
+    </aside>
+    <!-- hero section -->
+    <section class="returns-hero-sh">
+
+        <div class="returns-hero-container-sh">
+
+            <div class="returns-hero-top-sh">
+                <span>RETURNS &amp; EXCHANGES</span>
+                <span>01 — EASY RETURNS</span>
+            </div>
+
+            <div class="returns-hero-content-sh">
+
+                <div class="returns-hero-heading-sh">
+                    <span>CHANGE</span>
+                    <span>YOUR</span>
+                    <span>MIND.</span>
+                </div>
+
+                <div class="returns-hero-side-sh">
+
+                    <div class="returns-hero-number-sh">
+                        30
+                        <small>DAYS</small>
+                    </div>
+
+                    <p>
+                        Didn't get the right fit? No problem. Our simple
+                        return and exchange process makes it easy to find
+                        the pair that's right for you.
+                    </p>
+
+                    <a href="#returns-policy" class="returns-hero-btn-sh">
+                        VIEW RETURN POLICY
+                        <span>↗</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="returns-hero-bottom-sh">
+
+                <span>01 — RETURN</span>
+                <span>02 — EXCHANGE</span>
+                <span>03 — REFUND</span>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- reterns process -->
+    <section class="returns-process-sh" id="returns-process">
+
+        <div class="returns-process-container-sh">
+
+            <div class="returns-process-header-sh">
+
+                <div class="returns-process-label-sh">
+                    <span></span>
+                    SIMPLE PROCESS
+                </div>
+
+                <h2>
+                    RETURN
+                    <span>MADE EASY.</span>
+                </h2>
+
+                <p>
+                    We believe returns shouldn't be complicated.
+                    Follow three simple steps and we'll take care
+                    of the rest.
+                </p>
+
+            </div>
+
+
+            <div class="returns-process-grid-sh">
+
+                <!-- STEP 01 -->
+                <div class="returns-process-card-sh">
+
+                    <div class="returns-process-top-sh">
+                        <span>01</span>
+
+                        <div class="returns-process-icon-sh">
+                            ↗
+                        </div>
+                    </div>
+
+                    <div class="returns-process-content-sh">
+
+                        <h3>START YOUR RETURN</h3>
+
+                        <p>
+                            Contact us or submit your return request
+                            within 30 days of receiving your order.
+                        </p>
+
+                    </div>
+
+                    <div class="returns-process-bottom-sh">
+                        <span>STEP</span>
+                        <strong>01</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 02 -->
+                <div class="returns-process-card-sh">
+
+                    <div class="returns-process-top-sh">
+                        <span>02</span>
+
+                        <div class="returns-process-icon-sh">
+                            +
+                        </div>
+                    </div>
+
+                    <div class="returns-process-content-sh">
+
+                        <h3>SEND IT BACK</h3>
+
+                        <p>
+                            Pack your shoes securely in their original
+                            packaging and send them back using the
+                            provided return instructions.
+                        </p>
+
+                    </div>
+
+                    <div class="returns-process-bottom-sh">
+                        <span>STEP</span>
+                        <strong>02</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 03 -->
+                <div class="returns-process-card-sh">
+
+                    <div class="returns-process-top-sh">
+                        <span>03</span>
+
+                        <div class="returns-process-icon-sh">
+                            ✓
+                        </div>
+                    </div>
+
+                    <div class="returns-process-content-sh">
+
+                        <h3>GET YOUR REFUND</h3>
+
+                        <p>
+                            Once we receive and inspect your return,
+                            your refund or exchange will be processed
+                            as quickly as possible.
+                        </p>
+
+                    </div>
+
+                    <div class="returns-process-bottom-sh">
+                        <span>STEP</span>
+                        <strong>03</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="returns-process-note-sh">
+
+                <span class="returns-process-note-icon-sh">i</span>
+
+                <p>
+                    Please make sure returned items are unworn,
+                    unused and in their original packaging.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- return policy -->
+    <section class="return-policy-sh" id="returns-policy">
+
+        <div class="return-policy-container-sh">
+
+            <div class="return-policy-heading-sh">
+
+                <div class="return-policy-label-sh">
+                    <span></span>
+                    OUR POLICY
+                </div>
+
+                <h2>
+                    KNOW THE
+                    <span>RULES.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="return-policy-content-sh">
+
+                <div class="return-policy-intro-sh">
+                    <span class="return-policy-count-sh">30</span>
+
+                    <div>
+                        <strong>DAY RETURN WINDOW</strong>
+
+                        <p>
+                            You have 30 days from the date of delivery
+                            to request a return or exchange.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="return-policy-list-sh">
+
+                    <!-- ITEM 01 -->
+                    <div class="return-policy-item-sh">
+
+                        <div class="return-policy-item-number-sh">
+                            01
+                        </div>
+
+                        <div class="return-policy-item-content-sh">
+
+                            <h3>ITEM CONDITION</h3>
+
+                            <p>
+                                Items must be unworn, unused and in the
+                                same condition in which you received them.
+                            </p>
+
+                        </div>
+
+                        <div class="return-policy-item-icon-sh">
+                            ✓
+                        </div>
+
+                    </div>
+
+
+                    <!-- ITEM 02 -->
+                    <div class="return-policy-item-sh">
+
+                        <div class="return-policy-item-number-sh">
+                            02
+                        </div>
+
+                        <div class="return-policy-item-content-sh">
+
+                            <h3>ORIGINAL PACKAGING</h3>
+
+                            <p>
+                                Shoes should be returned with the original
+                                box, packaging and any included accessories.
+                            </p>
+
+                        </div>
+
+                        <div class="return-policy-item-icon-sh">
+                            ✓
+                        </div>
+
+                    </div>
+
+
+                    <!-- ITEM 03 -->
+                    <div class="return-policy-item-sh">
+
+                        <div class="return-policy-item-number-sh">
+                            03
+                        </div>
+
+                        <div class="return-policy-item-content-sh">
+
+                            <h3>PROOF OF PURCHASE</h3>
+
+                            <p>
+                                Please provide your order number or proof
+                                of purchase when submitting your request.
+                            </p>
+
+                        </div>
+
+                        <div class="return-policy-item-icon-sh">
+                            ✓
+                        </div>
+
+                    </div>
+
+
+                    <!-- ITEM 04 -->
+                    <div class="return-policy-item-sh">
+
+                        <div class="return-policy-item-number-sh">
+                            04
+                        </div>
+
+                        <div class="return-policy-item-content-sh">
+
+                            <h3>FINAL SALE ITEMS</h3>
+
+                            <p>
+                                Items marked as final sale cannot be returned
+                                or exchanged unless they arrive damaged or defective.
+                            </p>
+
+                        </div>
+
+                        <div class="return-policy-item-icon-sh">
+                            !
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="return-policy-bottom-sh">
+
+                <span>PLEASE READ BEFORE SENDING YOUR RETURN</span>
+
+                <span>
+                    RETURNS / EXCHANGES / REFUNDS
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Return or Exchange -->
+    <section class="return-choice-sh">
+
+        <div class="return-choice-container-sh">
+
+            <div class="return-choice-header-sh">
+
+                <div class="return-choice-label-sh">
+                    <span></span>
+                    WHAT DO YOU NEED?
+                </div>
+
+                <h2>
+                    RETURN OR
+                    <span>EXCHANGE?</span>
+                </h2>
+
+                <p>
+                    Choose the option that works best for you.
+                    Whether you want your money back or a different
+                    size, we've made the process simple.
+                </p>
+
+            </div>
+
+
+            <div class="return-choice-grid-sh">
+
+                <!-- RETURN -->
+                <div class="return-choice-card-sh return-choice-card-return-sh">
+
+                    <div class="return-choice-card-top-sh">
+                        <span>OPTION 01</span>
+
+                        <div class="return-choice-icon-sh">
+                            ↙
+                        </div>
+                    </div>
+
+                    <div class="return-choice-card-content-sh">
+
+                        <h3>RETURN</h3>
+
+                        <p>
+                            Changed your mind or the shoes aren't quite
+                            right for you? Send them back and receive
+                            a refund to your original payment method.
+                        </p>
+
+                        <ul>
+                            <li>
+                                <span>✓</span>
+                                Refund to original payment method
+                            </li>
+
+                            <li>
+                                <span>✓</span>
+                                Available within 30 days
+                            </li>
+
+                            <li>
+                                <span>✓</span>
+                                Item must be unworn
+                            </li>
+
+                            <li>
+                                <span>✓</span>
+                                Original packaging required
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="return-choice-card-bottom-sh">
+                        <span>GET YOUR MONEY BACK</span>
+                        <strong>REFUND</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- EXCHANGE -->
+                <div class="return-choice-card-sh return-choice-card-exchange-sh">
+
+                    <div class="return-choice-card-top-sh">
+                        <span>OPTION 02</span>
+
+                        <div class="return-choice-icon-sh">
+                            ↔
+                        </div>
+                    </div>
+
+                    <div class="return-choice-card-content-sh">
+
+                        <h3>EXCHANGE</h3>
+
+                        <p>
+                            Need another size or want a different option?
+                            Exchange your current pair for another available
+                            product or size.
+                        </p>
+
+                        <ul>
+                            <li>
+                                <span>✓</span>
+                                Change size or selected product
+                            </li>
+
+                            <li>
+                                <span>✓</span>
+                                Available within 30 days
+                            </li>
+
+                            <li>
+                                <span>✓</span>
+                                Item must be unworn
+                            </li>
+
+                            <li>
+                                <span>✓</span>
+                                Original packaging required
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="return-choice-card-bottom-sh">
+                        <span>FIND THE RIGHT FIT</span>
+                        <strong>EXCHANGE</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Refund Information -->
+    <section class="refund-info-sh" id="refund-info">
+
+        <div class="refund-info-container-sh">
+
+            <div class="refund-info-top-sh">
+                <span>REFUND INFORMATION</span>
+                <span>04 — MONEY BACK</span>
+            </div>
+
+            <div class="refund-info-main-sh">
+
+                <div class="refund-info-heading-sh">
+                    <span>YOUR</span>
+                    <span>MONEY.</span>
+                    <span>BACK.</span>
+                </div>
+
+                <div class="refund-info-intro-sh">
+
+                    <div class="refund-info-status-sh">
+                        <span class="refund-info-dot-sh"></span>
+                        REFUND PROCESS
+                    </div>
+
+                    <p>
+                        Once your returned item has been received and
+                        inspected, we'll process your refund back to
+                        the original payment method.
+                    </p>
+
+                    <div class="refund-info-time-sh">
+                        <strong>5–7</strong>
+                        <span>BUSINESS DAYS</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="refund-info-grid-sh">
+
+                <div class="refund-info-card-sh">
+
+                    <span class="refund-info-card-number-sh">01</span>
+
+                    <div>
+                        <h3>RETURN RECEIVED</h3>
+
+                        <p>
+                            We receive your package and check the item
+                            to make sure it meets our return conditions.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="refund-info-card-sh">
+
+                    <span class="refund-info-card-number-sh">02</span>
+
+                    <div>
+                        <h3>ITEM INSPECTED</h3>
+
+                        <p>
+                            Our team verifies the condition, packaging
+                            and order details before approving the refund.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="refund-info-card-sh">
+
+                    <span class="refund-info-card-number-sh">03</span>
+
+                    <div>
+                        <h3>REFUND ISSUED</h3>
+
+                        <p>
+                            Your refund is sent to the original payment
+                            method used when placing your order.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="refund-info-card-sh">
+
+                    <span class="refund-info-card-number-sh">04</span>
+
+                    <div>
+                        <h3>BANK PROCESSING</h3>
+
+                        <p>
+                            Depending on your bank or payment provider,
+                            it may take a few additional business days
+                            for the funds to appear.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="refund-info-note-sh">
+
+                <div class="refund-info-note-icon-sh">
+                    i
+                </div>
+
+                <p>
+                    Original shipping charges are non-refundable.
+                    Processing times may vary depending on your
+                    payment provider.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Returns FAQ -->
+    <section class="returns-faq-sh" id="returns-faq">
+
+        <div class="returns-faq-container-sh">
+
+            <div class="returns-faq-heading-sh">
+
+                <div class="returns-faq-label-sh">
+                    <span></span>
+                    NEED TO KNOW
+                </div>
+
+                <h2>
+                    RETURNS
+                    <span>FAQ.</span>
+                </h2>
+
+                <p>
+                    Still have questions? Find quick answers to the
+                    most common questions about returns, exchanges
+                    and refunds.
+                </p>
+
+            </div>
+
+
+            <div class="returns-faq-list-sh">
+
+                <!-- FAQ 01 -->
+                <div class="returns-faq-item-sh">
+
+                    <button class="returns-faq-question-sh" type="button">
+                        <span class="returns-faq-number-sh">01</span>
+
+                        <span class="returns-faq-question-text-sh">
+                            How long do I have to return my shoes?
+                        </span>
+
+                        <span class="returns-faq-plus-sh"></span>
+                    </button>
+
+                    <div class="returns-faq-answer-sh">
+                        <p>
+                            You have 30 days from the date your order was
+                            delivered to request a return or exchange.
+                            Items must meet our return conditions.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 02 -->
+                <div class="returns-faq-item-sh">
+
+                    <button class="returns-faq-question-sh" type="button">
+                        <span class="returns-faq-number-sh">02</span>
+
+                        <span class="returns-faq-question-text-sh">
+                            Can I exchange my shoes for another size?
+                        </span>
+
+                        <span class="returns-faq-plus-sh"></span>
+                    </button>
+
+                    <div class="returns-faq-answer-sh">
+                        <p>
+                            Yes. You can request an exchange for another
+                            available size within our 30-day return window.
+                            The original pair must be unworn and in its
+                            original packaging.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 03 -->
+                <div class="returns-faq-item-sh">
+
+                    <button class="returns-faq-question-sh" type="button">
+                        <span class="returns-faq-number-sh">03</span>
+
+                        <span class="returns-faq-question-text-sh">
+                            Do I need the original shoe box?
+                        </span>
+
+                        <span class="returns-faq-plus-sh"></span>
+                    </button>
+
+                    <div class="returns-faq-answer-sh">
+                        <p>
+                            Yes. Please return the shoes with their original
+                            box and packaging whenever possible. This helps
+                            us process your return quickly.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 04 -->
+                <div class="returns-faq-item-sh">
+
+                    <button class="returns-faq-question-sh" type="button">
+                        <span class="returns-faq-number-sh">04</span>
+
+                        <span class="returns-faq-question-text-sh">
+                            When will I receive my refund?
+                        </span>
+
+                        <span class="returns-faq-plus-sh"></span>
+                    </button>
+
+                    <div class="returns-faq-answer-sh">
+                        <p>
+                            Once your return has been received and approved,
+                            the refund is issued to your original payment
+                            method. Your bank or payment provider may need
+                            additional business days to post the funds.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 05 -->
+                <div class="returns-faq-item-sh">
+
+                    <button class="returns-faq-question-sh" type="button">
+                        <span class="returns-faq-number-sh">05</span>
+
+                        <span class="returns-faq-question-text-sh">
+                            Can I return shoes that I have worn?
+                        </span>
+
+                        <span class="returns-faq-plus-sh"></span>
+                    </button>
+
+                    <div class="returns-faq-answer-sh">
+                        <p>
+                            Returns are generally accepted only for unworn
+                            and unused shoes. If your shoes have a defect or
+                            arrived damaged, please contact our support team
+                            so we can help.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 06 -->
+                <div class="returns-faq-item-sh">
+
+                    <button class="returns-faq-question-sh" type="button">
+                        <span class="returns-faq-number-sh">06</span>
+
+                        <span class="returns-faq-question-text-sh">
+                            How do I start a return?
+                        </span>
+
+                        <span class="returns-faq-plus-sh"></span>
+                    </button>
+
+                    <div class="returns-faq-answer-sh">
+                        <p>
+                            Start by contacting our support team with your
+                            order number and reason for the return. We'll
+                            provide the next steps and return instructions.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Start Your Return -->
+    <section class="return-start-sh" id="start-return">
+
+        <div class="return-start-container-sh">
+
+            <div class="return-start-top-sh">
+                <span>READY TO START?</span>
+                <span>07 — NEXT STEP</span>
+            </div>
+
+            <div class="return-start-content-sh">
+
+                <div class="return-start-heading-sh">
+                    <span>LET'S</span>
+                    <span>MAKE IT</span>
+                    <span>RIGHT.</span>
+                </div>
+
+                <div class="return-start-side-sh">
+
+                    <div class="return-start-icon-sh">
+                        ↗
+                    </div>
+
+                    <p>
+                        Need to return or exchange your order?
+                        Start the process today and our team will
+                        guide you through every step.
+                    </p>
+
+                    <div class="return-start-actions-sh">
+
+                        <a href="/pages/contact" class="return-start-primary-sh">
+                            START A RETURN
+                            <span>↗</span>
+                        </a>
+
+                        <a href="/pages/track-order" class="return-start-secondary-sh">
+                            TRACK MY ORDER
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="return-start-bottom-sh">
+
+                <span>30 DAY RETURNS</span>
+                <span>EASY EXCHANGES</span>
+                <span>HELP WHEN YOU NEED IT</span>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- footer -->
+    <footer class="footer-sh">
+
+        <div class="footer-container-sh">
+
+            <!-- Footer Top -->
+            <div class="footer-top-sh">
+
+                <!-- Brand -->
+                <div class="footer-brand-sh">
+
+                    <a href="#" class="footer-logo-sh">
+                        STEPLUX
+                    </a>
+
+                    <p class="footer-description-sh">
+                        Step into comfort, quality and style.
+                        Discover premium shoes designed for
+                        everyday movement.
+                    </p>
+
+                    <!-- Social Icons -->
+                    <div class="footer-social-sh">
+
+                        <a href="#" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.7">
+                                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+
+                                <circle cx="12" cy="12" r="4"></circle>
+
+                                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+                            </svg>
+                        </a>
+
+
+                        <a href="#" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14 8h3V4h-3c-3.3 0-5 1.7-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V9c0-.7.3-1 1-1z" />
+                            </svg>
+                        </a>
+
+
+                        <a href="#" aria-label="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.7">
+                                <path d="M18 3h3l-6.5 7.4L22 21h-6.2l-4.8-6.2L5.5 21H2.5l7-8L2 3h6.4l4.3 5.6L18 3z" />
+                            </svg>
+                        </a>
+
+
+                        <a href="#" aria-label="TikTok">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.7">
+                                <path
+                                    d="M15 4c.5 2.4 2 3.8 4 4.1V11c-1.5 0-2.9-.5-4-1.3v6.4a5 5 0 1 1-4.3-5v2.9a2.2 2.2 0 1 0 1.4 2.1V4H15z" />
+                            </svg>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Shop -->
+                <div class="footer-column-sh">
+
+                    <h3>SHOP</h3>
+
+                    <ul>
+                        <li>
+                            <a href="/collection.html">Men</a>
+                        </li>
+
+                        <li>
+                            <a href="/collection.html">Women</a>
+                        </li>
+
+                        <li>
+                            <a href="/collection.html">New Arrivals</a>
+                        </li>
+
+                        <li>
+                            <a href="/collection.html">Best Sellers</a>
+                        </li>
+
+                        <li>
+                            <a href="/collection.html">Hot Deals</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <!-- Company -->
+                <div class="footer-column-sh">
+
+                    <h3>COMPANY</h3>
+
+                    <ul>
+                        <li>
+                            <a href="/about.html">About Us</a>
+                        </li>
+
+                        <li>
+                            <a href="/our-story.html">Our Story</a>
+                        </li>
+
+                        <li>
+                            <a href="/contact.html">Contact</a>
+                        </li>
+
+                        <li>
+                            <a href="/review.html">Reviews</a>
+                        </li>
+
+                        <li>
+                            <a href="/faq.html">FAQs</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <!-- Support -->
+                <div class="footer-column-sh">
+
+                    <h3>SUPPORT</h3>
+
+                    <ul>
+                        <li>
+                            <a href="/shipping.html">Shipping & Delivery</a>
+                        </li>
+
+                        <li>
+                            <a href="/retrens.html">Returns & Exchanges</a>
+                        </li>
+
+                        <li>
+                            <a href="/track-order.html">Track Order</a>
+                        </li>
+
+                        <li>
+                            <a href="/help.html">Help Center</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <!-- Newsletter -->
+                <div class="footer-newsletter-sh">
+
+                    <h3>STAY IN THE LOOP</h3>
+
+                    <p>
+                        Subscribe to get exclusive offers,
+                        new arrivals and latest updates.
+                    </p>
+
+                    <form class="footer-form-sh">
+
+                        <input type="email" placeholder="Your email address" aria-label="Email address" required>
+
+                        <button type="submit">
+                            →
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom-sh">
+
+                <p>
+                    © 2026 STEPLUX. All rights reserved.
+                </p>
+
+                <div class="footer-bottom-links-sh">
+
+                    <a href="/privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="/trem-conditions.html">
+                        Terms & Conditions
+                    </a>
+
+                    <a href="/refund-policy.html">
+                        Refund Policy
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const faqItems = document.querySelectorAll(".returns-faq-item-sh");
+
+            faqItems.forEach(function (item) {
+
+                const button = item.querySelector(".returns-faq-question-sh");
+                const answer = item.querySelector(".returns-faq-answer-sh");
+
+                button.addEventListener("click", function () {
+
+                    const isActive = item.classList.contains("active");
+
+                    // Close all
+                    faqItems.forEach(function (faq) {
+
+                        faq.classList.remove("active");
+
+                        const faqAnswer =
+                            faq.querySelector(".returns-faq-answer-sh");
+
+                        faqAnswer.style.maxHeight = null;
+
+                    });
+
+
+                    // Open clicked item
+                    if (!isActive) {
+
+                        item.classList.add("active");
+
+                        answer.style.maxHeight =
+                            answer.scrollHeight + "px";
+
+                    }
+
+                });
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>

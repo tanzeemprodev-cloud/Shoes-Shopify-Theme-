@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* hero section */
+
+.track-order-hero-sh {
+    width: 100%;
+    padding: 120px 0 130px;
+
+    background: #111111;
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+.track-order-hero-container-sh {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 25px;
+
+    text-align: center;
+}
+
+
+/* ================================
+   LABEL
+================================ */
+
+.track-order-hero-label-sh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+
+    color: #ff1f26;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+}
+
+
+/* ================================
+   HEADING
+================================ */
+
+.track-order-hero-container-sh h1 {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(55px, 8vw, 100px);
+
+    font-weight: 700;
+
+    line-height: 0.82;
+
+    letter-spacing: -0.08em;
+
+    text-transform: uppercase;
+}
+
+.track-order-hero-container-sh h1 span {
+    display: block;
+
+    color: #ff1f26;
+}
+
+
+/* ================================
+   DESCRIPTION
+================================ */
+
+.track-order-hero-container-sh>p {
+    max-width: 550px;
+
+    margin: 35px auto 45px;
+
+    color: #888888;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+.track-order-form-sh {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    padding: 25px;
+
+    border: 1px solid #2d2d2d;
+
+    border-radius: 10px;
+
+    background: #181818;
+
+    text-align: left;
+}
+
+.track-order-input-wrap-sh {
+    margin-bottom: 18px;
+}
+
+.track-order-input-wrap-sh label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #777777;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.14em;
+}
+
+.track-order-input-wrap-sh input {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 15px;
+
+    border: 1px solid #333333;
+
+    border-radius: 6px;
+
+    outline: none;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.track-order-input-wrap-sh input::placeholder {
+    color: #555555;
+}
+
+.track-order-input-wrap-sh input:focus {
+    border-color: #ff1f26;
+
+    background: #151515;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.track-order-btn-sh {
+    width: 100%;
+
+    height: 50px;
+
+    margin-top: 5px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    border: 1px solid #ff1f26;
+    border-radius: 6px;
+
+    background: #ff1f26;
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.track-order-btn-sh:hover {
+    background: #d9161d;
+
+    transform: translateY(-2px);
+}
+
+.track-order-arrow-sh {
+    font-size: 16px;
+
+    line-height: 1;
+
+    transition: transform 0.3s ease;
+}
+
+.track-order-btn-sh:hover .track-order-arrow-sh {
+    transform: translate(3px, -3px);
+}
+
+
+/* ================================
+   HELP
+================================ */
+
+.track-order-help-sh {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 28px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+}
+
+.track-order-help-sh>span {
+    color: #666666;
+}
+
+.track-order-help-sh a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    transition: color 0.25s ease;
+}
+
+.track-order-help-sh a:hover {
+    color: #ff1f26;
+}
+
+.track-order-help-sh a span {
+    margin-left: 5px;
+
+    color: #ff1f26;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 700px) {
+
+    .track-order-hero-sh {
+        padding: 90px 0 100px;
+    }
+
+    .track-order-hero-container-sh h1 {
+        font-size: 65px;
+    }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 500px) {
+
+    .track-order-hero-sh {
+        padding: 75px 0 80px;
+    }
+
+    .track-order-hero-container-sh {
+        padding: 0 18px;
+    }
+
+    .track-order-hero-container-sh h1 {
+        font-size: 50px;
+    }
+
+    .track-order-hero-container-sh>p {
+        margin: 28px auto 35px;
+
+        font-size: 9px;
+    }
+
+    .track-order-form-sh {
+        padding: 18px;
+    }
+
+    .track-order-input-wrap-sh input {
+        height: 46px;
+    }
+
+    .track-order-btn-sh {
+        height: 48px;
+    }
+
+    .track-order-help-sh {
+        flex-direction: column;
+
+        gap: 8px;
+
+        margin-top: 22px;
+    }
+
+}

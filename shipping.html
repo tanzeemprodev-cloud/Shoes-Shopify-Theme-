@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/shipping.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header-shoes">
+        <div class="container-sh">
+            <div class="row-sh">
+
+                <!-- Logo -->
+                <div class="logo-sh">
+                    <h3>StepLux</h3>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="menu-list-sh">
+                    <ul>
+                        <li><a href="/home.html">Home</a></li>
+                        <li><a href="/collection.html">Collection</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Desktop / Mobile Right Icons -->
+                <div class="icons-sh">
+
+
+                    <!-- Search -->
+                    <div class="search-sh">
+                        <button type="button" id="search-open-sh" aria-label="Open Search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                <path
+                                    d="M544 513L397.2 364.2C417.2 336.3 429.1 302 429.1 265C429.1 171.9 354.4 96.1 262.6 96.1C170.7 96 96 171.8 96 264.9C96 358 170.7 433.8 262.5 433.8C302.3 433.8 338.8 419.6 367.5 395.9L513.5 544L544 513zM262.5 394.8C191.9 394.8 134.4 336.5 134.4 264.9C134.4 193.3 191.9 135 262.5 135C333.1 135 390.6 193.3 390.6 264.9C390.6 336.5 333.2 394.8 262.5 394.8z" />
+                            </svg>
+                        </button>
+                    </div>
+
+
+                    <!-- Cart -->
+                    <div class="cart-sh">
+                        <button type="button" id="cart-open-sh" aria-label="Open Cart">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                <path
+                                    d="M331.8 504.4C331.1 487.5 339.7 471.7 354.2 463C368.7 454.4 386.7 454.5 401.2 463.2C415.6 471.9 424.1 487.8 423.3 504.7C424 521.6 415.4 537.4 400.9 546.1C386.4 554.7 368.4 554.6 353.9 545.9C339.5 537.2 331 521.3 331.8 504.4zM169.4 458.9C152.6 458.2 136.7 466.7 128.1 481.2C119.5 495.7 119.6 513.7 128.3 528.1C137 542.6 152.9 551 169.7 550.2C186.5 550.9 202.4 542.4 211 527.9C219.6 513.4 219.5 495.4 210.8 481C202.1 466.5 186.2 458.1 169.4 458.9zM461.1 188.9C158.9 188.9 81.9 176.1 0 89.7C34.4 141.4 53.3 238.6 373.1 233.9C706.4 228.9 503.1 320 443.9 422.8C630.6 256.1 763.3 188.9 461.1 188.9z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Desktop Button -->
+                    <div class="button-sh">
+                        <a href="#">Shop Now</a>
+                    </div>
+
+                    <!-- Mobile Hamburger -->
+                    <button class="hamburger-sh" id="hamburger-sh" aria-label="Open menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Search Overlay -->
+    <div class="search-overlay-sh" id="search-overlay-sh">
+
+        <div class="search-overlay-inner-sh">
+
+            <div class="search-overlay-top-sh">
+
+                <span>SEARCH</span>
+
+                <button type="button" id="search-close-sh" aria-label="Close Search">
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+
+            <form class="search-form-sh" action="/search.html" method="get">
+
+                <input type="search" name="q" id="search-input-sh" placeholder="What are you looking for?"
+                    autocomplete="off">
+
+                <button type="submit" aria-label="Submit Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                        <path
+                            d="M544 513L397.2 364.2C417.2 336.3 429.1 302 429.1 265C429.1 171.9 354.4 96.1 262.6 96.1C170.7 96 96 171.8 96 264.9C96 358 170.7 433.8 262.5 433.8C302.3 433.8 338.8 419.6 367.5 395.9L513.5 544L544 513zM262.5 394.8C191.9 394.8 134.4 336.5 134.4 264.9C134.4 193.3 191.9 135 262.5 135C333.1 135 390.6 193.3 390.6 264.9C390.6 336.5 333.2 394.8 262.5 394.8z" />
+                    </svg>
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+    <!-- Cart Overlay -->
+    <div class="cart-drawer-overlay-sh" id="cart-drawer-overlay-sh"></div>
+    <!-- Cart Drawer -->
+    <aside class="cart-drawer-sh" id="cart-drawer-sh" aria-hidden="true">
+
+        <div class="cart-drawer-header-sh">
+
+            <div>
+                <span class="cart-drawer-label-sh">
+                    YOUR CART
+                </span>
+
+                <h2>
+                    CART
+                </h2>
+            </div>
+
+            <button type="button" class="cart-drawer-close-sh" id="cart-close-sh" aria-label="Close cart">
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+
+        <!-- Cart Items -->
+        <div class="cart-drawer-items-sh" id="cart-drawer-items-sh">
+
+            <!-- Example Cart Item -->
+
+            <div class="cart-item-sh">
+
+                <div class="cart-item-image-sh">
+
+                    <img src="https://placehold.co/180x220" alt="Product">
+
+                </div>
+
+                <div class="cart-item-info-sh">
+
+                    <div class="cart-item-top-sh">
+
+                        <h3>
+                            Premium Essential
+                        </h3>
+
+                        <button type="button" class="cart-item-remove-sh">
+                            ×
+                        </button>
+
+                    </div>
+
+                    <span class="cart-item-option-sh">
+                        Size: M
+                    </span>
+
+                    <div class="cart-item-bottom-sh">
+
+                        <div class="cart-item-quantity-sh">
+
+                            <button type="button">
+                                −
+                            </button>
+
+                            <span>1</span>
+
+                            <button type="button">
+                                +
+                            </button>
+
+                        </div>
+
+                        <strong>
+                            $49.00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Empty Cart -->
+        <div class="cart-empty-sh" id="cart-empty-sh">
+
+            <div class="cart-empty-icon-sh">
+                ◇
+            </div>
+
+            <h3>
+                YOUR CART IS EMPTY
+            </h3>
+
+            <p>
+                Looks like you haven't added anything yet.
+            </p>
+
+            <a href="/collection.html">
+                SHOP COLLECTION
+                <span>↗</span>
+            </a>
+
+        </div>
+
+
+        <!-- Cart Footer -->
+        <div class="cart-drawer-footer-sh">
+
+            <div class="cart-subtotal-sh">
+
+                <span>
+                    SUBTOTAL
+                </span>
+
+                <strong>
+                    $49.00
+                </strong>
+
+            </div>
+
+            <p>
+                Shipping and taxes calculated at checkout.
+            </p>
+
+            <a href="/checkout.html" class="cart-checkout-sh">
+                CHECKOUT
+                <span>↗</span>
+            </a>
+
+            <a href="/cart.html" class="cart-view-sh">
+                VIEW CART
+            </a>
+
+        </div>
+
+    </aside>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay-sh" id="mobile-menu-overlay-sh"></div>
+    <!-- Mobile Side Drawer -->
+    <aside class="mobile-drawer-sh" id="mobile-drawer-sh">
+
+        <div class="mobile-drawer-header-sh">
+            <div class="mobile-drawer-logo-sh">
+                <h3>StepLux</h3>
+            </div>
+
+            <button class="mobile-close-sh" id="mobile-close-sh" aria-label="Close menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="mobile-menu-list-sh">
+            <ul>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/collection.html">Collection</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="mobile-shop-button-sh">
+            <a href="#">Shop Now</a>
+        </div>
+
+    </aside>
+    <!-- Hero Section -->
+    <section class="shipping-hero-sh">
+
+        <div class="shipping-hero-container-sh">
+
+            <div class="shipping-hero-left-sh">
+
+                <div class="shipping-label-sh">
+                    <span></span>
+                    SHIPPING & DELIVERY
+                </div>
+
+                <h1>
+                    YOUR ORDER.
+                    <span>OUR PRIORITY.</span>
+                </h1>
+
+                <p>
+                    From the moment you place your order to the moment
+                    it reaches your doorstep, we keep the process simple,
+                    clear and reliable.
+                </p>
+
+                <div class="shipping-hero-links-sh">
+                    <a href="#shipping-info-sh" class="shipping-primary-btn-sh">
+                        SHIPPING INFORMATION
+                        <span>↓</span>
+                    </a>
+
+                    <a href="/pages/track-order" class="shipping-secondary-btn-sh">
+                        TRACK YOUR ORDER
+                        <span>↗</span>
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="shipping-hero-right-sh">
+
+                <div class="shipping-number-sh">
+                    01
+                </div>
+
+                <div class="shipping-visual-sh">
+
+                    <div class="shipping-circle-sh">
+                        <span>FAST</span>
+                        <strong>DELIVERY</strong>
+                        <span>WORLDWIDE</span>
+                    </div>
+
+                    <div class="shipping-box-sh">
+                        <span>PACKED</span>
+                        <strong>WITH</strong>
+                        <span>CARE</span>
+                    </div>
+
+                </div>
+
+                <div class="shipping-hero-note-sh">
+                    <span>DELIVERY</span>
+                    <span>MADE SIMPLE</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- shipping info -->
+    <section class="shipping-info-sh" id="shipping-info-sh">
+
+        <div class="shipping-info-container-sh">
+
+            <div class="shipping-info-head-sh">
+
+                <div class="shipping-info-label-sh">
+                    <span></span>
+                    SHIPPING INFORMATION
+                </div>
+
+                <h2>
+                    FROM OUR DOOR
+                    <span>TO YOURS.</span>
+                </h2>
+
+                <p>
+                    We make every step of the delivery process simple,
+                    transparent and reliable.
+                </p>
+
+            </div>
+
+
+            <div class="shipping-steps-sh">
+
+                <!-- STEP 01 -->
+                <div class="shipping-step-sh">
+
+                    <div class="shipping-step-top-sh">
+                        <span>01</span>
+                        <span class="shipping-step-line-sh"></span>
+                    </div>
+
+                    <div class="shipping-step-icon-sh">
+                        ↗
+                    </div>
+
+                    <h3>ORDER PLACED</h3>
+
+                    <p>
+                        Once your order is confirmed, we start preparing
+                        your shoes for shipment.
+                    </p>
+
+                    <span class="shipping-step-time-sh">
+                        SAME DAY
+                    </span>
+
+                </div>
+
+
+                <!-- STEP 02 -->
+                <div class="shipping-step-sh">
+
+                    <div class="shipping-step-top-sh">
+                        <span>02</span>
+                        <span class="shipping-step-line-sh"></span>
+                    </div>
+
+                    <div class="shipping-step-icon-sh">
+                        →
+                    </div>
+
+                    <h3>ORDER SHIPPED</h3>
+
+                    <p>
+                        Your package is carefully packed and handed over
+                        to our trusted delivery partner.
+                    </p>
+
+                    <span class="shipping-step-time-sh">
+                        1–2 BUSINESS DAYS
+                    </span>
+
+                </div>
+
+
+                <!-- STEP 03 -->
+                <div class="shipping-step-sh">
+
+                    <div class="shipping-step-top-sh">
+                        <span>03</span>
+                        <span class="shipping-step-line-sh"></span>
+                    </div>
+
+                    <div class="shipping-step-icon-sh">
+                        ✓
+                    </div>
+
+                    <h3>DELIVERED</h3>
+
+                    <p>
+                        Your order arrives safely at your doorstep,
+                        ready for its next journey.
+                    </p>
+
+                    <span class="shipping-step-time-sh">
+                        3–5 BUSINESS DAYS
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- shipping options -->
+    <section class="shipping-options-sh">
+
+        <div class="shipping-options-container-sh">
+
+            <div class="shipping-options-head-sh">
+                <div class="shipping-options-label-sh">
+                    <span></span>
+                    DELIVERY OPTIONS
+                </div>
+
+                <h2>
+                    SHIPPING
+                    <span>MADE SIMPLE.</span>
+                </h2>
+
+                <p>
+                    Choose the delivery option that works best for you.
+                    Shipping availability and delivery times may vary by location.
+                </p>
+            </div>
+
+
+            <div class="shipping-options-grid-sh">
+
+                <!-- DOMESTIC -->
+                <div class="shipping-option-card-sh">
+
+                    <div class="shipping-option-top-sh">
+                        <span class="shipping-option-number-sh">01</span>
+
+                        <span class="shipping-option-tag-sh">
+                            MOST POPULAR
+                        </span>
+                    </div>
+
+                    <div class="shipping-option-icon-sh">
+                        →
+                    </div>
+
+                    <h3>DOMESTIC SHIPPING</h3>
+
+                    <p class="shipping-option-description-sh">
+                        Fast and reliable delivery for orders shipped
+                        within the country.
+                    </p>
+
+                    <div class="shipping-option-details-sh">
+
+                        <div>
+                            <span>ESTIMATED DELIVERY</span>
+                            <strong>3–5 BUSINESS DAYS</strong>
+                        </div>
+
+                        <div>
+                            <span>PROCESSING TIME</span>
+                            <strong>1–2 BUSINESS DAYS</strong>
+                        </div>
+
+                        <div>
+                            <span>TRACKING</span>
+                            <strong>AVAILABLE</strong>
+                        </div>
+
+                    </div>
+
+                    <a href="/pages/track-order" class="shipping-option-link-sh">
+                        TRACK YOUR ORDER
+                        <span>↗</span>
+                    </a>
+
+                </div>
+
+
+                <!-- INTERNATIONAL -->
+                <div class="shipping-option-card-sh shipping-option-card-dark-sh">
+
+                    <div class="shipping-option-top-sh">
+                        <span class="shipping-option-number-sh">02</span>
+
+                        <span class="shipping-option-tag-sh">
+                            WORLDWIDE
+                        </span>
+                    </div>
+
+                    <div class="shipping-option-icon-sh">
+                        ↗
+                    </div>
+
+                    <h3>INTERNATIONAL SHIPPING</h3>
+
+                    <p class="shipping-option-description-sh">
+                        We deliver to selected international destinations
+                        with reliable shipping partners.
+                    </p>
+
+                    <div class="shipping-option-details-sh">
+
+                        <div>
+                            <span>ESTIMATED DELIVERY</span>
+                            <strong>7–14 BUSINESS DAYS</strong>
+                        </div>
+
+                        <div>
+                            <span>PROCESSING TIME</span>
+                            <strong>1–2 BUSINESS DAYS</strong>
+                        </div>
+
+                        <div>
+                            <span>TRACKING</span>
+                            <strong>AVAILABLE</strong>
+                        </div>
+
+                    </div>
+
+                    <a href="/pages/contact" class="shipping-option-link-sh">
+                        SHIPPING QUESTIONS
+                        <span>↗</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- shipping process -->
+    <section class="shipping-process-sh">
+
+        <div class="shipping-process-container-sh">
+
+            <div class="shipping-process-header-sh">
+
+                <div class="shipping-process-label-sh">
+                    <span></span>
+                    ORDER PROCESS
+                </div>
+
+                <h2>
+                    WHAT HAPPENS
+                    <span>AFTER YOU ORDER?</span>
+                </h2>
+
+                <p>
+                    Every order follows a simple process designed to
+                    get your new shoes to you safely and efficiently.
+                </p>
+
+            </div>
+
+
+            <div class="shipping-process-list-sh">
+
+                <!-- STEP 01 -->
+                <div class="shipping-process-item-sh">
+
+                    <div class="shipping-process-number-sh">
+                        01
+                    </div>
+
+                    <div class="shipping-process-line-sh"></div>
+
+                    <div class="shipping-process-content-sh">
+
+                        <span class="shipping-process-small-sh">
+                            STEP ONE
+                        </span>
+
+                        <h3>ORDER CONFIRMATION</h3>
+
+                        <p>
+                            After you complete your purchase, you'll receive
+                            an order confirmation with all your order details.
+                        </p>
+
+                    </div>
+
+                    <div class="shipping-process-status-sh">
+                        ✓ CONFIRMED
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 02 -->
+                <div class="shipping-process-item-sh">
+
+                    <div class="shipping-process-number-sh">
+                        02
+                    </div>
+
+                    <div class="shipping-process-line-sh"></div>
+
+                    <div class="shipping-process-content-sh">
+
+                        <span class="shipping-process-small-sh">
+                            STEP TWO
+                        </span>
+
+                        <h3>ORDER PROCESSING</h3>
+
+                        <p>
+                            Our team carefully checks and prepares your
+                            order before it leaves our facility.
+                        </p>
+
+                    </div>
+
+                    <div class="shipping-process-status-sh">
+                        1–2 DAYS
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 03 -->
+                <div class="shipping-process-item-sh">
+
+                    <div class="shipping-process-number-sh">
+                        03
+                    </div>
+
+                    <div class="shipping-process-line-sh"></div>
+
+                    <div class="shipping-process-content-sh">
+
+                        <span class="shipping-process-small-sh">
+                            STEP THREE
+                        </span>
+
+                        <h3>SHIPPED</h3>
+
+                        <p>
+                            Your package is handed over to our delivery
+                            partner and you'll receive tracking information.
+                        </p>
+
+                    </div>
+
+                    <div class="shipping-process-status-sh">
+                        IN TRANSIT
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 04 -->
+                <div class="shipping-process-item-sh shipping-process-last-sh">
+
+                    <div class="shipping-process-number-sh">
+                        04
+                    </div>
+
+                    <div class="shipping-process-line-sh"></div>
+
+                    <div class="shipping-process-content-sh">
+
+                        <span class="shipping-process-small-sh">
+                            STEP FOUR
+                        </span>
+
+                        <h3>AT YOUR DOOR</h3>
+
+                        <p>
+                            Your order arrives at your doorstep. Time to
+                            unbox your new favorite pair.
+                        </p>
+
+                    </div>
+
+                    <div class="shipping-process-status-sh shipping-process-delivered-sh">
+                        DELIVERED
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- delivery areas -->
+    <section class="delivery-areas-sh">
+
+        <div class="delivery-areas-container-sh">
+
+            <div class="delivery-areas-visual-sh">
+
+                <div class="delivery-areas-circle-sh">
+                    <span>GLOBAL</span>
+                    <strong>DELIVERY</strong>
+                    <small>WHEREVER YOU GO</small>
+                </div>
+
+                <div class="delivery-areas-point-sh delivery-point-one-sh">
+                    <span></span>
+                    <strong>LOCAL</strong>
+                </div>
+
+                <div class="delivery-areas-point-sh delivery-point-two-sh">
+                    <span></span>
+                    <strong>EUROPE</strong>
+                </div>
+
+                <div class="delivery-areas-point-sh delivery-point-three-sh">
+                    <span></span>
+                    <strong>WORLDWIDE</strong>
+                </div>
+
+            </div>
+
+
+            <div class="delivery-areas-content-sh">
+
+                <div class="delivery-areas-label-sh">
+                    <span></span>
+                    DELIVERY AREAS
+                </div>
+
+                <h2>
+                    WE DELIVER
+                    <span>WHERE YOU ARE.</span>
+                </h2>
+
+                <p>
+                    We are continuously expanding our delivery network.
+                    Check the information below to see where we currently
+                    ship and what you can expect.
+                </p>
+
+
+                <div class="delivery-area-list-sh">
+
+                    <div class="delivery-area-item-sh">
+
+                        <div class="delivery-area-icon-sh">
+                            01
+                        </div>
+
+                        <div>
+                            <h3>LOCAL DELIVERY</h3>
+
+                            <p>
+                                Fast delivery available within our domestic
+                                shipping network.
+                            </p>
+                        </div>
+
+                        <span class="delivery-area-arrow-sh">↗</span>
+
+                    </div>
+
+
+                    <div class="delivery-area-item-sh">
+
+                        <div class="delivery-area-icon-sh">
+                            02
+                        </div>
+
+                        <div>
+                            <h3>EUROPEAN SHIPPING</h3>
+
+                            <p>
+                                Selected European destinations are available
+                                during checkout.
+                            </p>
+                        </div>
+
+                        <span class="delivery-area-arrow-sh">↗</span>
+
+                    </div>
+
+
+                    <div class="delivery-area-item-sh">
+
+                        <div class="delivery-area-icon-sh">
+                            03
+                        </div>
+
+                        <div>
+                            <h3>INTERNATIONAL</h3>
+
+                            <p>
+                                International delivery is available to selected
+                                countries and regions.
+                            </p>
+                        </div>
+
+                        <span class="delivery-area-arrow-sh">↗</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Faqs -->
+    <section class="shipping-faq-sh">
+
+        <div class="shipping-faq-container-sh">
+
+            <div class="shipping-faq-intro-sh">
+
+                <div class="shipping-faq-label-sh">
+                    <span></span>
+                    NEED TO KNOW
+                </div>
+
+                <h2>
+                    SHIPPING
+                    <span>QUESTIONS?</span>
+                </h2>
+
+                <p>
+                    Find quick answers to the most common questions
+                    about shipping, delivery and tracking.
+                </p>
+
+                <a href="/pages/contact" class="shipping-faq-contact-sh">
+                    STILL HAVE A QUESTION
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+
+            <div class="shipping-faq-list-sh" id="shippingFaqSh">
+
+                <!-- FAQ 01 -->
+                <div class="shipping-faq-item-sh">
+
+                    <button class="shipping-faq-question-sh" type="button">
+
+                        <span class="shipping-faq-number-sh">01</span>
+
+                        <span class="shipping-faq-title-sh">
+                            How long does shipping take?
+                        </span>
+
+                        <span class="shipping-faq-plus-sh"></span>
+
+                    </button>
+
+                    <div class="shipping-faq-answer-sh">
+                        <p>
+                            Standard domestic delivery usually takes around
+                            3–5 business days after your order has been processed.
+                            Delivery times may vary depending on your location.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 02 -->
+                <div class="shipping-faq-item-sh">
+
+                    <button class="shipping-faq-question-sh" type="button">
+
+                        <span class="shipping-faq-number-sh">02</span>
+
+                        <span class="shipping-faq-title-sh">
+                            When will my order be shipped?
+                        </span>
+
+                        <span class="shipping-faq-plus-sh"></span>
+
+                    </button>
+
+                    <div class="shipping-faq-answer-sh">
+                        <p>
+                            Most orders are processed within 1–2 business days.
+                            Once your package has been shipped, you'll receive
+                            tracking information by email.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 03 -->
+                <div class="shipping-faq-item-sh">
+
+                    <button class="shipping-faq-question-sh" type="button">
+
+                        <span class="shipping-faq-number-sh">03</span>
+
+                        <span class="shipping-faq-title-sh">
+                            Can I track my order?
+                        </span>
+
+                        <span class="shipping-faq-plus-sh"></span>
+
+                    </button>
+
+                    <div class="shipping-faq-answer-sh">
+                        <p>
+                            Yes. Once your order has been shipped, you'll receive
+                            a tracking number. You can use it on our Track Order
+                            page to check your delivery status.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 04 -->
+                <div class="shipping-faq-item-sh">
+
+                    <button class="shipping-faq-question-sh" type="button">
+
+                        <span class="shipping-faq-number-sh">04</span>
+
+                        <span class="shipping-faq-title-sh">
+                            Do you offer international shipping?
+                        </span>
+
+                        <span class="shipping-faq-plus-sh"></span>
+
+                    </button>
+
+                    <div class="shipping-faq-answer-sh">
+                        <p>
+                            International shipping is available to selected
+                            countries. Available destinations and shipping
+                            costs will be shown during checkout.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 05 -->
+                <div class="shipping-faq-item-sh">
+
+                    <button class="shipping-faq-question-sh" type="button">
+
+                        <span class="shipping-faq-number-sh">05</span>
+
+                        <span class="shipping-faq-title-sh">
+                            What if my package is delayed?
+                        </span>
+
+                        <span class="shipping-faq-plus-sh"></span>
+
+                    </button>
+
+                    <div class="shipping-faq-answer-sh">
+                        <p>
+                            Occasionally packages can be delayed because of
+                            weather, holidays or carrier issues. If your package
+                            hasn't arrived within the expected timeframe, please
+                            contact our support team.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 06 -->
+                <div class="shipping-faq-item-sh">
+
+                    <button class="shipping-faq-question-sh" type="button">
+
+                        <span class="shipping-faq-number-sh">06</span>
+
+                        <span class="shipping-faq-title-sh">
+                            What happens if I'm not home for delivery?
+                        </span>
+
+                        <span class="shipping-faq-plus-sh"></span>
+
+                    </button>
+
+                    <div class="shipping-faq-answer-sh">
+                        <p>
+                            Your delivery partner may leave the package in a
+                            safe location or attempt delivery again. Please check
+                            your tracking information for the latest update.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- cta -->
+    <section class="shipping-track-cta-sh">
+
+        <div class="shipping-track-cta-container-sh">
+
+            <div class="shipping-track-cta-top-sh">
+                <span>TRACK &amp; FOLLOW</span>
+                <span>06 — FINAL STEP</span>
+            </div>
+
+            <div class="shipping-track-cta-content-sh">
+
+                <div class="shipping-track-cta-title-sh">
+                    <span>WHERE'S</span>
+                    <span>MY ORDER?</span>
+                </div>
+
+                <div class="shipping-track-cta-text-sh">
+
+                    <p>
+                        Your order is on its way. Enter your tracking
+                        information and see exactly where your package is
+                        right now.
+                    </p>
+
+                    <div class="shipping-track-cta-actions-sh">
+
+                        <a href="/pages/track-order" class="shipping-track-primary-btn-sh">
+                            TRACK MY ORDER
+                            <span>↗</span>
+                        </a>
+
+                        <a href="/pages/contact" class="shipping-track-secondary-btn-sh">
+                            CONTACT SUPPORT
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="shipping-track-cta-bottom-sh">
+                <span>FAST</span>
+                <span>RELIABLE</span>
+                <span>FULLY TRACKED</span>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- footer -->
+    <footer class="footer-sh">
+
+        <div class="footer-container-sh">
+
+            <!-- Footer Top -->
+            <div class="footer-top-sh">
+
+                <!-- Brand -->
+                <div class="footer-brand-sh">
+
+                    <a href="#" class="footer-logo-sh">
+                        STEPLUX
+                    </a>
+
+                    <p class="footer-description-sh">
+                        Step into comfort, quality and style.
+                        Discover premium shoes designed for
+                        everyday movement.
+                    </p>
+
+                    <!-- Social Icons -->
+                    <div class="footer-social-sh">
+
+                        <a href="#" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.7">
+                                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+
+                                <circle cx="12" cy="12" r="4"></circle>
+
+                                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+                            </svg>
+                        </a>
+
+
+                        <a href="#" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14 8h3V4h-3c-3.3 0-5 1.7-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V9c0-.7.3-1 1-1z" />
+                            </svg>
+                        </a>
+
+
+                        <a href="#" aria-label="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.7">
+                                <path d="M18 3h3l-6.5 7.4L22 21h-6.2l-4.8-6.2L5.5 21H2.5l7-8L2 3h6.4l4.3 5.6L18 3z" />
+                            </svg>
+                        </a>
+
+
+                        <a href="#" aria-label="TikTok">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.7">
+                                <path
+                                    d="M15 4c.5 2.4 2 3.8 4 4.1V11c-1.5 0-2.9-.5-4-1.3v6.4a5 5 0 1 1-4.3-5v2.9a2.2 2.2 0 1 0 1.4 2.1V4H15z" />
+                            </svg>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Shop -->
+                <div class="footer-column-sh">
+
+                    <h3>SHOP</h3>
+
+                    <ul>
+                        <li>
+                            <a href="/collection.html">Men</a>
+                        </li>
+
+                        <li>
+                            <a href="/collection.html">Women</a>
+                        </li>
+
+                        <li>
+                            <a href="/collection.html">New Arrivals</a>
+                        </li>
+
+                        <li>
+                            <a href="/collection.html">Best Sellers</a>
+                        </li>
+
+                        <li>
+                            <a href="/collection.html">Hot Deals</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <!-- Company -->
+                <div class="footer-column-sh">
+
+                    <h3>COMPANY</h3>
+
+                    <ul>
+                        <li>
+                            <a href="/about.html">About Us</a>
+                        </li>
+
+                        <li>
+                            <a href="/our-story.html">Our Story</a>
+                        </li>
+
+                        <li>
+                            <a href="/contact.html">Contact</a>
+                        </li>
+
+                        <li>
+                            <a href="/review.html">Reviews</a>
+                        </li>
+
+                        <li>
+                            <a href="/faq.html">FAQs</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <!-- Support -->
+                <div class="footer-column-sh">
+
+                    <h3>SUPPORT</h3>
+
+                    <ul>
+                        <li>
+                            <a href="/shipping.html">Shipping & Delivery</a>
+                        </li>
+
+                        <li>
+                            <a href="/retrens.html">Returns & Exchanges</a>
+                        </li>
+
+                        <li>
+                            <a href="/track-order.html">Track Order</a>
+                        </li>
+
+                        <li>
+                            <a href="/help.html">Help Center</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <!-- Newsletter -->
+                <div class="footer-newsletter-sh">
+
+                    <h3>STAY IN THE LOOP</h3>
+
+                    <p>
+                        Subscribe to get exclusive offers,
+                        new arrivals and latest updates.
+                    </p>
+
+                    <form class="footer-form-sh">
+
+                        <input type="email" placeholder="Your email address" aria-label="Email address" required>
+
+                        <button type="submit">
+                            →
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom-sh">
+
+                <p>
+                    © 2026 STEPLUX. All rights reserved.
+                </p>
+
+                <div class="footer-bottom-links-sh">
+
+                    <a href="/privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="/trem-conditions.html">
+                        Terms & Conditions
+                    </a>
+
+                    <a href="/refund-policy.html">
+                        Refund Policy
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const faqItems = document.querySelectorAll(
+                ".shipping-faq-item-sh"
+            );
+
+            faqItems.forEach(function (item) {
+
+                const question = item.querySelector(
+                    ".shipping-faq-question-sh"
+                );
+
+                const answer = item.querySelector(
+                    ".shipping-faq-answer-sh"
+                );
+
+                question.addEventListener("click", function () {
+
+                    const isActive = item.classList.contains("active");
+
+                    /* Close all FAQs */
+                    faqItems.forEach(function (otherItem) {
+
+                        otherItem.classList.remove("active");
+
+                        const otherAnswer =
+                            otherItem.querySelector(
+                                ".shipping-faq-answer-sh"
+                            );
+
+                        otherAnswer.style.maxHeight = null;
+
+                    });
+
+
+                    /* Open clicked FAQ */
+                    if (!isActive) {
+
+                        item.classList.add("active");
+
+                        answer.style.maxHeight =
+                            answer.scrollHeight + "px";
+
+                    }
+
+                });
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>

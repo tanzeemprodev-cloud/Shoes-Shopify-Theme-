@@ -1,0 +1,3051 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* product informition */
+
+.product-hero-sh {
+    width: 100%;
+    padding: 40px 0 100px;
+    background: #f5f5f3;
+    color: #111111;
+}
+
+.product-hero-container-sh {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 25px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(400px, .95fr);
+    gap: 70px;
+}
+
+
+/* =================================
+   PRODUCT GALLERY
+================================= */
+
+.product-gallery-sh {
+    min-width: 0;
+}
+
+.product-gallery-main-sh {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #e9e9e6;
+}
+
+.product-gallery-main-sh img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+
+    transition: opacity .25s ease;
+}
+
+
+/* GALLERY ARROWS */
+
+.product-gallery-arrow-sh {
+    position: absolute;
+
+    top: 50%;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, .65);
+    border-radius: 50%;
+
+    background: rgba(17, 17, 17, .35);
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transform: translateY(-50%);
+
+    transition:
+        background-color .3s ease,
+        color .3s ease;
+}
+
+.product-gallery-prev-sh {
+    left: 18px;
+}
+
+.product-gallery-next-sh {
+    right: 18px;
+}
+
+.product-gallery-arrow-sh:hover {
+    background: #ffffff;
+    color: #111111;
+}
+
+
+/* IMAGE COUNT */
+
+.product-gallery-count-sh {
+    position: absolute;
+
+    right: 20px;
+    bottom: 18px;
+
+    padding: 8px 11px;
+
+    background: rgba(17, 17, 17, .75);
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: .08em;
+}
+
+
+/* THUMBNAILS */
+
+.product-gallery-thumbs-sh {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.product-thumb-sh {
+    position: relative;
+
+    aspect-ratio: 1 / 1;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    border: 1px solid transparent;
+
+    background: #e9e9e6;
+
+    cursor: pointer;
+
+    opacity: .55;
+
+    transition:
+        opacity .3s ease,
+        border-color .3s ease;
+}
+
+.product-thumb-sh.active {
+    border-color: #111111;
+    opacity: 1;
+}
+
+.product-thumb-sh:hover {
+    opacity: 1;
+}
+
+.product-thumb-sh img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =================================
+   PRODUCT INFO
+================================= */
+
+.product-info-sh {
+    padding-top: 5px;
+}
+
+.product-info-top-sh {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 45px;
+}
+
+.product-breadcrumb-sh {
+    color: #999999;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: .12em;
+}
+
+.product-wishlist-sh {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #d5d5d5;
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #111111;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition:
+        background-color .3s ease,
+        color .3s ease;
+}
+
+.product-wishlist-sh:hover {
+    background: #111111;
+    color: #ffffff;
+}
+
+
+/* LABEL */
+
+.product-label-sh {
+    display: inline-flex;
+
+    padding: 7px 10px;
+
+    margin-bottom: 18px;
+
+    background: #ff1f26;
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    letter-spacing: .13em;
+}
+
+
+/* TITLE */
+
+.product-title-sh {
+    max-width: 600px;
+
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(45px, 5vw, 60px);
+
+    font-weight: 600;
+
+    line-height: .88;
+
+    letter-spacing: -.075em;
+
+    text-transform: uppercase;
+}
+
+.product-title-sh span {
+    display: block;
+
+
+    color: #ff1f26;
+}
+
+
+/* RATING */
+
+.product-rating-sh {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 25px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+}
+
+.product-stars-sh {
+    color: #ff1f26;
+
+    letter-spacing: 1px;
+
+    font-size: 20px;
+}
+
+.product-rating-sh a {
+    color: #777777;
+
+    text-decoration: underline;
+
+    text-underline-offset: 3px;
+}
+
+
+/* PRICE */
+
+.product-price-sh {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.product-current-price-sh {
+    font-family: "Poppins", sans-serif;
+
+    font-size: 28px;
+
+    font-weight: 600;
+
+    letter-spacing: -.04em;
+}
+
+.product-old-price-sh {
+    color: #999999;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    text-decoration: line-through;
+}
+
+.product-sale-sh {
+    padding: 5px 8px;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: .1em;
+}
+
+
+/* DESCRIPTION */
+
+.product-description-sh {
+    max-width: 520px;
+
+    margin-top: 25px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.product-description-sh p {
+    margin: 0;
+
+    color: #666666;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+/* =================================
+   OPTIONS
+================================= */
+
+.product-option-sh {
+    padding: 25px 0;
+
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.product-option-header-sh {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: .1em;
+}
+
+.product-option-header-sh span {
+    color: #999999;
+}
+
+.product-option-header-sh strong {
+    font-weight: 600;
+}
+
+.product-options-list-sh {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.product-option-btn-sh {
+    width: 48px;
+    height: 42px;
+
+    border: 1px solid #d0d0cc;
+
+    background: transparent;
+
+    color: #111111;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease;
+}
+
+.product-option-btn-sh.active,
+.product-option-btn-sh:hover {
+    border-color: #111111;
+
+    background: #111111;
+
+    color: #ffffff;
+}
+
+
+/* =================================
+   BUY AREA
+================================= */
+
+.product-buy-sh {
+    display: grid;
+
+    grid-template-columns: 115px 1fr;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.product-quantity-sh {
+    height: 52px;
+
+    display: grid;
+
+    grid-template-columns: 32px 1fr 32px;
+
+    align-items: center;
+
+    border: 1px solid #d0d0cc;
+}
+
+.product-quantity-sh button {
+    height: 100%;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #111111;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.product-quantity-sh input {
+    width: 100%;
+
+    height: 100%;
+
+    padding: 0;
+
+    border: 0;
+
+    outline: 0;
+
+    background: transparent;
+
+    color: #111111;
+
+    text-align: center;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    -moz-appearance: textfield;
+}
+
+.product-quantity-sh input::-webkit-inner-spin-button,
+.product-quantity-sh input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* ADD TO CART */
+
+.product-add-cart-sh {
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    border: 0;
+
+    background: #ff1f26;
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    letter-spacing: .12em;
+
+    cursor: pointer;
+
+    transition:
+        background-color .3s ease,
+        color .3s ease;
+}
+
+.product-add-cart-sh span {
+    font-size: 15px;
+}
+
+.product-add-cart-sh:hover {
+    background: #111111;
+}
+
+
+/* BUY NOW */
+
+.product-buy-now-sh {
+    width: 100%;
+
+    height: 52px;
+
+    margin-top: 10px;
+
+    border: 1px solid #111111;
+
+    background: transparent;
+
+    color: #111111;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    letter-spacing: .12em;
+
+    cursor: pointer;
+
+    transition:
+        background-color .3s ease,
+        color .3s ease;
+}
+
+.product-buy-now-sh:hover {
+    background: #111111;
+
+    color: #ffffff;
+}
+
+
+/* =================================
+   FEATURES
+================================= */
+
+.product-features-sh {
+    margin-top: 30px;
+
+    border-top: 1px solid #d5d5d5;
+}
+
+.product-feature-sh {
+    display: grid;
+
+    grid-template-columns: 35px 1fr;
+
+    gap: 15px;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.product-feature-sh>span {
+    color: #ff1f26;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
+}
+
+.product-feature-sh strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: .1em;
+}
+
+.product-feature-sh p {
+    margin: 0;
+
+    color: #888888;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 950px) {
+
+    .product-hero-container-sh {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+    .product-info-sh {
+        max-width: 700px;
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .product-hero-sh {
+        padding: 20px 0 70px;
+    }
+
+    .product-hero-container-sh {
+        padding: 0 15px;
+
+        gap: 40px;
+    }
+
+    .product-gallery-main-sh {
+        aspect-ratio: 1 / 1.18;
+    }
+
+    .product-gallery-arrow-sh {
+        width: 36px;
+        height: 36px;
+    }
+
+    .product-gallery-prev-sh {
+        left: 10px;
+    }
+
+    .product-gallery-next-sh {
+        right: 10px;
+    }
+
+    .product-gallery-thumbs-sh {
+        gap: 6px;
+    }
+
+    .product-info-top-sh {
+        margin-bottom: 30px;
+    }
+
+    .product-breadcrumb-sh {
+        font-size: 6px;
+    }
+
+    .product-title-sh {
+        font-size: 48px;
+    }
+
+    .product-title-sh span {
+        padding-left: 7%;
+    }
+
+    .product-current-price-sh {
+        font-size: 25px;
+    }
+
+    .product-description-sh p {
+        font-size: 9px;
+    }
+
+    .product-buy-sh {
+        grid-template-columns: 95px 1fr;
+    }
+
+    .product-quantity-sh {
+        grid-template-columns: 27px 1fr 27px;
+    }
+
+    .product-add-cart-sh {
+        gap: 10px;
+    }
+
+}
+
+/* Product Benefits */
+
+.product-benefits-sh {
+    width: 100%;
+
+    padding: 110px 0;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+.product-benefits-container-sh {
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 0 25px;
+}
+
+
+/* =================================
+   TOP
+================================= */
+
+.product-benefits-top-sh {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    padding-bottom: 35px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.product-benefits-label-sh {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: .14em;
+}
+
+.product-benefits-label-sh span {
+    color: #ff1f26;
+}
+
+.product-benefits-top-sh>p {
+    max-width: 500px;
+
+    margin: 0;
+
+    color: #777777;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =================================
+   HEADING
+================================= */
+
+.product-benefits-heading-sh {
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 80px 0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(70px, 11vw, 80px);
+
+    font-weight: 600;
+
+    line-height: .7;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+}
+
+/* =================================
+   GRID
+================================= */
+
+.product-benefits-grid-sh {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid rgba(255, 255, 255, .2);
+
+    border-left: 1px solid rgba(255, 255, 255, .2);
+}
+
+
+/* =================================
+   CARD
+================================= */
+
+.product-benefit-card-sh {
+    position: relative;
+
+    min-height: 360px;
+
+    padding: 25px;
+
+    border-right: 1px solid rgba(255, 255, 255, .2);
+
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+
+    overflow: hidden;
+
+    transition:
+        background-color .35s ease;
+}
+
+.product-benefit-card-sh:hover {
+    background: #ff1f26;
+}
+
+
+/* NUMBER */
+
+.product-benefit-number-sh {
+    color: #666666;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    transition: color .35s ease;
+}
+
+.product-benefit-card-sh:hover .product-benefit-number-sh {
+    color: rgba(255, 255, 255, .7);
+}
+
+
+/* ICON */
+
+.product-benefit-icon-sh {
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 70px;
+
+    border: 1px solid rgba(255, 255, 255, .25);
+
+    border-radius: 50%;
+
+    color: #ff1f26;
+
+    font-size: 18px;
+
+    transition:
+        background-color .35s ease,
+        color .35s ease,
+        transform .35s ease;
+}
+
+.product-benefit-card-sh:hover .product-benefit-icon-sh {
+    background: #ffffff;
+
+    color: #ff1f26;
+
+    transform: rotate(12deg);
+}
+
+
+/* TITLE */
+
+.product-benefit-card-sh h3 {
+    margin: 25px 0 15px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 26px;
+
+    font-weight: 500;
+
+    line-height: .9;
+
+    letter-spacing: -.055em;
+
+    text-transform: uppercase;
+}
+
+.product-benefit-card-sh h3 span {
+    display: block;
+
+    color: #ff1f26;
+
+    transition: color .35s ease;
+}
+
+.product-benefit-card-sh:hover .product-benefit-card-sh h3 span {
+    color: #111111;
+}
+
+
+/* DESCRIPTION */
+
+.product-benefit-card-sh p {
+    max-width: 220px;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    transition: color .35s ease;
+}
+
+
+/* ARROW */
+
+.product-benefit-arrow-sh {
+    position: absolute;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 32px;
+
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, .2);
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    transition:
+        background-color .35s ease,
+        color .35s ease,
+        transform .35s ease;
+}
+
+.product-benefit-card-sh:hover .product-benefit-arrow-sh {
+    background: #ffffff;
+
+    color: #111111;
+
+    transform: translate(3px, -3px);
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 950px) {
+
+    .product-benefits-grid-sh {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .product-benefits-sh {
+        padding: 75px 0;
+    }
+
+    .product-benefits-container-sh {
+        padding: 0 18px;
+    }
+
+    .product-benefits-top-sh {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .product-benefits-heading-sh {
+        padding: 60px 0;
+
+        font-size: 68px;
+    }
+
+    .product-benefits-heading-sh span:nth-child(2) {
+        padding-left: 8%;
+    }
+
+    .product-benefits-heading-sh span:nth-child(3) {
+        padding-left: 15%;
+    }
+
+    .product-benefits-grid-sh {
+        grid-template-columns: 1fr;
+    }
+
+    .product-benefit-card-sh {
+        min-height: 300px;
+
+        padding: 22px;
+    }
+
+    .product-benefit-icon-sh {
+        margin-top: 55px;
+    }
+
+}
+
+/* Product Story */
+
+.product-story-sh {
+    width: 100%;
+    padding: 120px 0;
+    background: #f5f5f3;
+    color: #111111;
+    overflow: hidden;
+}
+
+.product-story-container-sh {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.product-story-header-sh {
+    padding-bottom: 70px;
+}
+
+.product-story-label-sh {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 35px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .14em;
+}
+
+.product-story-label-sh span {
+    color: #ff1f26;
+}
+
+.product-story-header-sh h2 {
+
+
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(65px, 9vw, 80px);
+    font-weight: 600;
+    line-height: .78;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: flex;
+}
+
+.product-story-header-sh h2 span {
+    display: block;
+
+    color: #ff1f26;
+}
+
+
+/* =================================
+   MAIN GRID
+================================= */
+
+.product-story-grid-sh {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) minmax(400px, .8fr);
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+
+/* =================================
+   IMAGE
+================================= */
+
+.product-story-image-sh {
+    position: relative;
+
+    aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+
+    background: #e8e8e5;
+}
+
+.product-story-image-sh img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform .7s ease;
+}
+
+.product-story-image-sh:hover img {
+    transform: scale(1.04);
+}
+
+.product-story-image-tag-sh {
+    position: absolute;
+
+    left: 20px;
+    bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 10px 13px;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .1em;
+}
+
+.product-story-image-tag-sh span {
+    color: #ff1f26;
+}
+
+
+/* =================================
+   CONTENT
+================================= */
+
+.product-story-content-sh {
+    padding-top: 15px;
+}
+
+.product-story-intro-sh {
+    padding-bottom: 35px;
+
+    border-bottom: 1px solid #d2d2ce;
+}
+
+.product-story-small-label-sh {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #999999;
+
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .14em;
+}
+
+.product-story-intro-sh p {
+    max-width: 500px;
+
+    margin: 0;
+
+    color: #555555;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* =================================
+   DETAILS
+================================= */
+
+.product-detail-sh {
+    display: grid;
+
+    grid-template-columns: 40px 1fr;
+
+    gap: 20px;
+
+    padding: 30px 0;
+
+    border-bottom: 1px solid #d2d2ce;
+}
+
+.product-detail-number-sh {
+    color: #ff1f26;
+
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.product-detail-content-sh h3 {
+    margin: 0 0 12px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -.045em;
+}
+
+.product-detail-content-sh p {
+    max-width: 440px;
+
+    margin: 0;
+
+    color: #777777;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* =================================
+   LINK
+================================= */
+
+.product-story-link-sh {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-top: 35px;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid #111111;
+
+    color: #111111;
+
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .12em;
+
+    transition:
+        color .3s ease,
+        gap .3s ease;
+}
+
+.product-story-link-sh span {
+    color: #ff1f26;
+
+    font-size: 15px;
+}
+
+.product-story-link-sh:hover {
+    gap: 25px;
+    color: #ff1f26;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 950px) {
+
+    .product-story-grid-sh {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .product-story-image-sh {
+        max-width: 700px;
+    }
+
+    .product-story-content-sh {
+        max-width: 700px;
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .product-story-sh {
+        padding: 75px 0;
+    }
+
+    .product-story-container-sh {
+        padding: 0 18px;
+    }
+
+    .product-story-header-sh {
+        padding-bottom: 50px;
+    }
+
+    .product-story-label-sh {
+        margin-bottom: 25px;
+    }
+
+    .product-story-header-sh h2 {
+        font-size: 58px;
+    }
+
+    .product-story-header-sh h2 span {
+        padding-left: 7%;
+    }
+
+    .product-story-grid-sh {
+        gap: 40px;
+    }
+
+    .product-story-content-sh {
+        padding-top: 0;
+    }
+
+    .product-story-intro-sh p {
+        font-size: 10px;
+    }
+
+    .product-detail-sh {
+        grid-template-columns: 30px 1fr;
+
+        gap: 12px;
+
+        padding: 25px 0;
+    }
+
+    .product-detail-content-sh h3 {
+        font-size: 20px;
+    }
+
+    .product-detail-content-sh p {
+        font-size: 9px;
+    }
+
+}
+
+/* How To Use */
+
+.product-howto-sh {
+    width: 100%;
+
+    padding: 115px 0;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+.product-howto-container-sh {
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 0 25px;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.product-howto-header-sh {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: end;
+
+    gap: 50px;
+
+    padding-bottom: 70px;
+}
+
+.product-howto-label-sh {
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 5px;
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    letter-spacing: .14em;
+}
+
+.product-howto-label-sh span {
+    color: #ff1f26;
+}
+
+.product-howto-header-sh h2 {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: clamp(65px, 9vw, 120px);
+
+    font-weight: 600;
+
+    line-height: .76;
+
+    letter-spacing: 0.2px;
+
+    text-transform: uppercase;
+}
+
+.product-howto-header-sh h2 span {
+    display: block;
+
+    padding-left: 18%;
+
+    color: #ff1f26;
+}
+
+.product-howto-header-sh>p {
+    max-width: 300px;
+
+    margin: 0 0 5px auto;
+
+    color: #777777;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =================================
+   STEPS
+================================= */
+
+.product-howto-steps-sh {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid rgba(255, 255, 255, .2);
+
+    border-left: 1px solid rgba(255, 255, 255, .2);
+}
+
+
+/* =================================
+   STEP
+================================= */
+
+.product-howto-step-sh {
+    padding: 20px;
+
+    border-right: 1px solid rgba(255, 255, 255, .2);
+
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+
+/* STEP TOP */
+
+.product-howto-step-top-sh {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+
+    font-family: "Inter", sans-serif;
+}
+
+.product-howto-step-top-sh span {
+    color: #777777;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: .15em;
+}
+
+.product-howto-step-top-sh strong {
+    color: #ff1f26;
+
+    font-size: 18px;
+
+    font-weight: 600;
+}
+
+
+/* IMAGE */
+
+.product-howto-image-sh {
+    width: 100%;
+
+    aspect-ratio: 1 / 1.08;
+
+    overflow: hidden;
+
+    background: #202020;
+}
+
+.product-howto-image-sh img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform .6s ease;
+}
+
+.product-howto-step-sh:hover .product-howto-image-sh img {
+    transform: scale(1.04);
+}
+
+
+/* CONTENT */
+
+.product-howto-content-sh {
+    padding: 28px 5px 15px;
+}
+
+.product-howto-content-sh h3 {
+    margin: 0 0 14px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 27px;
+
+    font-weight: 500;
+
+    line-height: .9;
+
+    letter-spacing: -.05em;
+}
+
+.product-howto-content-sh p {
+    max-width: 300px;
+
+    margin: 0;
+
+    color: #777777;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+/* =================================
+   BOTTOM
+================================= */
+
+.product-howto-bottom-sh {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin-top: 35px;
+
+    padding: 20px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, .2);
+
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.product-howto-bottom-sh>span {
+    flex-shrink: 0;
+
+    color: #ff1f26;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: .13em;
+}
+
+.product-howto-bottom-sh p {
+    margin: 0;
+
+    color: #777777;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 800px) {
+
+    .product-howto-header-sh {
+        grid-template-columns: 1fr;
+    }
+
+    .product-howto-label-sh {
+        grid-column: auto;
+    }
+
+    .product-howto-header-sh>p {
+        margin: 0;
+    }
+
+    .product-howto-steps-sh {
+        grid-template-columns: 1fr;
+    }
+
+    .product-howto-step-sh {
+        display: grid;
+
+        grid-template-columns: 35px 1fr;
+
+        gap: 20px;
+    }
+
+    .product-howto-step-top-sh {
+        grid-row: span 2;
+
+        flex-direction: column;
+
+        justify-content: flex-start;
+
+        align-items: center;
+
+        padding-top: 5px;
+
+        margin: 0;
+    }
+
+    .product-howto-image-sh {
+        aspect-ratio: 16 / 10;
+    }
+
+    .product-howto-content-sh {
+        padding: 15px 0 20px;
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .product-howto-sh {
+        padding: 75px 0;
+    }
+
+    .product-howto-container-sh {
+        padding: 0 18px;
+    }
+
+    .product-howto-header-sh {
+        gap: 30px;
+
+        padding-bottom: 50px;
+    }
+
+    .product-howto-header-sh h2 {
+        font-size: 62px;
+    }
+
+    .product-howto-header-sh h2 span {
+        padding-left: 8%;
+    }
+
+    .product-howto-step-sh {
+        display: block;
+
+        padding: 15px;
+    }
+
+    .product-howto-step-top-sh {
+        flex-direction: row;
+
+        margin-bottom: 15px;
+    }
+
+    .product-howto-image-sh {
+        aspect-ratio: 1 / 1;
+    }
+
+    .product-howto-content-sh {
+        padding: 22px 2px 12px;
+    }
+
+    .product-howto-content-sh h3 {
+        font-size: 24px;
+    }
+
+    .product-howto-content-sh p {
+        font-size: 8px;
+    }
+
+    .product-howto-bottom-sh {
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+}
+
+/* Customer Reviews */
+
+.product-reviews-sh {
+    width: 100%;
+    padding: 120px 0;
+    background: #f5f5f3;
+    color: #111111;
+    overflow: hidden;
+}
+
+.product-reviews-container-sh {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.product-reviews-header-sh {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    gap: 50px;
+    padding-bottom: 70px;
+}
+
+.product-reviews-label-sh {
+    grid-column: 1 / -1;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .14em;
+}
+
+.product-reviews-label-sh span {
+    color: #ff1f26;
+}
+
+.product-reviews-header-sh h2 {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(65px, 9vw, 80px);
+    font-weight: 600;
+    line-height: .76;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+}
+
+.product-reviews-header-sh h2 span {
+    display: block;
+    color: #ff1f26;
+}
+
+.product-reviews-header-sh>p {
+    max-width: 520px;
+    margin: 0 0 5px auto;
+
+    color: #777777;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =================================
+   SUMMARY
+================================= */
+
+.product-reviews-summary-sh {
+    display: grid;
+    grid-template-columns: 220px 1fr auto;
+    align-items: center;
+    gap: 50px;
+
+    padding: 35px 0;
+
+    border-top: 1px solid #d3d3cf;
+    border-bottom: 1px solid #d3d3cf;
+}
+
+.product-review-score-sh {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-review-score-sh strong {
+    font-family: "Poppins", sans-serif;
+    font-size: 55px;
+    font-weight: 600;
+    line-height: .8;
+    letter-spacing: -.07em;
+}
+
+.product-review-stars-sh {
+    margin-top: 12px;
+
+    color: #ff1f26;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.product-review-score-sh>span {
+    margin-top: 8px;
+
+    color: #888888;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+
+/* =================================
+   RATING BARS
+================================= */
+
+.product-review-bars-sh {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    max-width: 430px;
+}
+
+.product-review-bar-sh {
+    display: grid;
+    grid-template-columns: 12px 1fr 30px;
+    align-items: center;
+    gap: 8px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+.product-review-bar-sh>div {
+    height: 5px;
+    overflow: hidden;
+    background: #deded9;
+}
+
+.product-review-bar-sh i {
+    display: block;
+    height: 100%;
+    background: #111111;
+}
+
+.product-review-bar-sh small {
+    color: #888888;
+    font-size: 14px;
+}
+
+
+/* =================================
+   WRITE REVIEW
+================================= */
+
+.product-write-review-sh {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    padding: 12px 30px;
+
+    border: 1px solid #111111;
+    background: transparent;
+
+    color: #111111;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .1em;
+
+    cursor: pointer;
+
+    transition:
+        background-color .3s ease,
+        color .3s ease;
+}
+
+.product-write-review-sh span {
+    color: #ff1f26;
+    font-size: 14px;
+}
+
+.product-write-review-sh:hover {
+    background: #111111;
+    color: #ffffff;
+}
+
+
+/* =================================
+   FEATURED REVIEW
+================================= */
+
+.product-featured-review-sh {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 100px 1fr 120px;
+    gap: 35px;
+
+    margin-top: 70px;
+    padding: 55px;
+
+    background: #111111;
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+.product-featured-review-mark-sh {
+    color: #ff1f26;
+
+    font-family: Georgia, serif;
+    font-size: 110px;
+    line-height: .6;
+}
+
+.product-featured-review-content-sh {
+    max-width: 700px;
+}
+
+.product-featured-review-content-sh .product-review-stars-sh {
+    margin-top: 0;
+}
+
+.product-featured-review-content-sh blockquote {
+    margin: 30px 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(24px, 3vw, 38px);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -.04em;
+}
+
+.product-featured-review-author-sh {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.product-featured-review-author-sh>span {
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+
+    background: #ff1f26;
+}
+
+.product-featured-review-author-sh div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.product-featured-review-author-sh strong {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.product-featured-review-author-sh small {
+    color: #777777;
+
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    letter-spacing: .1em;
+}
+
+.product-featured-review-number-sh {
+    align-self: end;
+
+    color: #666666;
+
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .12em;
+
+    writing-mode: vertical-rl;
+}
+
+
+/* =================================
+   REVIEW CARDS
+================================= */
+
+.product-review-grid-sh {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: 15px;
+
+    border-top: 1px solid #d3d3cf;
+    border-left: 1px solid #d3d3cf;
+}
+
+.product-review-card-sh {
+    min-height: 300px;
+
+    padding: 30px;
+
+    border-right: 1px solid #d3d3cf;
+    border-bottom: 1px solid #d3d3cf;
+
+    transition:
+        background-color .3s ease,
+        transform .3s ease;
+}
+
+.product-review-card-sh:hover {
+    background: #ffffff;
+    transform: translateY(-5px);
+}
+
+.product-review-card-top-sh {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-review-card-top-sh .product-review-stars-sh {
+    margin-top: 0;
+}
+
+.product-review-card-top-sh>span {
+    color: #ff1f26;
+
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.product-review-card-sh h3 {
+    margin: 55px 0 15px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -.045em;
+}
+
+.product-review-card-sh p {
+    max-width: 300px;
+
+    margin: 0;
+
+    color: #777777;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.product-review-author-sh {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    margin-top: 35px;
+}
+
+.product-review-author-sh strong {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+.product-review-author-sh span {
+    color: #999999;
+
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+    .product-reviews-header-sh {
+        grid-template-columns: 1fr;
+    }
+
+    .product-reviews-label-sh {
+        grid-column: auto;
+    }
+
+    .product-reviews-header-sh>p {
+        margin: 0;
+    }
+
+    .product-reviews-summary-sh {
+        grid-template-columns: 180px 1fr;
+    }
+
+    .product-write-review-sh {
+        grid-column: 1 / -1;
+    }
+
+    .product-featured-review-sh {
+        grid-template-columns: 60px 1fr;
+    }
+
+    .product-featured-review-number-sh {
+        display: none;
+    }
+
+    .product-review-grid-sh {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .product-reviews-sh {
+        padding: 75px 0;
+    }
+
+    .product-reviews-container-sh {
+        padding: 0 18px;
+    }
+
+    .product-reviews-header-sh {
+        gap: 30px;
+        padding-bottom: 50px;
+    }
+
+    .product-reviews-header-sh h2 {
+        font-size: 62px;
+    }
+
+    .product-reviews-header-sh h2 span {
+        padding-left: 8%;
+    }
+
+    .product-reviews-summary-sh {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .product-review-bars-sh {
+        max-width: 100%;
+    }
+
+    .product-write-review-sh {
+        width: 100%;
+    }
+
+    .product-featured-review-sh {
+        grid-template-columns: 1fr;
+        gap: 20px;
+
+        margin-top: 50px;
+        padding: 30px;
+    }
+
+    .product-featured-review-mark-sh {
+        font-size: 75px;
+    }
+
+    .product-featured-review-content-sh blockquote {
+        font-size: 24px;
+    }
+
+    .product-review-card-sh {
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .product-review-card-sh h3 {
+        margin-top: 40px;
+    }
+
+}
+
+/* Product FAQ */
+
+.product-faq-sh {
+    width: 100%;
+    padding: 120px 0;
+    background: #111111;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.product-faq-container-sh {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.product-faq-header-sh {
+    padding-bottom: 70px;
+}
+
+.product-faq-label-sh {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 45px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .14em;
+}
+
+.product-faq-label-sh span {
+    color: #ff1f26;
+}
+
+.product-faq-heading-sh {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.product-faq-heading-sh h2 {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(65px, 9vw, 80px);
+    font-weight: 600;
+    line-height: 0.9;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+}
+
+.product-faq-heading-sh h2 span {
+    display: block;
+    color: #ff1f26;
+}
+
+.product-faq-heading-sh p {
+    max-width: 300px;
+    margin: 0 0 5px;
+
+    color: #777777;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =================================
+   FAQ LIST
+================================= */
+
+.product-faq-list-sh {
+    border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+
+/* =================================
+   FAQ ITEM
+================================= */
+
+.product-faq-item-sh {
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+
+/* =================================
+   QUESTION
+================================= */
+
+.product-faq-question-sh {
+    width: 100%;
+    min-height: 90px;
+
+    display: grid;
+    grid-template-columns: 55px 1fr 45px;
+    align-items: center;
+    gap: 20px;
+
+    padding: 15px 0;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+    color: #ffffff;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.product-faq-number-sh {
+    color: #ff1f26;
+
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.product-faq-title-sh {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(18px, 2vw, 20px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -.04em;
+
+    transition: color .3s ease;
+}
+
+.product-faq-question-sh:hover .product-faq-title-sh {
+    color: #ff1f26;
+}
+
+
+/* =================================
+   ICON
+================================= */
+
+.product-faq-icon-sh {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        transform .35s ease;
+}
+
+.product-faq-item-sh.active .product-faq-icon-sh {
+    background: #ff1f26;
+    color: #ffffff;
+
+    border-color: #ff1f26;
+}
+
+
+/* =================================
+   ANSWER
+================================= */
+
+.product-faq-answer-sh {
+    display: grid;
+
+    grid-template-rows: 0fr;
+
+    transition: grid-template-rows .4s ease;
+}
+
+.product-faq-answer-sh>div {
+    overflow: hidden;
+}
+
+.product-faq-item-sh.active .product-faq-answer-sh {
+    grid-template-rows: 1fr;
+}
+
+.product-faq-answer-sh p {
+    max-width: 950px;
+
+    margin: 0;
+
+    padding:
+        0 80px 35px 75px;
+
+    color: #777777;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* =================================
+   BOTTOM CTA
+================================= */
+
+.product-faq-bottom-sh {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    margin-top: 50px;
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+.product-faq-bottom-sh p {
+    margin: 0;
+
+    color: #777777;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+.product-faq-bottom-sh a {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .12em;
+
+    text-decoration: none;
+
+    transition:
+        color .3s ease,
+        gap .3s ease;
+}
+
+.product-faq-bottom-sh a span {
+    color: #ff1f26;
+    font-size: 16px;
+}
+
+.product-faq-bottom-sh a:hover {
+    gap: 22px;
+    color: #ff1f26;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 750px) {
+
+    .product-faq-heading-sh {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .product-faq-heading-sh p {
+        margin: 0;
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .product-faq-sh {
+        padding: 75px 0;
+    }
+
+    .product-faq-container-sh {
+        padding: 0 18px;
+    }
+
+    .product-faq-header-sh {
+        padding-bottom: 50px;
+    }
+
+    .product-faq-label-sh {
+        margin-bottom: 30px;
+    }
+
+    .product-faq-heading-sh {
+        gap: 25px;
+    }
+
+    .product-faq-heading-sh h2 {
+        font-size: 58px;
+    }
+
+    .product-faq-heading-sh h2 span {
+        padding-left: 8%;
+    }
+
+    .product-faq-question-sh {
+        min-height: 75px;
+
+        grid-template-columns: 30px 1fr 38px;
+
+        gap: 12px;
+    }
+
+    .product-faq-title-sh {
+        font-size: 16px;
+    }
+
+    .product-faq-icon-sh {
+        width: 32px;
+        height: 32px;
+    }
+
+    .product-faq-answer-sh p {
+        padding:
+            0 45px 25px 42px;
+
+        font-size: 8px;
+    }
+
+    .product-faq-bottom-sh {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+}
+
+/* Product CTA */
+
+.product-final-cta-sh {
+    width: 100%;
+    padding: 100px 0 0;
+
+    background: #ff1f26;
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+.product-final-cta-container-sh {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+
+/* =================================
+   TOP
+================================= */
+
+.product-final-cta-top-sh {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .35);
+
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .14em;
+}
+
+.product-final-cta-top-sh span {
+    opacity: .65;
+}
+
+
+/* =================================
+   MAIN
+================================= */
+
+.product-final-cta-main-sh {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+    padding: 80px 0;
+}
+
+
+/* =================================
+   HEADING
+================================= */
+
+.product-final-cta-heading-sh p {
+    margin: 0 0 25px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .15em;
+}
+
+.product-final-cta-heading-sh h2 {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(70px, 9vw, 125px);
+    font-weight: 600;
+    line-height: .72;
+    letter-spacing: -.09em;
+    text-transform: uppercase;
+}
+
+.product-final-cta-heading-sh h2 span {
+    display: block;
+    padding-left: 18%;
+
+    color: #111111;
+}
+
+
+/* =================================
+   PRODUCT
+================================= */
+
+.product-final-cta-product-sh {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 15px;
+
+    background: #111111;
+}
+
+
+/* IMAGE */
+
+.product-final-cta-image-sh {
+    width: 100%;
+    aspect-ratio: 1 / 1.15;
+
+    overflow: hidden;
+
+    background: #222222;
+}
+
+.product-final-cta-image-sh img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform .6s ease;
+}
+
+.product-final-cta-product-sh:hover .product-final-cta-image-sh img {
+    transform: scale(1.04);
+}
+
+
+/* INFO */
+
+.product-final-cta-info-sh {
+    padding: 10px 10px 10px 0;
+}
+
+.product-final-cta-label-sh {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    padding: 6px 8px;
+
+    background: #ff1f26;
+
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .12em;
+}
+
+.product-final-cta-info-sh h3 {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -.05em;
+}
+
+.product-final-cta-price-sh {
+    margin-top: 15px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.product-final-cta-info-sh p {
+    margin: 18px 0 25px;
+
+    color: #777777;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* BUTTON */
+
+.product-final-cta-button-sh {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 12px 30px;
+
+    border: 0;
+
+    background: #ff1f26;
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .12em;
+
+    cursor: pointer;
+
+    transition:
+        background-color .3s ease,
+        color .3s ease;
+}
+
+.product-final-cta-button-sh span {
+    font-size: 14px;
+}
+
+.product-final-cta-button-sh:hover {
+    background: #ffffff;
+    color: #111111;
+}
+
+
+/* =================================
+   BOTTOM
+================================= */
+
+.product-final-cta-bottom-sh {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, .35);
+}
+
+.product-final-cta-bottom-sh div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .08em;
+}
+
+.product-final-cta-bottom-sh span {
+    font-size: 14px;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 850px) {
+
+    .product-final-cta-main-sh {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .product-final-cta-heading-sh h2 {
+        font-size: 90px;
+    }
+
+    .product-final-cta-product-sh {
+        max-width: 650px;
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .product-final-cta-sh {
+        padding-top: 70px;
+    }
+
+    .product-final-cta-container-sh {
+        padding: 0 18px;
+    }
+
+    .product-final-cta-main-sh {
+        padding: 55px 0;
+        gap: 40px;
+    }
+
+    .product-final-cta-heading-sh h2 {
+        font-size: 62px;
+    }
+
+    .product-final-cta-heading-sh h2 span {
+        padding-left: 8%;
+    }
+
+    .product-final-cta-product-sh {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .product-final-cta-info-sh {
+        padding: 10px;
+    }
+
+    .product-final-cta-image-sh {
+        aspect-ratio: 1 / 1;
+    }
+
+    .product-final-cta-bottom-sh {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+}

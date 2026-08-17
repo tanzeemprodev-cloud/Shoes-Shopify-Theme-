@@ -770,6 +770,230 @@
 
                     </div>
 
+                    <!-- Product 1 -->
+
+                    <div class="swiper-slide">
+
+                        <div class="product-3d-card-sh">
+
+                            <div class="product-3d-image-sh">
+
+                                <span class="product-3d-badge-sh">
+                                    NEW
+                                </span>
+
+                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+                                    alt="Nike Air Max">
+
+                            </div>
+
+                            <div class="product-3d-info-sh">
+
+                                <div>
+                                    <h3>
+                                        Nike Air Max
+                                    </h3>
+
+                                    <p>
+                                        Everyday Sneakers
+                                    </p>
+                                </div>
+
+                                <strong>
+                                    $149.99
+                                </strong>
+
+                            </div>
+
+                            <a href="#" class="product-3d-btn-sh">
+                                View Product
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Product 2 -->
+
+                    <div class="swiper-slide">
+
+                        <div class="product-3d-card-sh">
+
+                            <div class="product-3d-image-sh">
+
+                                <span class="product-3d-badge-sh">
+                                    SALE
+                                </span>
+
+                                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=900&q=80"
+                                    alt="Classic Sneakers">
+
+                            </div>
+
+                            <div class="product-3d-info-sh">
+
+                                <div>
+                                    <h3>
+                                        Urban Runner
+                                    </h3>
+
+                                    <p>
+                                        Street Collection
+                                    </p>
+                                </div>
+
+                                <strong>
+                                    $129.99
+                                </strong>
+
+                            </div>
+
+                            <a href="#" class="product-3d-btn-sh">
+                                View Product
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Product 3 -->
+
+                    <div class="swiper-slide">
+
+                        <div class="product-3d-card-sh">
+
+                            <div class="product-3d-image-sh">
+
+                                <span class="product-3d-badge-sh">
+                                    NEW
+                                </span>
+
+                                <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=80"
+                                    alt="Running Shoes">
+
+                            </div>
+
+                            <div class="product-3d-info-sh">
+
+                                <div>
+                                    <h3>
+                                        Velocity Pro
+                                    </h3>
+
+                                    <p>
+                                        Performance Series
+                                    </p>
+                                </div>
+
+                                <strong>
+                                    $179.99
+                                </strong>
+
+                            </div>
+
+                            <a href="#" class="product-3d-btn-sh">
+                                View Product
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Product 4 -->
+
+                    <div class="swiper-slide">
+
+                        <div class="product-3d-card-sh">
+
+                            <div class="product-3d-image-sh">
+
+                                <span class="product-3d-badge-sh">
+                                    HOT
+                                </span>
+
+                                <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=900&q=80"
+                                    alt="Premium Shoes">
+
+                            </div>
+
+                            <div class="product-3d-info-sh">
+
+                                <div>
+                                    <h3>
+                                        Street X
+                                    </h3>
+
+                                    <p>
+                                        Premium Collection
+                                    </p>
+                                </div>
+
+                                <strong>
+                                    $159.99
+                                </strong>
+
+                            </div>
+
+                            <a href="#" class="product-3d-btn-sh">
+                                View Product
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Product 5 -->
+
+                    <div class="swiper-slide">
+
+                        <div class="product-3d-card-sh">
+
+                            <div class="product-3d-image-sh">
+
+                                <span class="product-3d-badge-sh">
+                                    NEW
+                                </span>
+
+                                <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=900&q=80"
+                                    alt="Sport Shoes">
+
+                            </div>
+
+                            <div class="product-3d-info-sh">
+
+                                <div>
+                                    <h3>
+                                        Motion X
+                                    </h3>
+
+                                    <p>
+                                        Sport Collection
+                                    </p>
+                                </div>
+
+                                <strong>
+                                    $139.99
+                                </strong>
+
+                            </div>
+
+                            <a href="#" class="product-3d-btn-sh">
+                                View Product
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
 
                 </div>
 
@@ -1887,28 +2111,20 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-
             const product3DSlider = new Swiper(".product-3d-swiper-sh", {
-
                 effect: "coverflow",
-
                 centeredSlides: true,
-
-                initialSlide: 0,
-
                 slidesPerView: "auto",
-
                 loop: true,
-
+                watchOverflow: true,
+                observer: true,
+                observeParents: true,
                 grabCursor: true,
-
-                speed: 1200,
-
+                speed: 900,
                 autoplay: {
                     delay: 3000,
                     disableOnInteraction: false
                 },
-
                 coverflowEffect: {
                     rotate: 12,
                     stretch: 0,
@@ -1916,19 +2132,29 @@
                     modifier: 1.2,
                     slideShadows: false
                 },
-
                 navigation: {
                     nextEl: ".product-3d-next-sh",
                     prevEl: ".product-3d-prev-sh"
                 },
-
                 pagination: {
                     el: ".product-3d-pagination-sh",
                     clickable: true
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: "auto",
+                        centeredSlides: true
+                    },
+                    769: {
+                        slidesPerView: "auto",
+                        centeredSlides: true
+                    }
                 }
-
             });
 
+            window.addEventListener("resize", function () {
+                if (product3DSlider) product3DSlider.update();
+            });
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>

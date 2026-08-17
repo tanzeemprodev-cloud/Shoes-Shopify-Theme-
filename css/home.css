@@ -4367,3 +4367,1460 @@
     }
 
 }
+
+
+/* TRUST SECTION*/
+
+.trust-section-sh {
+    width: 100%;
+    padding: 100px 20px;
+    background: #f5f5f5;
+    font-family: "Inter", sans-serif;
+}
+
+.trust-container-sh {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.trust-heading-sh {
+    max-width: 700px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.trust-eyebrow-sh {
+    display: inline-block;
+    margin-bottom: 14px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #111111;
+}
+
+.trust-heading-sh h2 {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+
+    color: #111111;
+}
+
+.trust-heading-sh h2 span {
+    color: #777777;
+}
+
+.trust-heading-sh p {
+    max-width: 570px;
+    margin: 18px auto 0;
+
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+
+    color: #666666;
+}
+
+
+/* =========================
+   TRUST GRID
+========================= */
+
+.trust-grid-sh {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+
+/* =========================
+   TRUST CARD
+========================= */
+
+.trust-card-sh {
+    position: relative;
+
+    min-height: 280px;
+    padding: 30px 26px;
+
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition:
+        transform 0.35s ease,
+        background-color 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.trust-card-sh:hover {
+    transform: translateY(-7px);
+
+    background: #111111;
+    border-color: #111111;
+
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.trust-icon-sh {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f2f2f2;
+    border-radius: 50%;
+
+    color: #111111;
+
+    transition:
+        background-color 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.trust-icon-sh svg {
+    width: 25px;
+    height: 25px;
+}
+
+.trust-card-sh:hover .trust-icon-sh {
+    background: #ffffff;
+    color: #111111;
+    transform: rotate(-5deg);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.trust-content-sh {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 35px;
+}
+
+.trust-content-sh h3 {
+    margin: 0 0 10px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.3;
+
+    color: #111111;
+
+    transition: color 0.35s ease;
+}
+
+.trust-content-sh p {
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.7;
+
+    color: #6b6b6b;
+
+    transition: color 0.35s ease;
+}
+
+.trust-card-sh:hover .trust-content-sh h3 {
+    color: #ffffff;
+}
+
+.trust-card-sh:hover .trust-content-sh p {
+    color: #bdbdbd;
+}
+
+
+/* =========================
+   NUMBER
+========================= */
+
+.trust-number-sh {
+    position: absolute;
+    right: 20px;
+    bottom: 12px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 1;
+
+    color: #f1f1f1;
+
+    pointer-events: none;
+
+    transition: color 0.35s ease;
+}
+
+.trust-card-sh:hover .trust-number-sh {
+    color: #1d1d1d;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px) {
+
+    .trust-section-sh {
+        padding: 80px 20px;
+    }
+
+    .trust-heading-sh {
+        margin-bottom: 40px;
+    }
+
+    .trust-grid-sh {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .trust-card-sh {
+        min-height: 260px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .trust-section-sh {
+        padding: 65px 16px;
+    }
+
+    .trust-heading-sh {
+        margin-bottom: 32px;
+    }
+
+    .trust-eyebrow-sh {
+        font-size: 10px;
+        letter-spacing: 1.7px;
+        margin-bottom: 11px;
+    }
+
+    .trust-heading-sh h2 {
+        font-size: 31px;
+        letter-spacing: -1px;
+    }
+
+    .trust-heading-sh p {
+        margin-top: 14px;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .trust-grid-sh {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .trust-card-sh {
+        min-height: auto;
+        padding: 25px 22px;
+        border-radius: 16px;
+    }
+
+    .trust-icon-sh {
+        width: 48px;
+        height: 48px;
+    }
+
+    .trust-icon-sh svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .trust-content-sh {
+        margin-top: 28px;
+    }
+
+    .trust-content-sh h3 {
+        font-size: 17px;
+    }
+
+    .trust-content-sh p {
+        max-width: 85%;
+        font-size: 12.5px;
+    }
+
+    .trust-number-sh {
+        font-size: 60px;
+        right: 16px;
+        bottom: 8px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+    .trust-heading-sh h2 {
+        font-size: 28px;
+    }
+
+    .trust-card-sh {
+        padding: 22px 20px;
+    }
+
+    .trust-content-sh p {
+        max-width: 80%;
+    }
+}
+
+/* =========================
+   TRUST FEATURE SECTION
+========================= */
+
+.trust-feature-sh {
+    width: 100%;
+    padding: 110px 20px;
+    background: #f5f5f5;
+    font-family: "Inter", sans-serif;
+}
+
+.trust-feature-container-sh {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+
+    align-items: center;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.trust-feature-image-sh {
+    position: relative;
+    width: 100%;
+    height: 610px;
+
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+.trust-feature-image-sh img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.7s ease;
+}
+
+.trust-feature-image-sh:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   IMAGE BADGE
+========================= */
+
+.trust-image-badge-sh {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+
+    min-width: 150px;
+    padding: 17px 20px;
+
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(10px);
+
+    border-radius: 14px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.trust-image-badge-sh strong {
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1;
+
+    color: #111111;
+}
+
+.trust-image-badge-sh span {
+    margin-top: 5px;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+
+    color: #666666;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.trust-feature-content-sh {
+    max-width: 530px;
+}
+
+.trust-feature-eyebrow-sh {
+    display: inline-block;
+    margin-bottom: 16px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #111111;
+}
+
+.trust-feature-content-sh h2 {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(38px, 4vw, 58px);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -2px;
+
+    color: #111111;
+}
+
+.trust-feature-content-sh h2 span {
+    color: #777777;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.trust-feature-description-sh {
+    max-width: 500px;
+
+    margin: 22px 0 30px;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.8;
+
+    color: #666666;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.trust-feature-btn-sh {
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 14px 16px 14px 21px;
+
+    background: #111111;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+
+    border-radius: 100px;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.trust-feature-btn-sh span {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+    color: #111111;
+
+    border-radius: 50%;
+
+    transition: transform 0.3s ease;
+}
+
+.trust-feature-btn-sh svg {
+    width: 16px;
+    height: 16px;
+}
+
+.trust-feature-btn-sh:hover {
+    background: #333333;
+    transform: translateY(-2px);
+}
+
+.trust-feature-btn-sh:hover span {
+    transform: translateX(3px);
+}
+
+
+/* =========================
+   BENEFITS
+========================= */
+
+.trust-benefits-sh {
+    margin-top: 45px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #dddddd;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.trust-benefit-sh {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.trust-benefit-icon-sh {
+    flex-shrink: 0;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 50%;
+
+    color: #111111;
+}
+
+.trust-benefit-icon-sh svg {
+    width: 18px;
+    height: 18px;
+}
+
+.trust-benefit-sh h3 {
+    margin: 1px 0 5px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.3;
+
+    color: #111111;
+}
+
+.trust-benefit-sh p {
+    margin: 0;
+
+    font-size: 10px;
+    line-height: 1.5;
+
+    color: #777777;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1050px) {
+
+    .trust-feature-container-sh {
+        gap: 50px;
+    }
+
+    .trust-feature-image-sh {
+        height: 540px;
+    }
+
+    .trust-feature-content-sh h2 {
+        font-size: 46px;
+    }
+
+    .trust-benefits-sh {
+        gap: 12px;
+    }
+
+    .trust-benefit-sh {
+        gap: 8px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+    .trust-feature-sh {
+        padding: 70px 16px;
+    }
+
+    .trust-feature-container-sh {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+
+    /* Image */
+
+    .trust-feature-image-sh {
+        height: 430px;
+        border-radius: 18px;
+    }
+
+    .trust-image-badge-sh {
+        left: 16px;
+        bottom: 16px;
+
+        min-width: 135px;
+        padding: 14px 16px;
+    }
+
+    .trust-image-badge-sh strong {
+        font-size: 22px;
+    }
+
+
+    /* Content */
+
+    .trust-feature-content-sh {
+        max-width: 100%;
+    }
+
+    .trust-feature-eyebrow-sh {
+        font-size: 10px;
+        letter-spacing: 1.8px;
+        margin-bottom: 12px;
+    }
+
+    .trust-feature-content-sh h2 {
+        font-size: 36px;
+        letter-spacing: -1.3px;
+    }
+
+    .trust-feature-description-sh {
+        margin: 17px 0 25px;
+
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+
+    /* Benefits */
+
+    .trust-benefits-sh {
+        margin-top: 35px;
+        padding-top: 25px;
+
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .trust-benefit-sh {
+        align-items: center;
+    }
+
+    .trust-benefit-icon-sh {
+        width: 42px;
+        height: 42px;
+    }
+
+    .trust-benefit-icon-sh svg {
+        width: 19px;
+        height: 19px;
+    }
+
+    .trust-benefit-sh h3 {
+        font-size: 13px;
+    }
+
+    .trust-benefit-sh p {
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+    .trust-feature-image-sh {
+        height: 380px;
+    }
+
+    .trust-feature-content-sh h2 {
+        font-size: 32px;
+    }
+
+    .trust-feature-description-sh {
+        font-size: 12px;
+    }
+
+}
+
+/* BLOG SECTION  */
+.blog-section-sh {
+    width: 100%;
+    padding: 105px 20px;
+    background: #f5f5f5;
+    font-family: "Inter", sans-serif;
+}
+
+.blog-container-sh {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+/*  HEADER  */
+.blog-header-sh {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+
+.blog-eyebrow-sh {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #111111;
+}
+
+.blog-header-sh h2 {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(34px, 4vw, 52px);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -1.7px;
+    color: #111111;
+}
+
+.blog-header-sh h2 span {
+    color: #777777;
+}
+
+/* VIEW ALL BUTTON  */
+.blog-view-all-sh {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 17px 13px 20px;
+    color: #111111;
+    border: 1px solid #d5d5d5;
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.blog-view-all-sh span {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111111;
+    color: #ffffff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.blog-view-all-sh:hover {
+    background: #111111;
+    color: #ffffff;
+    border-color: #111111;
+}
+
+.blog-view-all-sh:hover span {
+    transform: translateX(3px);
+}
+
+/* ========================= BLOG GRID ========================= */
+.blog-grid-sh {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 24px;
+}
+
+/* ========================= FEATURED ARTICLE ========================= */
+.blog-featured-sh {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.blog-featured-sh:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.09);
+}
+
+/* ========================= IMAGES ========================= */
+.blog-image-sh {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+}
+
+.blog-image-sh img,
+.blog-card-image-sh img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.blog-featured-sh:hover .blog-image-sh img,
+.blog-card-sh:hover .blog-card-image-sh img {
+    transform: scale(1.05);
+}
+
+/* ========================= CATEGORY ========================= */
+.blog-category-sh {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    padding: 8px 11px;
+    background: #ffffff;
+    color: #111111;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ========================= FEATURED CONTENT ========================= */
+.blog-featured-content-sh {
+    padding: 27px 30px 30px;
+}
+
+.blog-meta-sh {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 11px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #888888;
+}
+
+.blog-featured-content-sh h3 {
+    max-width: 700px;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    color: #111111;
+}
+
+.blog-featured-content-sh p {
+    max-width: 650px;
+    margin: 12px 0 20px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #6d6d6d;
+}
+
+/* ========================= SIDE BLOGS ========================= */
+.blog-side-sh {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px;
+}
+
+.blog-card-sh {
+    display: grid;
+    grid-template-columns: 42% 58%;
+    background: #ffffff;
+    border: 1px solid #e7e7e7;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.blog-card-sh:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* ========================= SMALL CARD IMAGE ========================= */
+.blog-card-image-sh {
+    position: relative;
+    height: 100%;
+    min-height: 230px;
+    overflow: hidden;
+}
+
+.blog-card-image-sh .blog-category-sh {
+    top: 13px;
+    left: 13px;
+    padding: 6px 8px;
+    font-size: 10px;
+}
+
+/* ========================= SMALL CARD CONTENT ========================= */
+.blog-card-content-sh {
+    padding: 25px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.blog-card-content-sh .blog-meta-sh {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.blog-card-content-sh h3 {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #111111;
+}
+
+/* ========================= READ MORE ========================= */
+.blog-read-more-sh {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 17px;
+    color: #111111;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.blog-read-more-sh span {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.blog-read-more-sh:hover span {
+    transform: translateX(4px);
+}
+
+/* ========================= TABLET ========================= */
+@media (max-width: 991px) {
+    .blog-section-sh {
+        padding: 80px 20px;
+    }
+
+    .blog-grid-sh {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-side-sh {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .blog-card-sh {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-card-image-sh {
+        height: 240px;
+        min-height: 0;
+    }
+
+    .blog-card-content-sh {
+        padding: 22px;
+    }
+}
+
+/* ========================= MOBILE ========================= */
+@media (max-width: 600px) {
+    .blog-section-sh {
+        padding: 65px 16px;
+    }
+
+    .blog-header-sh {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .blog-eyebrow-sh {
+        margin-bottom: 10px;
+        font-size: 9px;
+    }
+
+    .blog-header-sh h2 {
+        font-size: 32px;
+        letter-spacing: -1px;
+    }
+
+    .blog-view-all-sh {
+        margin-top: 20px;
+        font-size: 10px;
+    }
+
+    /* Featured */
+    .blog-image-sh {
+        height: 280px;
+    }
+
+    .blog-featured-content-sh {
+        padding: 22px 20px 24px;
+    }
+
+    .blog-featured-content-sh h3 {
+        font-size: 20px;
+    }
+
+    .blog-featured-content-sh p {
+        font-size: 11px;
+    }
+
+    /* Side Cards */
+    .blog-side-sh {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .blog-card-sh {
+        grid-template-columns: 42% 58%;
+    }
+
+    .blog-card-image-sh {
+        height: 210px;
+    }
+
+    .blog-card-content-sh {
+        padding: 17px;
+    }
+
+    .blog-card-content-sh h3 {
+        font-size: 14px;
+    }
+
+    .blog-card-content-sh .blog-meta-sh {
+        font-size: 8px;
+    }
+
+    .blog-read-more-sh {
+        margin-top: 12px;
+        font-size: 9px;
+    }
+}
+
+/* ========================= SMALL MOBILE ========================= */
+@media (max-width: 380px) {
+    .blog-image-sh {
+        height: 250px;
+    }
+
+    .blog-featured-content-sh h3 {
+        font-size: 18px;
+    }
+
+    .blog-card-sh {
+        grid-template-columns: 40% 60%;
+    }
+
+    .blog-card-image-sh {
+        height: 190px;
+    }
+
+    .blog-card-content-sh {
+        padding: 14px;
+    }
+
+    .blog-card-content-sh h3 {
+        font-size: 12px;
+    }
+}
+
+/*  CUSTOMER RESULTS SECTION  */
+.results-section-sh {
+    width: 100%;
+    padding: 105px 20px;
+    background: #111111;
+    font-family: "Inter", sans-serif;
+}
+
+.results-container-sh {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 100px;
+    align-items: center;
+}
+
+/* ========================= LEFT CONTENT ========================= */
+.results-content-sh {
+    max-width: 430px;
+}
+
+.results-eyebrow-sh {
+    display: inline-block;
+    margin-bottom: 17px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.results-content-sh h2 {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(38px, 4vw, 56px);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -1.8px;
+    color: #ffffff;
+}
+
+.results-content-sh h2 span {
+    display: block;
+    color: #777777;
+}
+
+.results-content-sh>p {
+    max-width: 410px;
+    margin: 22px 0 30px;
+    font-size: 13px;
+    line-height: 1.8;
+    font-family: "Inter", sans-serif;
+    color: #a6a6a6;
+}
+
+/* ========================= BUTTON ========================= */
+.results-btn-sh {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 15px 13px 20px;
+    background: #ffffff;
+    color: #111111;
+    text-decoration: none;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+    transition: transform 0.3s ease;
+}
+
+.results-btn-sh span {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111111;
+    color: #ffffff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.results-btn-sh svg {
+    width: 15px;
+    height: 15px;
+}
+
+.results-btn-sh:hover {
+    transform: translateY(-3px);
+}
+
+.results-btn-sh:hover span {
+    transform: translateX(3px);
+}
+
+/* ========================= RESULTS ========================= */
+.results-stats-sh {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #2c2c2c;
+}
+
+/* ========================= RESULT ITEM ========================= */
+.result-item-sh {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 25px 0;
+    border-bottom: 1px solid #2c2c2c;
+}
+
+/* ========================= CIRCLE ========================= */
+.result-circle-sh {
+    position: relative;
+    width: 105px;
+    height: 105px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-circle-sh svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.result-circle-sh circle {
+    fill: none;
+    stroke-width: 5;
+}
+
+.result-circle-bg-sh {
+    stroke: #2c2c2c;
+}
+
+.result-circle-progress-sh {
+    stroke: #ffffff;
+    stroke-linecap: round;
+    stroke-dasharray: 270.18;
+    stroke-dashoffset: 27;
+}
+
+.result-95-sh {
+    stroke-dashoffset: 13.5;
+}
+
+.result-92-sh {
+    stroke-dashoffset: 21.6;
+}
+
+.result-90-sh {
+    stroke-dashoffset: 27;
+}
+
+.result-circle-sh strong {
+    position: relative;
+    z-index: 2;
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* =========================
+   CIRCLE ANIMATION
+========================= */
+
+.result-circle-progress-sh {
+    stroke: #ffffff;
+    stroke-linecap: round;
+
+    stroke-dasharray: 270.18;
+    stroke-dashoffset: 270.18;
+
+    transition: stroke-dashoffset 3s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Animation values */
+.results-section-sh.is-visible .result-95-sh {
+    stroke-dashoffset: 13.51;
+}
+
+.results-section-sh.is-visible .result-92-sh {
+    stroke-dashoffset: 21.61;
+}
+
+.results-section-sh.is-visible .result-90-sh {
+    stroke-dashoffset: 27.02;
+}
+
+/* ========================= RESULT INFO ========================= */
+.result-info-sh h3 {
+    margin: 0 0 7px;
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.result-info-sh p {
+    max-width: 550px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #8f8f8f;
+}
+
+/* ========================= TABLET ========================= */
+@media (max-width: 900px) {
+    .results-container-sh {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .results-content-sh {
+        max-width: 600px;
+    }
+
+    .results-content-sh>p {
+        max-width: 520px;
+    }
+}
+
+/* ========================= MOBILE ========================= */
+@media (max-width: 600px) {
+    .results-section-sh {
+        padding: 70px 16px;
+    }
+
+    .results-container-sh {
+        gap: 45px;
+    }
+
+    .results-eyebrow-sh {
+        font-size: 9px;
+        letter-spacing: 1.7px;
+    }
+
+    .results-content-sh h2 {
+        font-size: 36px;
+        letter-spacing: -1.2px;
+    }
+
+    .results-content-sh>p {
+        margin: 17px 0 25px;
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .result-item-sh {
+        gap: 18px;
+        padding: 20px 0;
+    }
+
+    .result-circle-sh {
+        width: 82px;
+        height: 82px;
+    }
+
+    .result-circle-sh circle {
+        stroke-width: 4.5;
+    }
+
+    .result-circle-sh strong {
+        font-size: 18px;
+    }
+
+    .result-info-sh h3 {
+        font-size: 14px;
+    }
+
+    .result-info-sh p {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+}
+
+/* ========================= SMALL MOBILE ========================= */
+@media (max-width: 380px) {
+    .result-item-sh {
+        gap: 14px;
+    }
+
+    .result-circle-sh {
+        width: 72px;
+        height: 72px;
+    }
+
+    .result-circle-sh strong {
+        font-size: 16px;
+    }
+
+    .result-info-sh h3 {
+        font-size: 13px;
+    }
+
+    .result-info-sh p {
+        font-size: 9px;
+    }
+}
